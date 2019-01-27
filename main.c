@@ -6,7 +6,7 @@
 /*   By: gkshleri <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/26 13:26:27 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/01/26 14:56:15 by breolson         ###   ########.fr       */
+/*   Updated: 2019/01/27 19:47:06 by gkshleri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 int		main(void)
 {
 	char a[5] = "Hello";
-	ft_printf("%s Vanya World!", a);
+	ft_printf("%0#+", a);
 	return (0);
 }

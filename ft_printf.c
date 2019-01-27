@@ -6,7 +6,7 @@
 /*   By: gkshleri <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/26 13:01:47 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/01/26 13:34:22 by gkshleri         ###   ########.fr       */
+/*   Updated: 2019/01/27 20:49:13 by gkshleri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,17 @@
 int		ft_printf(const char *argv, ...)
 {
 	va_list	ap;
-	char	arr;
+	t_lists *list;
 	int		i;
 
 	i = 0;
 	va_start(ap, argv);
+	list = (t_lists*)malloc(sizeof(t_lists));
 	while (argv[i])
 	{
 		if (argv[i] == '%')
 		{
-			if(!(parsing((char *)argv, ap)))
-				return (0); // ошибка сборки, невалид. данные;
+			parsing((char *)argv, ap, list);
 			i++;
 		}
 		else
@@ -34,5 +34,6 @@ int		ft_printf(const char *argv, ...)
 			 * данных, которые нужно вывести */
 		i++;
 	}
+	va_end(ap);
 	return (0);
 }

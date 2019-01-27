@@ -6,7 +6,7 @@
 /*   By: gkshleri <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/26 13:02:44 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/01/27 17:19:31 by gkshleri         ###   ########.fr       */
+/*   Updated: 2019/01/27 20:42:55 by gkshleri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,16 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
-define struct	t_lists
+typedef struct	s_lists
 {
-	char		*arr;
-	char		*flag;
+	char		flag[5];
 	int 		width;
-}				s_lists
+}				t_lists;
 
 int		ft_printf(const char *argv, ...);
-int		parsing(char *argv, va_list ap);
-char	*ft_flag(char **argv);
-char	*ft_width(char **argv, va_list ap);
-char	*ft_accuracy(char **argv, va_list ap);
+int		parsing(char *argv, va_list ap, t_lists *list);
+void	ft_flag(char *argv, t_lists *list);
+char	*ft_width(char *argv, va_list ap);
+char	*ft_accuracy(char *argv, va_list ap);
 
 #endif
