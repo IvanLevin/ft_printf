@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gkshleri <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: breolson <breolson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/26 13:26:27 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/01/29 15:12:06 by gkshleri         ###   ########.fr       */
+/*   Updated: 2019/01/29 22:59:26 by breolson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 int		main(void)
 {
 	char a[5] = "Hello";
-	ft_printf("%#0--+*.3", 3);
+	printf("\n%d", ft_printf("Hello\n\n%*.3 sh", 3));
 	return (0);
 }

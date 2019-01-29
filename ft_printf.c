@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gkshleri <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: breolson <breolson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/26 13:01:47 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/01/29 16:45:54 by gkshleri         ###   ########.fr       */
+/*   Updated: 2019/01/29 22:51:12 by breolson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,12 @@ int		ft_printf(const char *argv, ...)
 {
 	va_list	ap;
 	t_lists *list;
+	int 	len;
 
 	va_start(ap, argv);
-	list = (t_lists*)malloc(sizeof(t_lists));
+	if (!(list = (t_lists*)malloc(sizeof(t_lists))))
+		return (-1);
+	list->len = 0;
 	while (*argv)
 	{
 		if (*argv == '%')
@@ -32,11 +35,14 @@ int		ft_printf(const char *argv, ...)
 			 * данных, которые нужно вывести
 			 * Тут также нужно обработать /n */
 
-			printf("%c", *argv);
+			write(1, argv, 1);
+			list->len += 1;
 			argv++;
 		}
 
 	}
 	va_end(ap);
-	return (0);
+	len = list->len;
+	free(list);
+	return (len); // printf возвращает кол-во выведенных байт
 }
