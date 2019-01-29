@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_len_strchr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/25 15:32:38 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/01/29 10:09:31 by gkshleri         ###   ########.fr       */
+/*   Created: 2019/01/29 11:10:09 by gkshleri          #+#    #+#             */
+/*   Updated: 2019/01/29 12:28:57 by gkshleri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t n)
+char	ft_len_strchr(char *s, int c, int len)
 {
-	unsigned char	*arr1;
-	unsigned char	*arr2;
-	size_t			i;
+	char	ch_a;
+	int		i;
+	int		j;
 
 	i = 0;
-	arr1 = (unsigned char *)src;
-	arr2 = (unsigned char *)dst;
-	if (src > dst)
-		while (i < n)
-		{
-			arr2[i] = arr1[i];
-			i++;
-		}
-	if (dst > src)
-		while (n)
-		{
-			n--;
-			arr2[n] = arr1[n];
-		}
-	return (arr2);
+	j = 0;
+	ch_a = (char)c;
+	while (s[j] != '\0' && s[j] != ch_a && (i < len))
+	{
+		i++;
+		j++;
+	}
+	if (s[j] == ch_a)
+		return (s[j]);
+	else
+		return (0);
 }

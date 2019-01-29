@@ -6,7 +6,7 @@
 /*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/29 15:50:38 by gkshleri          #+#    #+#             */
-/*   Updated: 2018/12/19 12:26:05 by gkshleri         ###   ########.fr       */
+/*   Updated: 2019/01/29 12:20:37 by gkshleri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,5 +87,6 @@ int					*ft_selection_sort(int *arr);
 int					ft_atoi_base(const char *str, int str_base);
 void				ft_hex(int n);
 void				ft_swap(int *a, int *b);
+char				ft_len_strchr(char *s, int c, int len);
 
 #endif
