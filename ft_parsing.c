@@ -6,7 +6,7 @@
 /*   By: gkshleri <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/26 13:19:30 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/01/29 13:56:11 by gkshleri         ###   ########.fr       */
+/*   Updated: 2019/01/29 17:21:49 by gkshleri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,23 @@ char	*parsing(char *argv, va_list ap, t_lists *list)
 			*argv == '#' || *argv == '0')
 	{
 		argv = ft_flag(argv, list);
-		printf("Address after flag: %c\n", *argv);
+		printf("Address after flag: %s\n", argv);
 	}
 	if (*argv == '*' || (*argv >= '0' && *argv <= '9'))
 	{
 		argv = ft_width(argv, ap, list);
-		printf("Address after width: %c\n", *argv);
+		printf("Address after width: %s\n", argv);
 	}
-//	if (argv[i] == '.' && (argv[i + 1] == '*' || \
-//				(argv[i + 1] >= '0' && argv[i + 1] <= '9')))
-//	{
-//		argv = ft_accuracy(argv, ap);
-//	}
+	if (*argv == '.' && (*(argv+1) == '*' || \
+				(*(argv+1) >= '0' && *(argv+1) <= '9')))
+	{
+		argv = ft_accuracy(argv, ap, list);
+		printf("Address after accuracy: %s\n", argv);
+	}
+	printf("--------------------\n");
+	printf("   RESULT: \n");
+	printf("Flag: %s\n", list->flag);
+	printf("Width: %d\n", list->width);
+	printf("Accuracy: %d\n", list->accouracy);
 	return (argv);
 }
