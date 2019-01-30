@@ -1,34 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_printf_d.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/27 20:23:19 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/01/30 11:56:00 by gkshleri         ###   ########.fr       */
+/*   Created: 2019/01/30 15:55:51 by gkshleri          #+#    #+#             */
+/*   Updated: 2019/01/30 15:59:57 by gkshleri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "ft_printf.h"
 
-char	*ft_strrchr(const char *s, int c)
+void    ft_printf_d(t_lists *list, int type)
 {
-	char	ch;
-	char	*arr;
-	char	*check;
 
-	check = NULL;
-	ch = (char)c;
-	arr = (char *)s;
-	while (*arr != '\0')
-	{
-		if (*arr == ch)
-			check = arr;
-		arr++;
-	}
-	if (*arr == ch)
-		return (arr);
-	else
-		return (check);
 }

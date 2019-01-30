@@ -3,10 +3,11 @@
 /*                                                        :::      ::::::::   */
 /*   ft_check_valid.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gkshleri <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: breolson <breolson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/27 16:03:03 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/01/29 17:32:26 by gkshleri         ###   ########.fr       */
+/*   Updated: 2019/01/30 11:57:32 by gkshleri         ###   ########.fr       */
+/*   Updated: 2019/01/30 07:56:18 by breolson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +18,22 @@ void    search_flag(char *argv, int len, t_lists *list)
     int     j;
 
     j = 0;
+    printf("%s", list->flag);
     if (argv)
     {
-        if((list->flag[j] = ft_len_strchr(argv, PLUS, len)))
+        if ((list->flag[j] = ft_len_strchr(argv, PLUS, len)))
             j++;
-        if((list->flag[j] = ft_len_strchr(argv, MINUS, len)))
+        if ((list->flag[j] = ft_len_strchr(argv, MINUS, len)))
+        {
+        	list->minus = 1;
             j++;
-        if((list->flag[j] = ft_len_strchr(argv, SPACE, len)))
+        }
+        if ((list->flag[j] = ft_len_strchr(argv, SPACE, len)))
             j++;
-        if((list->flag[j] = ft_len_strchr(argv, LATTICE, len)))
+        if ((list->flag[j] = ft_len_strchr(argv, LATTICE, len)))
             j++;
-        list->flag[j] = ft_len_strchr(argv, ZERO, len);
+        if ((list->flag[j] = ft_len_strchr(argv, ZERO, len)))
+			list->zero = 1;
     }
 }
 
