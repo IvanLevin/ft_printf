@@ -6,7 +6,7 @@
 /*   By: breolson <breolson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/26 13:02:44 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/01/29 22:51:50 by breolson         ###   ########.fr       */
+/*   Updated: 2019/01/30 07:45:42 by breolson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,17 +26,22 @@
 
 typedef struct	s_lists
 {
-	int			len; // для сохранения выведенных байт
+	char		spec;		// спецификатор
+	int			len;		// для сохранения выведенных байт
+	int			minus;		// сохранения флага '-'
+	int			zero;		// сохранения флага '0'
 	char		flag[5];
-	int 		width;
-	int         accouracy;
+	int 		width;		// сохранение ширины поля
+	int         accouracy;	// сохранение точности 
 }				t_lists;
 
-int     ft_printf(const char *argv, ...);
-char    *parsing(char *argv, va_list ap, t_lists *list);
-char	*ft_flag(char *argv, t_lists *list);
-void    search_flag(char *argv, int len, t_lists *list);
-char	*ft_width(char *argv, va_list ap, t_lists *list);
-char	*ft_accuracy(char *argv, va_list ap, t_lists *list);
+int     	ft_printf(const char *argv, ...);
+char   	 	*parsing(char *argv, va_list ap, t_lists *list);
+char		*ft_flag(char *argv, t_lists *list);
+void    	search_flag(char *argv, int len, t_lists *list);
+char		*ft_width(char *argv, va_list ap, t_lists *list);
+char		*ft_accuracy(char *argv, va_list ap, t_lists *list);
+void		ft_printf_s(char *str, t_lists *list);
+void		ft_print_free(char **str, t_lists *list, int max);
 
 #endif

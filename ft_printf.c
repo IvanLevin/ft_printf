@@ -6,11 +6,22 @@
 /*   By: breolson <breolson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/26 13:01:47 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/01/29 22:51:12 by breolson         ###   ########.fr       */
+/*   Updated: 2019/01/30 08:00:34 by breolson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+void	initialize(t_lists *list) // если не занулить, каждому полю присваивается 
+//рандомное значение и все идет по пизде
+{
+	list->spec = 0;
+	list->len = 0;
+	list->minus = 0;
+	list->zero = 0;
+	list->width = 0;
+	list->accouracy = 0;
+}
 
 int		ft_printf(const char *argv, ...)
 {
@@ -22,10 +33,13 @@ int		ft_printf(const char *argv, ...)
 	if (!(list = (t_lists*)malloc(sizeof(t_lists))))
 		return (-1);
 	list->len = 0;
+
+	// !!! структуру надо занулять при каждой инициализации!
 	while (*argv)
 	{
 		if (*argv == '%')
 		{
+			initialize(list);
 			argv = parsing((char *)argv, ap, list);
 			// функция пропускающая проценты и их содержание
 		}
@@ -35,7 +49,7 @@ int		ft_printf(const char *argv, ...)
 			 * данных, которые нужно вывести
 			 * Тут также нужно обработать /n */
 
-			write(1, argv, 1);
+			write(1, argv, 1); // вот она
 			list->len += 1;
 			argv++;
 		}
