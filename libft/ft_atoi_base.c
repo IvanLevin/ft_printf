@@ -1,5 +1,4 @@
 
-
 #include "includes/libft.h"
 
 static	int	change_alp(char c, int str_base)

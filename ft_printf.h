@@ -1,4 +1,5 @@
 
+
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 # define PLUS '+'
@@ -21,7 +22,7 @@ typedef struct	s_lists
 	int			zero;		// сохранения флага '0'
 	char		flag[5];
 	int 		width;		// сохранение ширины поля
-	int         accouracy;	// сохранение точности
+	int         accouracy;	// сохранение точности 
 }				t_lists;
 
 int     	ft_printf(const char *argv, ...);
