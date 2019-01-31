@@ -6,5 +6,5 @@ C_FLAGS = -g   -std=gnu11
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/breolson/Documents/GitHub/ft_printf/. -I/Users/breolson/Documents/GitHub/ft_printf/libft/includes 
+C_INCLUDES = -I/Users/gkshleri/Documents/Git/MyGitHub/ft_printf/. -I/Users/gkshleri/Documents/Git/MyGitHub/ft_printf/libft/includes 
 
