@@ -21,7 +21,7 @@ char	*parsing(char *argv, va_list ap, t_lists *list)
 	}
 	if (*argv == 'h' || *argv == 'l')
 	{
-		argv = ft_modifier(argv, ap, list);
+		argv = ft_modifier(argv, list);
 	}
 	if(data_types(argv, ap, list))
 	{
