@@ -117,6 +117,8 @@ dkms.conf
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
+ .idea/workspace.xml
+ cmake-build-debug/CMakeFiles/CMakeOutput.log
 
 # Generated files
 .idea/**/contentModel.xml
