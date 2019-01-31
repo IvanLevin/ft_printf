@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/breolson/Documents/GitHub/ft_printf/ft_printf.h
+libft/includes/libft.h
+/Users/breolson/Documents/GitHub/ft_printf/libft/includes/libft.h
+stdio.h
+-
+unistd.h
+-
+stdlib.h
+-
+stdarg.h
+-
+
+/Users/breolson/Documents/GitHub/ft_printf/ft_printf_cs.c
+ft_printf.h
+/Users/breolson/Documents/GitHub/ft_printf/ft_printf.h
+
+/Users/breolson/Documents/GitHub/ft_printf/libft/includes/libft.h
+string.h
+-
+stdlib.h
+-
+unistd.h
+-
+
