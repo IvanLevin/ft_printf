@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striter.c                                       :+:      :+:    :+:   */
+/*   ft_printf_d.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/30 16:59:02 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/01/31 14:53:12 by gkshleri         ###   ########.fr       */
+/*   Created: 2019/01/30 15:55:51 by gkshleri          #+#    #+#             */
+/*   Updated: 2019/01/31 14:22:20 by gkshleri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "ft_printf.h"
 
-void	ft_striter(char *s, void (*f)(char *))
+void    ft_printf_d(t_lists *list, int type)
 {
-	int i;
+    int d;
 
-	i = 0;
-	if (!s || !f)
-		return ;
-	while (s[i])
-	{
-		(f)(&s[i]);
-		i++;
-	}
+    d = 0;
+    d = type;
+    list->minus = 0;
+
 }

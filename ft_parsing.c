@@ -3,10 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_parsing.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: breolson <breolson@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/26 13:19:30 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/01/30 17:27:25 by gkshleri         ###   ########.fr       */
+/*   Updated: 2019/01/31 14:46:58 by gkshleri         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,33 +21,20 @@ char	*parsing(char *argv, va_list ap, t_lists *list)
 			*argv == '#' || *argv == '0')
 	{
 		argv = ft_flag(argv, list);
-		//printf("Address after flag: %s\n", argv);
 	}
 	if (*argv == '*' || (*argv >= '0' && *argv <= '9'))
 	{
 		argv = ft_width(argv, ap, list);
-		//printf("Address after width: %s\n", argv);
 	}
 	if (*argv == '.' && (*(argv+1) == '*' || \
 				(*(argv+1) >= '0' && *(argv+1) <= '9')))
 	{
 		argv = ft_accuracy(argv, ap, list);
-		//printf("Address after accuracy: %s\n", argv);
 	}
-	if (*argv == 's')
+	if(data_types(argv, ap, list))
 	{
-		list->spec = 's';
-		argv++;
-		ft_printf_s(va_arg(ap, char *), list);
+	    argv++;
+		// free_our_list(list); - будем подчищать этой функцией;
 	}
-	if (*argv == 'c')
-	{
-		ft_putstr(va_arg(ap, const char *));
-	}
-	//printf("\033[0m--------------------\n");
-	//printf("   RESULT: \n");
-	//printf("Flag: %s\n", list->flag);
-	//printf("Width: %d\n", list->width);
-	//printf("Accuracy: %d\n", list->accouracy);
 	return (argv);
 }

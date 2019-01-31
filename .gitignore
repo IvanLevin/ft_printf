@@ -285,6 +285,7 @@ modules.xml
 ### CLion+iml Patch ###
 # Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-249601023
 
+# # **.*
 
 # End of https://www.gitignore.io/api/clion,clion+iml,clion+all
 *.xml

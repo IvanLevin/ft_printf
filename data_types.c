@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striter.c                                       :+:      :+:    :+:   */
+/*   data_types.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/30 16:59:02 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/01/31 14:53:12 by gkshleri         ###   ########.fr       */
+/*   Created: 2019/01/30 13:56:10 by gkshleri          #+#    #+#             */
+/*   Updated: 2019/01/31 14:22:20 by gkshleri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "ft_printf.h"
 
-void	ft_striter(char *s, void (*f)(char *))
+int     data_types(char *argv, va_list ap, t_lists *list)
 {
-	int i;
-
-	i = 0;
-	if (!s || !f)
-		return ;
-	while (s[i])
-	{
-		(f)(&s[i]);
-		i++;
-	}
+    if (*argv == 's')
+    {
+        ft_printf_s(va_arg(ap, char *), list);
+        return (1);
+    }
+    if (*argv == 'c')
+    {
+        ft_printf_c(list, ap);
+        return (1);
+    }
+    if (*argv == 'd')
+    {
+        ft_printf_d(list, va_arg(ap, int));
+        return (1);
+    }
+    return (0);
 }
