@@ -261,6 +261,10 @@ modules.xml
 # .idea/vcs.xml
 # vcs.xml
 # .idea/*
+# .o
+# ../.idea/workspace.xml
+# ../cmake-build-debug/CMakeFiles/CMakeOutput.log
+# ../cmake-build-debug/ft_printf
 
 # CMake
 
