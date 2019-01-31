@@ -6,7 +6,7 @@
 /*   By: breolson <breolson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/30 01:26:55 by breolson          #+#    #+#             */
-/*   Updated: 2019/01/30 17:19:37 by gkshleri         ###   ########.fr       */
+/*   Updated: 2019/01/30 17:28:39 by gkshleri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,9 +51,9 @@ void		ft_printf_s(char *str, t_lists *list)
 	len = ft_strlen(str) ;
 	if (!str)
 		return ; // неправильно, надо кидать нули или пробелы
-	output = list->width > len ? list->width : len;
+	output = list->width > (int)len ? list->width : len;
 	tmp = ft_strnew(output);
-	space = space_amount(list, len);
+	space = space_amount(list, (int)len);
 	if (list->minus == 0 && space > 0)
 		tmp_i += fill_space(space, tmp, tmp_i, list);
 	while (*str)

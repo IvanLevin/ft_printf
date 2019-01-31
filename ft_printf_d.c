@@ -6,7 +6,7 @@
 /*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/30 15:55:51 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/01/30 17:19:37 by gkshleri         ###   ########.fr       */
+/*   Updated: 2019/01/31 12:25:16 by gkshleri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,10 @@
 
 void    ft_printf_d(t_lists *list, int type)
 {
+    int d;
+
+    d = 0;
+    d = type;
+    list->minus = 0;
 
 }
