@@ -95,3 +95,20 @@ char	*ft_accuracy(char *argv, va_list ap, t_lists *list)
     }
     return (argv);
 }
+
+char    *ft_modifier(char *argv, va_list ap, t_lists *list)
+{
+    list->mod = *argv;
+    argv++;
+    if (list->mod == 'h' && *argv == 'h')
+    {
+        argv++;
+        list->mod = 'G';
+    }
+    else if (list->mod == 'l' && *argv == 'l')
+    {
+        argv++;
+        list->mod = 'K';
+    }
+    return (argv);
+}
