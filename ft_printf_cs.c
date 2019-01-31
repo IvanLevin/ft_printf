@@ -6,7 +6,7 @@
 /*   By: breolson <breolson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/30 01:26:55 by breolson          #+#    #+#             */
-/*   Updated: 2019/01/30 17:28:39 by gkshleri         ###   ########.fr       */
+/*   Updated: 2019/01/31 13:50:10 by breolson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,14 +43,20 @@ void		ft_printf_s(char *str, t_lists *list)
 	size_t	len;	//длина пришедшей строки
 	size_t	output;	//длина выходной строки
 	char	*tmp;
+	char 	*tmp2;
 	int		tmp_i; // индекс для сохранения позиции на выводе
 	int		space; // кол - во пробелов(либо нулей)
 
     list->spec = 's';
 	tmp_i = 0;
-	len = ft_strlen(str) ;
-	if (!str)
-		return ; // неправильно, надо кидать нули или пробелы
+	len = ft_strlen(str);
+	if ((int)len > list->accouracy)
+	{
+		len = list->accouracy;
+		tmp2 = ft_strnew(len);
+		ft_strncpy(tmp2, str, len);
+		str = tmp2;
+	}
 	output = list->width > (int)len ? list->width : len;
 	tmp = ft_strnew(output);
 	space = space_amount(list, (int)len);
