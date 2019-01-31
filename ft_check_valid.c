@@ -96,7 +96,7 @@ char	*ft_accuracy(char *argv, va_list ap, t_lists *list)
     return (argv);
 }
 
-char    *ft_modifier(char *argv, va_list ap, t_lists *list)
+char    *ft_modifier(char *argv, t_lists *list)
 {
     list->mod = *argv;
     argv++;

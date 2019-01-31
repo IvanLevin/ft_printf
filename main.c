@@ -4,13 +4,13 @@
 
 int		main(void)
 {
-	char a[5] = "Hello";
+//	char a[5] = "Hello";
 //	char  d = 'A';
 
 //	ft_printf("%#0--+*.* TEST_WORD \n", 32, 12);
 //
 //	printf("\n-----------------------\n");
-ы//	printf("ZDOROVYI printf    \n");
+//	printf("ZDOROVYI printf    \n");
 //	printf("%10hhs\n", a);
 //	printf("\n-----------------------\n");
 //	printf("\n-----------------------\n");
