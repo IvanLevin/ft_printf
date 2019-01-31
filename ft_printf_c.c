@@ -6,7 +6,7 @@
 /*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/30 14:16:22 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/01/31 12:16:24 by gkshleri         ###   ########.fr       */
+/*   Updated: 2019/01/31 14:08:56 by gkshleri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,12 +52,13 @@ void    ft_printf_c(t_lists *list, va_list ap)
     {
         i = print_c(&first, second, i);
         i = print_space(second, space, i);
-        ft_print_free(&second, list, i);
+//        i++;
+        ft_print_free(second, list, i);
     }
     else if (list->minus == 0)
     {
         i = print_space(second, space, i);
         i = print_c(&first, second, i);
-        ft_print_free(&second, list, i);
+        ft_print_free(second, list, i);
     }
 }

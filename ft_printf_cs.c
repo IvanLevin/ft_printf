@@ -6,7 +6,7 @@
 /*   By: breolson <breolson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/30 01:26:55 by breolson          #+#    #+#             */
-/*   Updated: 2019/01/30 17:28:39 by gkshleri         ###   ########.fr       */
+/*   Updated: 2019/01/31 12:24:03 by gkshleri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,5 +60,5 @@ void		ft_printf_s(char *str, t_lists *list)
 		tmp[tmp_i++] = *str++;
 	if (list->minus == 1 && space > 0)
 		tmp_i += fill_space(space, tmp, tmp_i, list);
-	ft_print_free(&tmp, list, tmp_i);
+	ft_print_free(tmp, list, tmp_i);
 }
