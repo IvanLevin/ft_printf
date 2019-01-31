@@ -288,3 +288,4 @@ modules.xml
 
 # End of https://www.gitignore.io/api/clion,clion+iml,clion+all
 *.xml
+.DS_Store
