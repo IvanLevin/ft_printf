@@ -110,10 +110,5 @@ char    *ft_modifier(char *argv, t_lists *list)
         argv++;
         list->mod = 'K';
     }
-    else if (list->mod == 'L')
-    {
-        argv++;
-        list->mod = 'L';
-    }
     return (argv);
 }
