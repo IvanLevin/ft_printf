@@ -39,12 +39,11 @@ void		ft_printf_s(char *str, t_lists *list)
     list->spec = 's';
 	tmp_i = 0;
 	len = ft_strlen(str);
-	if ((int)len > list->accouracy)
+	if ((int)len > list->accouracy && list->accouracy)
 	{
-		len = list->accouracy;
+        len = (size_t)list->accouracy;
 		tmp2 = ft_strnew(len);
-		ft_strncpy(tmp2, str, len);
-		str = tmp2;
+		str = ft_strncpy(tmp2, str, len);
 	}
 	output = list->width > (int)len ? list->width : len;
 	tmp = ft_strnew(output);
@@ -55,5 +54,5 @@ void		ft_printf_s(char *str, t_lists *list)
 		tmp[tmp_i++] = *str++;
 	if (list->minus == 1 && space > 0)
 		tmp_i += fill_space(space, tmp, tmp_i, list);
-	ft_print_free(&tmp, list, tmp_i);
+	ft_print_free(tmp, list, tmp_i);
 }
