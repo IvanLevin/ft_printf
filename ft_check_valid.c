@@ -78,7 +78,7 @@ char	*ft_accuracy(char *argv, va_list ap, t_lists *list)
         argv++;
         if (*argv == '*')
         {
-            list->accouracy = va_arg(ap, int);
+            list->precision = va_arg(ap, int);
             argv++;
             return (argv);
         }
@@ -87,7 +87,7 @@ char	*ft_accuracy(char *argv, va_list ap, t_lists *list)
             len = 0;
             while (argv[len] >= '0' && argv[len] <= '9')
                 len++;
-            list->accouracy = ft_atoi(ft_strncpy(ft_strnew(len), argv, len));
+            list->precision = ft_atoi(ft_strncpy(ft_strnew(len), argv, len));
             while (*argv >= '0' && *argv <= '9')
                 argv++;
             return (argv);

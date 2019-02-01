@@ -22,7 +22,7 @@ typedef struct	s_lists
 	int		zero;		// сохранения флага '0'
 	char	flag[5];
 	int 	width;		// сохранение ширины поля
-    int		accouracy;	// сохранение точности
+    int		precision;	// сохранение точности
 	char	mod;		// модификатор спецификатора
 						// [h, hh = G, l, ll = K, L]
 }				t_lists;
@@ -41,7 +41,7 @@ int			fill_space(int space, char *tmp, int tmp_i, t_lists *list);
 void		ft_printf_s(char *str, t_lists *list);
 void		ft_print_free(char *str, t_lists *list, int max);
 void        ft_printf_c(t_lists *list, va_list ap);
-void    	ft_printf_d(t_lists *list, int type);
+void        ft_printf_d(t_lists *list, char *specifier);
 int         print_c(char *first, char *second, int i);
 
 #endif

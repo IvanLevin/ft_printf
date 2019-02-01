@@ -10,7 +10,7 @@ void	initialize(t_lists *list) // если не занулить, каждому
 	list->minus = 0;
 	list->zero = 0;
 	list->width = 0;
-	list->accouracy = 0;
+	list->precision = 0;
 	list->mod = 0;
 }
 
