@@ -27,7 +27,6 @@
 *.so
 *.so.*
 *.dylib
-*.idea/workspace.xml
 
 # Executables
 *.exe
@@ -119,6 +118,7 @@ dkms.conf
 .idea/**/dictionaries
 .idea/**/shelf
 .idea/workspace.xml
+    cmake-build-debug/CMakeFiles/CMakeOutput.log
 
 # Generated files
 .idea/**/contentModel.xml
@@ -131,7 +131,6 @@ dkms.conf
 .idea/**/dynamic.xml
 .idea/**/uiDesigner.xml
 .idea/**/dbnavigator.xml
-.idea/workspace.xml
 
 # Gradle
 .idea/**/gradle.xml
