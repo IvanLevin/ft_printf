@@ -41,7 +41,8 @@ int			fill_space(int space, char *tmp, int tmp_i, t_lists *list);
 void		ft_printf_s(char *str, t_lists *list);
 void		ft_print_free(char *str, t_lists *list, int max);
 void        ft_printf_c(t_lists *list, va_list ap);
-void        ft_printf_d(t_lists *list, char *specifier);
 int         print_c(char *first, char *second, int i);
+void        ft_printf_d(t_lists *list, char *specifier, va_list ap);
+void        print_d_or_i(t_lists *list, char *specifier, va_list ap);
 
 #endif
