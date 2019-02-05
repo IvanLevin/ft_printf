@@ -11,14 +11,20 @@ void    search_flag(char *argv, int len, t_lists *list)
     if (argv)
     {
         if ((list->flag[j] = ft_len_strchr(argv, PLUS, len)))
+        {
+            list->plus = 1;
             j++;
+        }
         if ((list->flag[j] = ft_len_strchr(argv, MINUS, len)))
         {
         	list->minus = 1;
             j++;
         }
         if ((list->flag[j] = ft_len_strchr(argv, SPACE, len)))
+        {
+            list->space = 1;
             j++;
+        }
         if ((list->flag[j] = ft_len_strchr(argv, LATTICE, len)))
             j++;
         if ((list->flag[j] = ft_len_strchr(argv, ZERO, len)))

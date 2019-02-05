@@ -2,8 +2,7 @@
 
 #include "ft_printf.h"
 
-void	initialize(t_lists *list) // если не занулить, каждому полю присваивается 
-//рандомное значение и все идет по пизде
+void	initialize(t_lists *list)
 {
 	list->spec = 0;
 	list->len = 0;
