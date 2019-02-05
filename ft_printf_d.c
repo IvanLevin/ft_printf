@@ -1,6 +1,72 @@
 
 #include "ft_printf.h"
 
+int     extra_rigth_d(char *arr_1, char *arr_d, size_t len, t_lists *list)
+{
+    int     i;
+    int     j;
+
+    i = 0;
+    j = 0;
+    len = (size_t)list->width - ft_strlen(arr_d);
+    if ((*arr_d == '-' && list->plus == 1) || *arr_d == '-')
+        arr_1[i++] = arr_d[j++];
+    else if ((list->space == 1 && list->plus == 0) && (arr_d[j] != '-' || arr_d[j] != '+'))
+    {
+        arr_1[i++] = ' ';
+        j++;
+        len--;
+    }
+    else if (*arr_d != '-' && list->plus == 1)
+    {
+        arr_1[i++] = '+';
+        len--;
+    }
+    while (len--)
+        arr_1[i++] = '0';
+    while (arr_d[j])
+        arr_1[i++] = arr_d[j++];
+    return (i);
+}
+
+int     d_minus_right(char *arr_1, char *arr_d, size_t len, t_lists *list)
+{
+    int     i;
+    int     j;
+
+    i = 0;
+    if (list->zero == 1)
+        i = extra_rigth_d(arr_1, arr_d, len, list);
+
+
+    return (i);
+}
+
+int     d_minus_left(char *arr_1, char *arr_d, size_t len, t_lists *list)
+{
+    int     i;
+    int     j;
+
+    i = 0;
+    j = 0;
+    if ((list->plus == 1 && list->space == 1) \
+    || (list->plus == 1 && list->space == 0))
+    {
+        arr_1[i++] = '+';
+        arr_d++;
+    }
+    else if (list->space == 1 && list->plus == 0)
+    {
+        arr_1[i++] = ' ';
+        arr_d++;
+    }
+    while (arr_d[j])
+        arr_1[i++] = arr_d[j++];
+    while (len--)
+        arr_1[i++] = ' ';
+    return (i);
+}
+
 int     pr_left_d(char *arr, char *arr2, t_lists *list)
 {
     int     i;
@@ -11,7 +77,7 @@ int     pr_left_d(char *arr, char *arr2, t_lists *list)
     i = 0;
     j = 0;
     p = 0;
-    max = list->width - list->precision;
+    max = list->width - list->precision - 1;
     while (max > 0)
     {
         arr2[j++] = ' ';
@@ -31,19 +97,16 @@ int     pr_right_d(char *arr, char *arr2, t_lists *list)
     int     i;
     int     j;
     int     p;
-    int     max;
 
     j = 0;
     i = 0;
     p = 0;
-    max = list->width - list->precision;
     while (arr[i])
     {
         arr2[j++] = arr[i++];
         p++;
     }
-    i = 0;
-    while (max > i++)
+    while (list->width > j)
     {
         arr2[j++] = ' ';
         p++;
@@ -56,14 +119,17 @@ int     fill_zero(char *arr, t_lists *list, char *ap, size_t max)
     int     i;
     int     j;
 
-    i = -1;
-    if (list ->plus == 1 || list->space == 1)
-        i = 0;
-    if (*ap == '-')
-        arr[++i] = '-';
-    while (max-- > 0)
-        arr[++i] = '0';
+    i = 0;
     j = 0;
+    if ((list ->plus == 1 && *ap != '-') || (list->space == 1 && *ap != '-'))
+        i = 1;
+    if (*ap == '-')
+    {
+        arr[i++] = '-';
+        j = 1;
+    }
+    while (max-- > 0)
+        arr[i++] = '0';
     while (ap[j])
         arr[i++] = ap[j++];
     return (i);
@@ -74,12 +140,12 @@ int     flag_and_width_d(t_lists *list, char *ar1, char *ar2, size_t len)
     int     i;
 
     i = 0;
-    if (list->plus == 1)
+    if (list->plus == 1 && *ar2 != '-')
     {
         ar1[i] = '+';
         i = fill_zero(ar1, list, ar2, len);
     }
-    else if (list->space == 1)
+    else if (list->space == 1 && *ar2 != '-')
     {
         ar1[i] = ' ';
         i = fill_zero(ar1, list, ar2, len);
@@ -102,7 +168,7 @@ void    print_d_i(t_lists *list, va_list ap)
     if ((size_t)list->precision > len && list->precision)
     {
         arr_1 = ft_strnew((size_t)list->precision + 1);
-        len = list->precision - len;
+        len = list->precision - len + 1;
         i = flag_and_width_d(list, arr_1, arr_d, len);
         if (list->precision < list->width && list->width)
         {
@@ -117,10 +183,13 @@ void    print_d_i(t_lists *list, va_list ap)
     }
     else if ((size_t)list->width > len && list->width)
     {
-        arr_1 = ft_strnew((size_t)list->width + 1);
         len = list->width - len;
-        i =
-        printf("arr_d = %s", arr_1);
+        arr_1 = ft_strnew(len);
+        if (list->minus == 1)
+            i = d_minus_left(arr_1, arr_d, len, list);
+        else if(list->minus == 0)
+            i = d_minus_right(arr_1, arr_d, len, list);
+        ft_print_free(arr_1, list, i);
     }
 }
 
@@ -128,7 +197,6 @@ void    print_d_or_i(t_lists *list, char *specifier, va_list ap)
 {
     if ((*specifier == 'd' || *specifier == 'i') && !list->mod)
         print_d_i(list, ap);
-
 
 }
 
