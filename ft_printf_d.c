@@ -2,12 +2,16 @@
 
 #include "ft_printf.h"
 
-void    ft_printf_d(t_lists *list, int type)
+void    ft_printf_d(t_lists *list, char *specifier)
 {
-    int d;
+    if (*specifier == 'd' || *specifier == 'i')
+    {
 
-    d = 0;
-    d = type;
-    list->minus = 0;
+
+    }
+    else
+
+
+
 
 }

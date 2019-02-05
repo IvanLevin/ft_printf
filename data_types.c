@@ -1,6 +1,12 @@
 
 #include "ft_printf.h"
 
+int    ft_get_type(va_list ap, t_lists *list)
+{
+    if (list->mod == 'h')
+        return ((short int)va_arg(ap, int));
+}
+
 int     data_types(char *argv, va_list ap, t_lists *list)
 {
     if (*argv == 's')
@@ -13,10 +19,12 @@ int     data_types(char *argv, va_list ap, t_lists *list)
         ft_printf_c(list, ap);
         return (1);
     }
-    if (*argv == 'd')
+    if (*argv == 'd' || *argv == 'i' || *argv == 'u')
     {
-        ft_printf_d(list, va_arg(ap, int));
+        ft_printf_d(list, argv);
         return (1);
     }
+    if (*argv == 'x' || *argv == 'X')
+        ft_printf_x(ft_get_type(ap, list), list);
     return (0);
 }
