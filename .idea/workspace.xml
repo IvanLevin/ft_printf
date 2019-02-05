@@ -64,7 +64,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4228474">
+    <splitter split-orientation="horizontal" split-proportion="0.48160762">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -141,7 +141,7 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/ft_printf_cs.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="448">
+                <state relative-caret-position="379">
                   <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
                 </state>
               </provider>
@@ -154,8 +154,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/data_types.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="114">
-                  <caret line="6" column="40" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="40" />
+                <state relative-caret-position="551">
+                  <caret line="29" column="1" lean-forward="true" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
@@ -274,6 +274,7 @@
       <workItem from="1549014409997" duration="993000" />
       <workItem from="1549019434388" duration="3062000" />
       <workItem from="1549027176071" duration="869000" />
+      <workItem from="1549352734475" duration="241000" />
     </task>
     <task id="LOCAL-00001" summary="precision">
       <created>1548932885081</created>
@@ -307,12 +308,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15383000" />
+    <option name="totallyTimeSpent" value="15624000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1424" height="1353" extended-state="0" />
+    <frame x="0" y="23" width="1725" height="1353" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15340087" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12774807" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -506,15 +507,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ft_printf_cs.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
+        <state relative-caret-position="379">
           <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data_types.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="40" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="40" />
+        <state relative-caret-position="551">
+          <caret line="29" column="1" lean-forward="true" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
         </state>
       </provider>
     </entry>
