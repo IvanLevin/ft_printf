@@ -7,7 +7,6 @@ void    search_flag(char *argv, int len, t_lists *list)
     int     j;
 
     j = 0;
-    printf("%s", list->flag);
     if (argv)
     {
         if ((list->flag[j] = ft_len_strchr(argv, PLUS, len)))
@@ -104,7 +103,7 @@ char	*ft_accuracy(char *argv, va_list ap, t_lists *list)
 
 char    *ft_modifier(char *argv, t_lists *list)
 {
-    list->mod = *argv;
+//    list->mod = *argv;
     argv++;
     if (list->mod == 'h' && *argv == 'h')
     {

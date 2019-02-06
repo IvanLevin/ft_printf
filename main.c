@@ -4,6 +4,21 @@
 
 int		main(void)
 {
+	int d  = 3;
+	ft_printf("*%+5.8d*\n", d);
+	ft_printf("*%-5.8d*\n", d);
+	ft_printf("*%05.4d*\n", d);
+	ft_printf("*% 5.3d*\n", d);
+	ft_printf("*% 3.5d*\n", d);
+	ft_printf("*% -5d*\n", d);
+	printf("\n");
+	d = -3;
+	ft_printf("*%+5.8d*\n", d);
+	ft_printf("*%-5.8d*\n", d);
+	ft_printf("*%05.4d*\n", d);
+	ft_printf("*% 5.3d*\n", d);
+	ft_printf("*% 3.5d*\n", d);
+	ft_printf("*% -5d*\n", d);
 //	char a[5] = "Hello";
 //	char  d = 'A';
 //	printf("*%#6.12X*\n", 214850000);

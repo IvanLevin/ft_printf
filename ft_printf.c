@@ -4,10 +4,11 @@
 
 void	initialize(t_lists *list)
 {
-	list->spec = 0;
 	list->len = 0;
 	list->minus = 0;
 	list->zero = 0;
+	list->space = 0;
+	list->plus = 0;
 	list->width = 0;
 	list->precision = 0;
 	list->mod = 0;
