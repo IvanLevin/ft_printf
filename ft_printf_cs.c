@@ -36,12 +36,11 @@ void		ft_printf_s(char *str, t_lists *list)
 	int		tmp_i; // индекс для сохранения позиции на выводе
 	int		space; // кол - во пробелов(либо нулей)
 
-    list->spec = 's';
 	tmp_i = 0;
 	len = ft_strlen(str);
-	if ((int)len > list->accouracy && list->accouracy)
+	if ((int)len > list->precision && list->precision)
 	{
-        len = (size_t)list->accouracy;
+        len = (size_t)list->precision;
 		tmp2 = ft_strnew(len);
 		str = ft_strncpy(tmp2, str, len);
 	}
