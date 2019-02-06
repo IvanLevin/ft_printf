@@ -6,8 +6,9 @@ int		main(void)
 {
 //	char a[5] = "Hello";
 //	char  d = 'A';
-
-	ft_printf("%2.4d", -3);
+//	printf("*%#6.12X*\n", 214850000);
+//printf("%d", 2200000000);
+    ft_printf("*%d*", 23);
 //	ft_printf("%#0--+*.* TEST_WORD \n", 32, 12);
 //
 //	printf("\n-----------------------\n");

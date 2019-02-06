@@ -51,5 +51,9 @@ int         fill_zero(char *arr, t_lists *list, char *ap, size_t max);
 int         flag_and_width_d(t_lists *list, char *ar1, char *ar2, size_t len);
 int         pr_right_d(char *arr, char *arr2, t_lists *list);
 int         pr_left_d(char *arr, char *arr2, t_lists *list);
+int         d_minus_left(char *arr_1, char *arr_d, size_t len, t_lists *list);
+int         d_minus_right(char *arr_1, char *arr_d, size_t len, t_lists *list);
+int         extra_rigth_d(char *arr_1, char *arr_d, size_t len, t_lists *list);
+void    	ft_printf_x(long long n, t_lists *list);
 
 #endif

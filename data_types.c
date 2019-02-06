@@ -1,10 +1,10 @@
 
 #include "ft_printf.h"
 
-int    ft_get_type(va_list ap, t_lists *list)
+long long   ft_get_type(va_list ap, t_lists *list)
 {
-    if (list->mod == 'h')
-        return ((short int)va_arg(ap, int));
+    if (!list->mod)
+        return (va_arg(ap, unsigned int));
 }
 
 int     data_types(char *argv, va_list ap, t_lists *list)
@@ -25,6 +25,9 @@ int     data_types(char *argv, va_list ap, t_lists *list)
         return (1);
     }
     if (*argv == 'x' || *argv == 'X')
+    {
         ft_printf_x(ft_get_type(ap, list), list);
+        return (1);
+    }
     return (0);
 }
