@@ -56,9 +56,14 @@ void    print_d_or_i(t_lists *list, char *specifier, va_list ap)
 {
     if (*specifier == 'd' || *specifier == 'i')
         print_d_i(list, ft_itoa_long(va_arg(ap, int)));
-//    if (*specifier == 'd' || *specifier == 'i')
-//        print_d_i(list, ft_itoa_long(va_arg(ap, long long)));
-
+    else if ((*specifier == 'd' || *specifier == 'i') && ft_strchr(&list->mod, 'h'))
+        print_d_i(list, ft_itoa_long(va_arg(ap, long long)));
+    else if ((*specifier == 'd' || *specifier == 'i') && ft_strchr(&list->mod, 'l'))
+        print_d_i(list, ft_itoa_long(va_arg(ap, long)));
+    else if ((*specifier == 'd' || *specifier == 'i') && ft_strchr(&list->mod, 'G'))
+        print_d_i(list, ft_itoa_long(va_arg(ap, unsigned int)));
+    else if ((*specifier == 'd' || *specifier == 'i') && ft_strchr(&list->mod, 'K'))
+        print_d_i(list, ft_itoa_long(va_arg(ap, long long)));
 }
 
 void    ft_printf_d_i_u(t_lists *list, char *specifier, va_list ap)
