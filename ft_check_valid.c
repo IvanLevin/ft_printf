@@ -7,7 +7,6 @@ void    search_flag(char *argv, int len, t_lists *list)
     int     j;
 
     j = 0;
-    printf("%s", list->flag);
     if (argv)
     {
         if ((list->flag[j] = ft_len_strchr(argv, PLUS, len)))

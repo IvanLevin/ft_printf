@@ -15,7 +15,7 @@ int     data_types(char *argv, va_list ap, t_lists *list)
     }
     if (*argv == 'd' || *argv == 'i' || *argv == 'u')
     {
-        ft_printf_d(list, argv, ap);
+        ft_printf_d_i_u(list, argv, ap);
         return (1);
     }
     return (0);
