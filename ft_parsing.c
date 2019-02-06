@@ -19,10 +19,10 @@ char	*parsing(char *argv, va_list ap, t_lists *list)
 	{
 		argv = ft_accuracy(argv, ap, list);
 	}
-//	if (*argv == 'h' || *argv == 'l' || *argv == 'L')
-//	{
-//		argv = ft_modifier(argv, list);
-//	}
+	if (*argv == 'h' || *argv == 'l' || *argv == 'L')
+	{
+		argv = ft_modifier(argv, list);
+	}
 	if(data_types(argv, ap, list))
 	{
 	    argv++;
