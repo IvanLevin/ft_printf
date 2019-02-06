@@ -16,7 +16,6 @@
 
 typedef struct	s_lists
 {
-	char	spec;		// спецификатор
     int	    len;		// для сохранения выведенных байт
 	int		minus;		// сохранения флага '-'
 	int		zero;		// сохранения флага '0'
@@ -54,5 +53,6 @@ int         pr_left_d(char *arr, char *arr2, t_lists *list);
 int         d_minus_left(char *arr_1, char *arr_d, size_t len, t_lists *list);
 int         d_minus_right(char *arr_1, char *arr_d, size_t len, t_lists *list);
 int         extra_rigth_d(char *arr_1, char *arr_d, size_t len, t_lists *list);
+int         extra_rigth_d_two(char *arr_1, char *arr_d, size_t len, t_lists *list);
 
 #endif
