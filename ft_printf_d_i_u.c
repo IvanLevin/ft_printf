@@ -1,7 +1,7 @@
 
 #include "ft_printf.h"
 
-void    print_width_d_i (t_lists *list, char *arr_d, size_t len)
+void    print_width_d_i (t_lists *list, char *arr_d, long long len)
 {
     char    *arr_1;
     int     i;
@@ -16,11 +16,11 @@ void    print_width_d_i (t_lists *list, char *arr_d, size_t len)
     ft_print_free(arr_1, list, i);
 }
 
-void    print_precision_d_i (t_lists *list, char *arr_d, size_t len)
+void    print_precision_d_i (t_lists *list, char *arr_d, long long len)
 {
-    char    *arr_1;
-    char    *arr_2;
-    int     i;
+    char        *arr_1;
+    char        *arr_2;
+    int   i;
 
     i = 0;
     arr_1 = ft_strnew((size_t)list->precision + 1);
@@ -40,24 +40,24 @@ void    print_precision_d_i (t_lists *list, char *arr_d, size_t len)
 
 void    print_d_i(t_lists *list, void *arr_d)
 {
-    size_t  len;
+    long long  len;
 
-    len = ft_strlen(arr_d);
+    len = (long long)ft_strlen(arr_d);
     if ((size_t)list->precision > len && list->precision)
         print_precision_d_i (list, arr_d, len);
 
     else if ((size_t)list->width > len && list->width)
         print_width_d_i (list, arr_d, len);
     else
-        ft_print_free(arr_d, list, (int)len);
+        ft_print_free(arr_d, list, (long long)len);
 }
 
 void    print_d_or_i(t_lists *list, char *specifier, va_list ap)
 {
     if (*specifier == 'd' || *specifier == 'i')
-        print_d_i(list, ft_itoa(va_arg(ap, int)));
-    if (*specifier == 'd' || *specifier == 'i')
-        print_d_i(list, ft_itoa(va_arg(ap, int)));
+        print_d_i(list, ft_itoa_long(va_arg(ap, int)));
+//    if (*specifier == 'd' || *specifier == 'i')
+//        print_d_i(list, ft_itoa_long(va_arg(ap, long long)));
 
 }
 

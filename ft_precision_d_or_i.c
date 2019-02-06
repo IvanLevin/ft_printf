@@ -50,7 +50,7 @@ int     pr_right_d(char *arr, char *arr2, t_lists *list)
     return (p);
 }
 
-int     fill_zero(char *arr, t_lists *list, char *ap, size_t max)
+int     fill_zero(char *arr, t_lists *list, char *ap, long long max)
 {
     int     i;
     int     j;
@@ -71,7 +71,7 @@ int     fill_zero(char *arr, t_lists *list, char *ap, size_t max)
     return (i);
 }
 
-int     flag_and_width_d(t_lists *list, char *ar1, char *ar2, size_t len)
+int     flag_and_width_d(t_lists *list, char *ar1, char *ar2, long long len)
 {
     int     i;
 

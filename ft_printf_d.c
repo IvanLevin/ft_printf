@@ -1,7 +1,7 @@
 
 #include "ft_printf.h"
 
-int     extra_rigth_d_two(char *arr_1, char *arr_d, size_t len, t_lists *list)
+int     extra_rigth_d_two(char *arr_1, char *arr_d, long long len, t_lists *list)
 {
    int  i;
    int  j;
@@ -19,7 +19,7 @@ int     extra_rigth_d_two(char *arr_1, char *arr_d, size_t len, t_lists *list)
     return (i);
 }
 
-int     extra_rigth_d(char *arr_1, char *arr_d, size_t len, t_lists *list)
+int     extra_rigth_d(char *arr_1, char *arr_d, long long len, t_lists *list)
 {
     int     i;
     int     j;
@@ -44,12 +44,12 @@ int     extra_rigth_d(char *arr_1, char *arr_d, size_t len, t_lists *list)
     return (i);
 }
 
-int     d_minus_right(char *arr_1, char *arr_d, size_t len, t_lists *list)
+int     d_minus_right(char *arr_1, char *arr_d, long long len, t_lists *list)
 {
     int     i;
 
     i = 0;
-    len = (size_t)list->width - ft_strlen(arr_d);
+    len = (long long)list->width - (long long)ft_strlen(arr_d);
     if (list->zero == 1)
         i = extra_rigth_d(arr_1, arr_d, len, list);
     else if (list->zero == 0)
@@ -57,7 +57,7 @@ int     d_minus_right(char *arr_1, char *arr_d, size_t len, t_lists *list)
     return (i);
 }
 
-int     d_minus_left(char *arr_1, char *arr_d, size_t len, t_lists *list)
+int     d_minus_left(char *arr_1, char *arr_d, long long len, t_lists *list)
 {
     int     i;
     int     j;
