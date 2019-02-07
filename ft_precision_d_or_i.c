@@ -57,9 +57,9 @@ int     fill_zero(char *arr, t_lists *list, char *ap, long long max)
 
     i = 0;
     j = 0;
-    if ((list ->plus == 1 && *ap != '-') || (list->space == 1 && *ap != '-'))
+    if (list->spec != 'u' && ((list->plus == 1 && *ap != '-') || (list->space == 1 && *ap != '-')))
         i = 1;
-    if (*ap == '-')
+    if (*ap == '-' && list->spec != 'u')
     {
         arr[i++] = '-';
         j = 1;
@@ -78,7 +78,7 @@ int     flag_and_width_d(t_lists *list, char *ar1, char *ar2, long long len)
     i = 0;
     if (*ar2 == '-')
         len++;
-    if (list->plus == 1 && *ar2 != '-')
+    if (list->plus == 1 && *ar2 != '-' && list->spec != 'u')
     {
         ar1[i] = '+';
         i = fill_zero(ar1, list, ar2, len);
