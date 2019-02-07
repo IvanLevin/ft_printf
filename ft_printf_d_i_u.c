@@ -52,24 +52,24 @@ void    print_d_i(t_lists *list, void *arr_d)
         ft_print_free(arr_d, list, (long long)len);
 }
 
-void    print_d_or_i(t_lists *list, char *specifier, va_list ap)
+void    ft_printf_d_i_u(t_lists *list, char *specifier, va_list ap)
 {
     if (*specifier == 'd' || *specifier == 'i')
         print_d_i(list, ft_itoa_long(va_arg(ap, int)));
     else if ((*specifier == 'd' || *specifier == 'i') && ft_strchr(&list->mod, 'h'))
-        print_d_i(list, ft_itoa_long(va_arg(ap, long long)));
+        print_d_i(list, ft_itoa_long(va_arg(ap, long long int)));
     else if ((*specifier == 'd' || *specifier == 'i') && ft_strchr(&list->mod, 'l'))
         print_d_i(list, ft_itoa_long(va_arg(ap, long)));
     else if ((*specifier == 'd' || *specifier == 'i') && ft_strchr(&list->mod, 'G'))
         print_d_i(list, ft_itoa_long(va_arg(ap, unsigned int)));
     else if ((*specifier == 'd' || *specifier == 'i') && ft_strchr(&list->mod, 'K'))
-        print_d_i(list, ft_itoa_long(va_arg(ap, long long)));
-}
-
-void    ft_printf_d_i_u(t_lists *list, char *specifier, va_list ap)
-{
-    if (*specifier == 'd' || *specifier == 'i')
-        print_d_or_i(list, specifier, ap);
-//    else
-//        print_u(list, specifier);
+        print_d_i(list, ft_itoa_long(va_arg(ap, long long int)));
+    if (*specifier == 'u')
+    {
+        list->spec = 'u';
+        if (*specifier == 'u')
+            print_d_i(list, ft_itoa_long(va_arg(ap, unsigned int)));
+        else if (*specifier == 'u' && ft_strchr(&list->mod, 'l'))
+            print_d_i(list, ft_itoa_long(va_arg(ap, unsigned long long int)));
+    }
 }
