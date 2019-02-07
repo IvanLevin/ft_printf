@@ -13,6 +13,7 @@ void	initialize(t_lists *list) // если не занулить, каждому
 	list->width = 0;
 	list->precision = 0;
 	list->mod = 0;
+	list->spec = 0;
 }
 
 int		ft_printf(const char *argv, ...)
