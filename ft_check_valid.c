@@ -25,7 +25,10 @@ void    search_flag(char *argv, int len, t_lists *list)
             j++;
         }
         if ((list->flag[j] = ft_len_strchr(argv, LATTICE, len)))
+        {
+            list->sharp = 2;
             j++;
+        }
         if ((list->flag[j] = ft_len_strchr(argv, ZERO, len)))
 			list->zero = 1;
     }

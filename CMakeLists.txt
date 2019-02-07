@@ -74,14 +74,15 @@ add_executable(ft_printf
         libft/ft_toupper.c
         data_types.c
         ft_check_valid.c
+        ft_itoa_long.c
         ft_parsing.c
+        ft_precision_d_or_i.c
+        ft_print_x.c
         ft_printf.c
         ft_printf.h
         ft_printf_c.c
         ft_printf_cs.c
         ft_printf_d.c
         ft_printf_d_i_u.c
-        ft_precision_d_or_i.c
-        ft_itoa_long.c
         main.c
-        print_free.c ft_print_x.c)
+        print_free.c)
