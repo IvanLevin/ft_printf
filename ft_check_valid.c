@@ -25,7 +25,10 @@ void    search_flag(char *argv, int len, t_lists *list)
             j++;
         }
         if ((list->flag[j] = ft_len_strchr(argv, LATTICE, len)))
+        {
+            list->sharp = 2;
             j++;
+        }
         if ((list->flag[j] = ft_len_strchr(argv, ZERO, len)))
 			list->zero = 1;
     }
@@ -54,7 +57,9 @@ char    *ft_flag(char *argv, t_lists *list)
 char	*ft_width(char *argv, va_list ap, t_lists *list)
 {
     size_t  len;
+    char *tmp;
 
+    tmp = NULL;
     if (*argv == '*')
     {
         list->width = va_arg(ap, int);
@@ -66,11 +71,13 @@ char	*ft_width(char *argv, va_list ap, t_lists *list)
         len = 0;
         while (argv[len] >= '0' && argv[len] <= '9')
             len++;
-        list->width = ft_atoi(ft_strncpy(ft_strnew(len), argv, len));
+        tmp = ft_strnew(len);
+        list->width = ft_atoi(ft_strncpy(tmp, argv, len));
         while (*argv >= '0' && *argv <= '9')
             argv++;
         return (argv);
     }
+//    free(tmp);
     return (argv);
 }
 
@@ -81,7 +88,9 @@ char	*ft_accuracy(char *argv, va_list ap, t_lists *list)
     if (*argv == '.')
     {
         argv++;
-        if (*argv == '*')
+        if (*argv != '*' && !(*argv >= '0' && *argv <= '9'))
+            list->dot = 1;
+        else if (*argv == '*')
         {
             list->precision = va_arg(ap, int);
             argv++;
@@ -103,7 +112,7 @@ char	*ft_accuracy(char *argv, va_list ap, t_lists *list)
 
 char    *ft_modifier(char *argv, t_lists *list)
 {
-//    list->mod = *argv;
+    list->mod = *argv;
     argv++;
     if (list->mod == 'h' && *argv == 'h')
     {

@@ -16,6 +16,7 @@
 
 typedef struct	s_lists
 {
+    int     sharp;      // для решетки
     int	    len;		// для сохранения выведенных байт
 	int		minus;		// сохранения флага '-'
 	int		zero;		// сохранения флага '0'
@@ -26,6 +27,7 @@ typedef struct	s_lists
     int		precision;	// сохранение точности
 	char	mod;		// модификатор спецификатора
 	char	spec;
+	int     dot;
 }				t_lists;
 
 int     	ft_printf(const char *argv, ...);
@@ -56,5 +58,6 @@ int         d_minus_right(char *arr_1, char *arr_d, long long len, t_lists *list
 int         extra_rigth_d(char *arr_1, char *arr_d, long long len, t_lists *list);
 int         extra_rigth_d_two(char *arr_1, char *arr_d, long long len, t_lists *list);
 char		*ft_itoa_long(long long n);
+void        ft_printf_x(long long n, t_lists *list);
 
 #endif

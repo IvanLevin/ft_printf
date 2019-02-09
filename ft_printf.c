@@ -2,10 +2,9 @@
 
 #include "ft_printf.h"
 
-void	initialize(t_lists *list) // если не занулить, каждому полю присваивается 
-//рандомное значение и все идет по пизде
+void	initialize(t_lists *list)
 {
-	list->len = 0;
+	list->dot = 0;
 	list->minus = 0;
 	list->zero = 0;
 	list->space = 0;
@@ -26,22 +25,16 @@ int		ft_printf(const char *argv, ...)
 	if (!(list = (t_lists*)malloc(sizeof(t_lists))))
 		return (-1);
 	list->len = 0;
-
-	// !!! структуру надо занулять при каждой инициализации!
 	while (*argv)
 	{
 		if (*argv == '%')
 		{
 			initialize(list);
 			argv = parsing((char *)argv, ap, list);
-			// функция пропускающая проценты и их содержание
 		}
 		else
 		{
-			/* какая - то фукнция для обработки обычных
-			 * данных, которые нужно вывести */
-
-			write(1, argv, 1); // вот она
+			write(1, argv, 1);
 			list->len += 1;
 			argv++;
 		}
@@ -49,6 +42,6 @@ int		ft_printf(const char *argv, ...)
 	}
 	va_end(ap);
 	len = list->len;
-	free(list);
-	return (len); // printf возвращает кол-во выведенных байт
+//	free(list);
+	return (len);
 }

@@ -32,7 +32,6 @@ void    print_precision_d_i (t_lists *list, char *arr_d, long long len)
         i = list->minus == 1 ? pr_right_d(arr_1, arr_2, list) : pr_left_d(arr_1, arr_2, list);
         free(arr_1);
         ft_print_free(arr_2, list, i);
-        free(arr_2);
     }
     else
         ft_print_free(arr_1, list, i);
@@ -54,10 +53,10 @@ void    print_d_i(t_lists *list, void *arr_d)
 
 void    ft_printf_d_i_u(t_lists *list, char *specifier, va_list ap)
 {
-    if (*specifier == 'd' || *specifier == 'i')
+    if ((*specifier == 'd' || *specifier == 'i' ) && !list->mod)
         print_d_i(list, ft_itoa_long(va_arg(ap, int)));
     else if ((*specifier == 'd' || *specifier == 'i') && ft_strchr(&list->mod, 'h'))
-        print_d_i(list, ft_itoa_long(va_arg(ap, long long int)));
+        print_d_i(list, ft_itoa_long(va_arg(ap, int)));
     else if ((*specifier == 'd' || *specifier == 'i') && ft_strchr(&list->mod, 'l'))
         print_d_i(list, ft_itoa_long(va_arg(ap, long)));
     else if ((*specifier == 'd' || *specifier == 'i') && ft_strchr(&list->mod, 'G'))

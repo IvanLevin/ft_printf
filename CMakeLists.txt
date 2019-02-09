@@ -83,5 +83,6 @@ add_executable(ft_printf
         ft_printf_cs.c
         ft_printf_d.c
         ft_printf_d_i_u.c
+        ft_print_x.c
         main.c
         print_free.c)
