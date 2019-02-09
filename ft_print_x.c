@@ -79,9 +79,11 @@ int			fill_zeros(int zeros, char *tmp, int tmp_i, t_lists *list)
 
 int         zeros_amount_x(t_lists *list, int len)
 {
-    if (list->zero && list->precision)
+    if (list->zero && list->precision && !list->width)
         return (0);
-    if (list->zero)
+    if (list->zero && !list->precision && !list->width)
+        return (list->width - list->sharp - len);
+    if (list->zero && !list->precision && list->width)
         return (list->width - list->sharp - len);
     if (len > 0 && list->precision)
         return (list->precision - len);
@@ -92,22 +94,11 @@ int         zeros_amount_x(t_lists *list, int len)
     return (0);
 }
 
-int			space_amount_x(t_lists *list, int len)
+int         space_amount_x2(t_lists *list, int len)
 {
-    if (list->zero && list->precision)
-        return (list->width - len);
-    else if (list->zero)
-        return (0);
-    if (len > 0 && list->width > len && list->width < list->precision && list->sharp)
-    {
-        if (list->width < list->precision)
-            return (list->width - len - list->sharp);
-    }
-    else if (!len && list->width)
-        return (list->width);
-    else if (len > 0 && list->width && !list->precision)
+    if (len > 0 && list->width && !list->precision)
         return (list->width - list->sharp - len);
-    else if (len > 0 && list->width > list->precision && list->sharp)
+    else if (len > 0 && list->width > list->precision && list->sharp )
         return (list->width - list->sharp - len);
     else if (len > 0 && list->width > list->precision && !list->sharp && !list->minus)
         return (list->width - list->precision);
@@ -116,9 +107,29 @@ int			space_amount_x(t_lists *list, int len)
     return (0);
 }
 
+int			space_amount_x(t_lists *list, int len)
+{
+    if (list->zero && list->precision && !list->width)
+        return (list->width - len);
+    if (list->zero && list->precision && list->width)
+        if (list->precision < len)
+            return (list->width - len);
+        else
+            return (list->width - list->precision - list->sharp);
+    else if (list->zero)
+        return (0);
+    if (len > 0 && list->width > len && list->width < list->precision && list->sharp)
+        if (list->width < list->precision)
+            return (list->width - len - list->sharp);
+    if (list->width > len && len < list->precision)
+        return (list->width - list->precision - list->sharp);
+    else if (!len && list->width)
+        return (list->width);
+    else
+        return (space_amount_x2(list, len));
+}
 
-
-void        ft_printf_x(long long n, t_lists *list)
+void        ft_printf_x(long long n, t_lists *list, int base)
 {
     char    *str;
     char    *tmp;
@@ -128,12 +139,15 @@ void        ft_printf_x(long long n, t_lists *list)
     int     space;
 
     tmp_i = 0;
-    str = ft_itoa_base(n, 16);
+    if (base == 8)
+        list->sharp = 0;
+    str = ft_itoa_base(n, base);
     len = ft_strlen(str);
     tmp = ft_strnew(len > list->precision ? len + list->width + list->sharp\
             : len + list->precision + list->sharp);
     zeros = zeros_amount_x(list, (int)len);
     space = space_amount_x(list, (int)len);
+//    printf("%d %d", zeros, space);
     if (!list->minus && space > 0 && !zeros)
     {
         tmp_i += fill_space_x(space, tmp, tmp_i, list);
@@ -141,11 +155,13 @@ void        ft_printf_x(long long n, t_lists *list)
     }
     else if (!list->minus && zeros)
     {
-        tmp_i += fill_space_x(space - list->sharp, tmp, tmp_i, list);
+        tmp_i += fill_space_x(space, tmp, tmp_i, list);
         tmp_i += fill_sharp(tmp, tmp_i, list);
         tmp_i += fill_zeros(zeros, tmp, tmp_i, list);
+        zeros = 0;
     }
     tmp_i += fill_sharp(tmp, tmp_i, list);
+    tmp_i += fill_zeros(zeros, tmp, tmp_i, list);
     while (*str)
         tmp[tmp_i++] = *str++;
     if (list->minus && space > 0)

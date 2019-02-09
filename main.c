@@ -28,6 +28,7 @@ int		main(void)
 //	printf("*%#6.12X*\n", 214850000);
 //  printf("%d", 2200000000);
     ft_printf("|%d||%x|\n", 23, 255);
+
     printf("|%x|\n", 4081);
     ft_printf("|%x|\n", 4081);
 
@@ -78,6 +79,15 @@ int		main(void)
 
     printf("|%0*x|\n", 8, 15);
     ft_printf("|%0*x|\n", 8, 15);
+////
+////    printf("ABC\n");
+////    ft_printf("ABC\n");
+////
+////    printf("%d\n", 5);
+////    ft_printf("%d\n", 5);
+//
+//    printf("|%#028.24x|\n", 337598646);
+//    ft_printf("|%#028.24x|\n", 337598646);
 //    t = printf("o4 = |%-10.s|\n", z);
 // 	t1 = ft_printf("m4 = |%-10.s|\n", z);
 // 	printf("o4 = %d\n",t);
