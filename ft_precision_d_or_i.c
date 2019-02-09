@@ -11,9 +11,11 @@ int     pr_left_d(char *arr, char *arr2, t_lists *list)
     i = 0;
     j = 0;
     p = 0;
-    if (*arr == '+')
+    if (*arr == '+' || *arr == ' ' || *arr == '-')
         max = list->width - list->precision - 1;
-    max = list->width - list->precision;
+    else
+        max = list->width - list->precision;
+
     while (max > 0)
     {
         arr2[j++] = ' ';
