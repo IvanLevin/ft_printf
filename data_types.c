@@ -4,7 +4,7 @@
 long long   ft_get_type(va_list ap, t_lists *list)
 {
     if (!list->mod)
-        return (va_arg(ap, int));
+        return ((unsigned)va_arg(ap, int));
     else if ((ft_strchr(&list->mod, 'h')))
         return ((unsigned short)va_arg(ap, int));
     else if ((ft_strchr(&list->mod, 'l')))

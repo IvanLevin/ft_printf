@@ -18,6 +18,6 @@ void		ft_print_free(char *str, t_lists *list, long long max)
 		max--;
 		i++;
 	}
-//	free(tmp);
+	free(tmp);
 	list->len += i;
 }
