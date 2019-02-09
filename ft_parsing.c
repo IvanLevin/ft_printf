@@ -14,8 +14,8 @@ char	*parsing(char *argv, va_list ap, t_lists *list)
 	{
 		argv = ft_width(argv, ap, list);
 	}
-	if (*argv == '.' && (*(argv+1) == '*' || \
-				(*(argv+1) >= '0' && *(argv+1) <= '9')))
+	if (*argv == '.' || (*argv == '.' && (*(argv+1) == '*' || \
+				(*(argv+1) >= '0' && *(argv+1) <= '9'))))
 	{
 		argv = ft_accuracy(argv, ap, list);
 	}

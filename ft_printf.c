@@ -4,7 +4,7 @@
 
 void	initialize(t_lists *list)
 {
-	list->len = 0;
+	list->dot = 0;
 	list->minus = 0;
 	list->zero = 0;
 	list->space = 0;

@@ -27,6 +27,7 @@ typedef struct	s_lists
     int		precision;	// сохранение точности
 	char	mod;		// модификатор спецификатора
 	char	spec;
+	int     dot;
 }				t_lists;
 
 int     	ft_printf(const char *argv, ...);

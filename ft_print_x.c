@@ -5,6 +5,8 @@ int         ft_itoa_len(long long n, int base)
     int     i;
 
     i = 0;
+    if (n < 0)
+        n *= -1;
     while (n >= (long long)base)
     {
         n /= base;
@@ -129,7 +131,7 @@ void        ft_printf_x(long long n, t_lists *list)
     str = ft_itoa_base(n, 16);
     len = ft_strlen(str);
     tmp = ft_strnew(len > list->precision ? len + list->width + list->sharp\
-            : list->precision + list->sharp);
+            : len + list->precision + list->sharp);
     zeros = zeros_amount_x(list, (int)len);
     space = space_amount_x(list, (int)len);
     if (!list->minus && space > 0 && !zeros)

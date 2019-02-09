@@ -84,7 +84,9 @@ char	*ft_accuracy(char *argv, va_list ap, t_lists *list)
     if (*argv == '.')
     {
         argv++;
-        if (*argv == '*')
+        if (*argv != '*' && !(*argv >= '0' && *argv <= '9'))
+            list->dot = 1;
+        else if (*argv == '*')
         {
             list->precision = va_arg(ap, int);
             argv++;
@@ -106,7 +108,7 @@ char	*ft_accuracy(char *argv, va_list ap, t_lists *list)
 
 char    *ft_modifier(char *argv, t_lists *list)
 {
-//    list->mod = *argv;
+    list->mod = *argv;
     argv++;
     if (list->mod == 'h' && *argv == 'h')
     {
