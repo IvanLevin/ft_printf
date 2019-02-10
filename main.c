@@ -79,6 +79,29 @@ int		main(void)
 
     printf("|%0*x|\n", 8, 15);
     ft_printf("|%0*x|\n", 8, 15);
+
+    printf("|%0 15.d|\n", 35489877);
+    ft_printf("|%0 15.d|\n", 35489877);
+
+    printf("|%015.3x|\n", 3);
+    ft_printf("|%015.3x|\n", 3);
+    printf("|%o|\n", 157865);
+    ft_printf("|%o|\n", 157865);
+
+    printf("|%o|\n", 157865);
+    ft_printf("|%o|\n", 157865);
+
+    printf("|%o|\n", -157865);
+    ft_printf("|%o|\n", -157865);
+
+    printf("|%1o|\n", -157865);
+    ft_printf("|%1o|\n", -157865);
+
+    printf("|%15o|\n", -157865);
+    ft_printf("|%15o|\n", -157865);
+
+
+
 ////
 ////    printf("ABC\n");
 ////    ft_printf("ABC\n");
