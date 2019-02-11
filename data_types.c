@@ -43,5 +43,7 @@ int     data_types(char *argv, va_list ap, t_lists *list)
         ft_printf_x(ft_get_type(ap, list), list, 8, *argv);
         return (1);
     }
-    return (0);
+    if (*argv == 'p')
+        ft_printf_p(list, va_arg(ap, long long));
+    return (1);
 }
