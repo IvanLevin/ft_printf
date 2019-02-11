@@ -4,14 +4,19 @@
 
 int		main(void)
 {
-	int d  = 3;
+	int d  = 5;
+
+	printf("*%-15p*\n", &d);
+    ft_printf("*%-15p*\n", &d);
+//	ft_printf("%18p", &d);
+//	ft_printf("%p\n", &d);
 //	ft_printf("*%u*\n", d);
 //	ft_printf("*%u*\n", d);
 //	ft_printf("*%u*\n", d);
 //	ft_printf("*%u*\n", d);
 //	ft_printf("*%u*\n", d);
-	printf("%+5.3d\n", d);
-	ft_printf("%+5.3d\n", d);
+//	printf("%+5.3d\n", d);
+//	ft_printf("%+5.3d\n", d);
 //	ft_printf("*%-5.8d*\n", d);
 //	ft_printf("*%05.4d*\n", d);
 //	ft_printf("*% 5.3d*\n", d);

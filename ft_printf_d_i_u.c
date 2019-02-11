@@ -1,7 +1,7 @@
 
 #include "ft_printf.h"
 
-void    print_width_d_i (t_lists *list, char *arr_d, long long len)
+static  void    print_width_d_i (t_lists *list, char *arr_d, long long len)
 {
     char    *arr_1;
     int     i;
@@ -16,7 +16,7 @@ void    print_width_d_i (t_lists *list, char *arr_d, long long len)
     ft_print_free(arr_1, list, i);
 }
 
-void    print_precision_d_i (t_lists *list, char *arr_d, long long len)
+static  void    print_precision_d_i (t_lists *list, char *arr_d, long long len)
 {
     char        *arr_1;
     char        *arr_2;
@@ -37,7 +37,7 @@ void    print_precision_d_i (t_lists *list, char *arr_d, long long len)
         ft_print_free(arr_1, list, i);
 }
 
-void    print_d_i(t_lists *list, void *arr_d)
+static  void    print_d_i(t_lists *list, void *arr_d)
 {
     long long  len;
 

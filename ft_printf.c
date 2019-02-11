@@ -42,6 +42,6 @@ int		ft_printf(const char *argv, ...)
 	}
 	va_end(ap);
 	len = list->len;
-//	free(list);
+	free(list);
 	return (len);
 }
