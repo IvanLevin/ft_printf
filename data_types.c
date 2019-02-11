@@ -35,12 +35,12 @@ int     data_types(char *argv, va_list ap, t_lists *list)
     }
     if (*argv == 'x' || *argv == 'X')
     {
-        ft_printf_x(ft_get_type(ap, list), list, 16);
+        ft_printf_x(ft_get_type(ap, list), list, 16, *argv);
         return (1);
     }
     if (*argv == 'o')
     {
-        ft_printf_x(ft_get_type(ap, list), list, 8);
+        ft_printf_x(ft_get_type(ap, list), list, 8, *argv);
         return (1);
     }
     return (0);
