@@ -32,7 +32,6 @@ void    ft_printf_c(t_lists *list, va_list ap)
     int     i;
 
     i = 0;
-    list->spec = 'c';
     char_c = va_arg(ap, int);
     first = (char )char_c;
     space = space_amount(list, 1);
@@ -41,7 +40,6 @@ void    ft_printf_c(t_lists *list, va_list ap)
     {
         i = print_c(&first, second, i);
         i = print_space(second, space, i);
-//        i++;
         ft_print_free(second, list, i);
     }
     else if (list->minus == 0)

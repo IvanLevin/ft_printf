@@ -7,20 +7,28 @@ void    search_flag(char *argv, int len, t_lists *list)
     int     j;
 
     j = 0;
-    printf("%s", list->flag);
     if (argv)
     {
         if ((list->flag[j] = ft_len_strchr(argv, PLUS, len)))
+        {
+            list->plus = 1;
             j++;
+        }
         if ((list->flag[j] = ft_len_strchr(argv, MINUS, len)))
         {
         	list->minus = 1;
             j++;
         }
         if ((list->flag[j] = ft_len_strchr(argv, SPACE, len)))
+        {
+            list->space = 1;
             j++;
+        }
         if ((list->flag[j] = ft_len_strchr(argv, LATTICE, len)))
+        {
+            list->sharp = 2;
             j++;
+        }
         if ((list->flag[j] = ft_len_strchr(argv, ZERO, len)))
 			list->zero = 1;
     }
@@ -49,7 +57,9 @@ char    *ft_flag(char *argv, t_lists *list)
 char	*ft_width(char *argv, va_list ap, t_lists *list)
 {
     size_t  len;
+    char *tmp;
 
+    tmp = NULL;
     if (*argv == '*')
     {
         list->width = va_arg(ap, int);
@@ -61,7 +71,8 @@ char	*ft_width(char *argv, va_list ap, t_lists *list)
         len = 0;
         while (argv[len] >= '0' && argv[len] <= '9')
             len++;
-        list->width = ft_atoi(ft_strncpy(ft_strnew(len), argv, len));
+        tmp = ft_strnew(len);
+        list->width = ft_atoi(ft_strncpy(tmp, argv, len));
         while (*argv >= '0' && *argv <= '9')
             argv++;
         return (argv);
@@ -76,9 +87,11 @@ char	*ft_accuracy(char *argv, va_list ap, t_lists *list)
     if (*argv == '.')
     {
         argv++;
-        if (*argv == '*')
+        if (*argv != '*' && !(*argv >= '0' && *argv <= '9'))
+            list->dot = 1;
+        else if (*argv == '*')
         {
-            list->accouracy = va_arg(ap, int);
+            list->precision = va_arg(ap, int);
             argv++;
             return (argv);
         }
@@ -87,7 +100,7 @@ char	*ft_accuracy(char *argv, va_list ap, t_lists *list)
             len = 0;
             while (argv[len] >= '0' && argv[len] <= '9')
                 len++;
-            list->accouracy = ft_atoi(ft_strncpy(ft_strnew(len), argv, len));
+            list->precision = ft_atoi(ft_strncpy(ft_strnew(len), argv, len));
             while (*argv >= '0' && *argv <= '9')
                 argv++;
             return (argv);

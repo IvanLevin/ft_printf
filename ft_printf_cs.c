@@ -20,9 +20,11 @@ int			fill_space(int space, char *tmp, int tmp_i, t_lists *list)
 
 int			space_amount(t_lists *list, int len)
 {
-	if (len > 0 && list->width > len)
+    if (list->width && !list->precision)
+        return (list->width);
+    if (len > 0 && list->width > len)
 		return (list->width - len);
-	else if (!len && list->width)
+    if (!len && list->width)
 		return (list->width);
 	return (0);
 }
@@ -36,12 +38,11 @@ void		ft_printf_s(char *str, t_lists *list)
 	int		tmp_i; // индекс для сохранения позиции на выводе
 	int		space; // кол - во пробелов(либо нулей)
 
-    list->spec = 's';
 	tmp_i = 0;
 	len = ft_strlen(str);
-	if ((int)len > list->accouracy && list->accouracy)
+	if ((int)len > list->precision && list->precision)
 	{
-        len = (size_t)list->accouracy;
+        len = (size_t)list->precision;
 		tmp2 = ft_strnew(len);
 		str = ft_strncpy(tmp2, str, len);
 	}
@@ -50,8 +51,10 @@ void		ft_printf_s(char *str, t_lists *list)
 	space = space_amount(list, (int)len);
 	if (list->minus == 0 && space > 0)
 		tmp_i += fill_space(space, tmp, tmp_i, list);
-	while (*str)
-		tmp[tmp_i++] = *str++;
+
+	if (!list->dot && list->precision)
+		while (*str)
+			tmp[tmp_i++] = *str++;
 	if (list->minus == 1 && space > 0)
 		tmp_i += fill_space(space, tmp, tmp_i, list);
 	ft_print_free(tmp, list, tmp_i);
