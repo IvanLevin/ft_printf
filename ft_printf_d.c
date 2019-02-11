@@ -1,7 +1,7 @@
 
 #include "ft_printf.h"
 
-int     extra_rigth_d_two(char *arr_1, char *arr_d, long long len, t_lists *list)
+static  int     extra_rigth_d_two(char *arr_1, char *arr_d, long long len, t_lists *list)
 {
    int  i;
    int  j;
@@ -19,7 +19,7 @@ int     extra_rigth_d_two(char *arr_1, char *arr_d, long long len, t_lists *list
     return (i);
 }
 
-int     extra_rigth_d(char *arr_1, char *arr_d, long long len, t_lists *list)
+static  int     extra_rigth_d(char *arr_1, char *arr_d, long long len, t_lists *list)
 {
     int     i;
     int     j;
@@ -37,8 +37,12 @@ int     extra_rigth_d(char *arr_1, char *arr_d, long long len, t_lists *list)
         len--;
         j++;
     }
-    while (len--)
-        arr_1[i++] = '0';
+    if(!list->dot)
+        while (len--)
+            arr_1[i++] = '0';
+    else
+        while (len--)
+            arr_1[i++] = ' ';
     while (arr_d[j])
         arr_1[i++] = arr_d[j++];
     return (i);
