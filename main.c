@@ -4,6 +4,8 @@
 
 int		main(void)
 {
+    double  d;
+
 //   int t;
 //   int t1;
 //
@@ -27,8 +29,8 @@ int		main(void)
 //	char  d = 'A';
 //	printf("*%#6.12X*\n", 214850000);
 //  printf("%d", 2200000000);
-    ft_printf("|%d||%x|\n", 23, 255);
-
+//    ft_printf("|%d||%x|\n", 23, 255);
+//
     printf("|%x|\n", 4081);
     ft_printf("|%x|\n", 4081);
 
@@ -166,6 +168,28 @@ int		main(void)
 
     printf("|%#19.17o|\n", -157865);
     ft_printf("|%#19.17o|\n", -157865);
+
+    d = 564.77658;
+
+    printf("ORIGIN|%.16f|\n", d);
+    ft_printf("   FT |%.16f|\n", d);
+
+//    printf("|% 15d|\n", 1);
+//    ft_printf("|% 15d|\n", 1);
+
+//    printf("|%1.x|\n", 0);
+//    ft_printf("|%1.x|\n", 0);
+//
+//    printf("|%#17.18x|\n", -10);
+//    ft_printf("|%#17.18x|\n", -10);
+//
+//    printf("|%#2.0001x|\n", 0);
+//    ft_printf("|%#2.0001x|\n", 0);
+
+//    printf("|%.d|\n", 0);
+//    ft_printf("|%.d|\n", 0);
+
+
 ////
 ////    printf("ABC\n");
 ////    ft_printf("ABC\n");

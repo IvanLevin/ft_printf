@@ -86,4 +86,4 @@ add_executable(ft_printf
         ft_print_x.c
         ft_printf_p.c
         main.c
-        print_free.c)
+        print_free.c ft_printf_f.c)
