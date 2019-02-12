@@ -169,10 +169,10 @@ int		main(void)
     printf("|%#19.17o|\n", -157865);
     ft_printf("|%#19.17o|\n", -157865);
 
-    d = 564.77658;
+    d = 52;
 
-    printf("ORIGIN|%.16f|\n", d);
-    ft_printf("   FT |%.16f|\n", d);
+    printf("ORIGIN|%.f|\n", d);
+    ft_printf("   FT |%.f|\n", d);
 
 //    printf("|% 15d|\n", 1);
 //    ft_printf("|% 15d|\n", 1);
