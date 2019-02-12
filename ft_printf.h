@@ -16,18 +16,21 @@
 
 typedef struct	s_lists
 {
-    int     sharp;      // для решетки
-    int	    len;		// для сохранения выведенных байт
-	int		minus;		// сохранения флага '-'
-	int		zero;		// сохранения флага '0'
-	char	flag[5];
-	int     space;
-	int     plus;
-	int 	width;		// сохранение ширины поля
-    int		precision;	// сохранение точности
-	char	mod;		// модификатор спецификатора
-	char	spec;
-	int     dot;
+    int         zeros;
+    int         spaces;
+    int         base;
+    int         sharp;      // для решетки
+    int	        len;		// для сохранения выведенных байт
+	int		    minus;		// сохранения флага '-'
+	int		    zero;		// сохранения флага '0'
+	char	    flag[5];
+	int         space;
+	int         plus;
+	int 	    width;		// сохранение ширины поля
+    int		    precision;	// сохранение точности
+	char	    mod;		// модификатор спецификатора
+	char	    spec;
+	int         dot;
 }				t_lists;
 
 int     	ft_printf(const char *argv, ...);
@@ -56,6 +59,7 @@ char		*ft_itoa_long(long long n);
 char        *ft_itoa_base(long long n, int base);
 void        ft_printf_p(t_lists *list, long long ap);
 int			fill_space_x(int space, char *tmp, int tmp_i, t_lists *list);
-void        ft_printf_x(long long n, t_lists *list, int base, char spec);
+void        ft_printf_x(long long n, t_lists *list);
+void        ft_printf_f(t_lists *list, double n);
 
 #endif

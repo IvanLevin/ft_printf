@@ -35,15 +35,20 @@ int     data_types(char *argv, va_list ap, t_lists *list)
     }
     if (*argv == 'x' || *argv == 'X')
     {
-        ft_printf_x(ft_get_type(ap, list), list, 16, *argv);
+        list->spec = *argv;
+        list->base = 16;
+        ft_printf_x(ft_get_type(ap, list), list);
         return (1);
     }
     if (*argv == 'o')
     {
-        ft_printf_x(ft_get_type(ap, list), list, 8, *argv);
+        list->base = 8;
+        ft_printf_x(ft_get_type(ap, list), list);
         return (1);
     }
     if (*argv == 'p')
         ft_printf_p(list, va_arg(ap, long long));
+    if (*argv == 'f')
+        ft_printf_f(list, va_arg(ap, double));
     return (1);
 }
