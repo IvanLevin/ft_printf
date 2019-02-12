@@ -77,13 +77,13 @@ add_executable(ft_printf
         ft_itoa_long.c
         ft_parsing.c
         ft_precision_d_or_i.c
+        ft_print_x.c
         ft_printf.c
         ft_printf.h
         ft_printf_c.c
         ft_printf_cs.c
         ft_printf_d.c
         ft_printf_d_i_u.c
-        ft_print_x.c
         ft_printf_p.c
         main.c
         print_free.c)
