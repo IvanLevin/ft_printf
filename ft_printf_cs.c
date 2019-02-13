@@ -1,7 +1,7 @@
 
 #include "ft_printf.h"
 
-int			fill_space(int space, char *tmp, int tmp_i, t_lists *list)
+static	int			fill_space(int space, char *tmp, int tmp_i, t_lists *list)
 {
 	int		i;
 

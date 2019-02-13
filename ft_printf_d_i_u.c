@@ -43,10 +43,10 @@ static  void    print_d_i(t_lists *list, void *arr_d)
     long long  len;
 
     len = (long long)ft_strlen(arr_d);
-    if ((size_t)list->precision > len && list->precision)
+    if ((long long)list->precision > len && list->precision)
         print_precision_d_i (list, arr_d, len);
 
-    else if ((size_t)list->width > len && list->width)
+    else if ((long long)list->width > len && list->width)
         print_width_d_i (list, arr_d, len);
     else
         ft_print_free(arr_d, list, (long long)len);
