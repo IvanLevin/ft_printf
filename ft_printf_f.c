@@ -3,12 +3,15 @@
 void        ft_print_fby1(double pnt, t_lists *list, int prec)
 {
     char    *tmp;
+    double  test = 0.5;
     ft_print_free(".", list, 1);
     tmp = ft_strnew((size_t)list->precision);
     while (prec)
     {
         pnt = pnt * 10;
-//        tmp = ft_strjoin(tmp, ft_itoa_long((long long)pnt));
+        if (prec == 1)
+            pnt += test;
+        tmp = ft_strjoin(tmp, ft_itoa_long((long long)pnt));
         tmp = ft_itoa_long((long long)pnt);
         ft_print_free(tmp, list, (long long)ft_strlen(tmp));
         pnt = pnt - (long)pnt;
@@ -18,6 +21,7 @@ void        ft_print_fby1(double pnt, t_lists *list, int prec)
 
 double      ft_get_addit(int prec)
 {
+
     double  addit;
 
     addit = 0.5;
@@ -26,6 +30,8 @@ double      ft_get_addit(int prec)
         addit /= 10;
         prec--;
     }
+//    printf("\n pnt = %f \n", pnt);
+//    printf("\nRESULT = %f\n", pnt);
     return (addit);
 }
 
@@ -36,9 +42,10 @@ void        ft_printf_f(t_lists *list, double n)
     char    *tmp;
     double  pnt;
     char    *tmp2;
+    double test;
 
     pnt = n - (long)n;
-    pnt += ft_get_addit(list->precision);
+//    test = ft_get_addit(list->precision);
     tmp = ft_strnew(500);
     tmp = ft_itoa_long((long long)n);
     len = ft_strlen(tmp);
