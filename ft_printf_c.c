@@ -1,7 +1,7 @@
 
 #include "ft_printf.h"
 
-int    print_space(char *second, int space, int start)
+static  int    print_space(char *second, int space, int start)
 {
     int     i;
 
@@ -14,7 +14,7 @@ int    print_space(char *second, int space, int start)
     return (i);
 }
 
-int     print_c(char *first, char *second, int i)
+static  int     print_c(char *first, char *second, int i)
 {
     int     j;
 

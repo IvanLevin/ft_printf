@@ -34,14 +34,14 @@ void        ft_printf_f(t_lists *list, double n)
     }
     pnt += addit;
 //    printf("%f", pnt);
-    if (list->precision)
-    {
+//    if (list->precision)
+//    {
         tmp[len] = '.';
         tmp2 = ft_strnew(500);
         tmp2 = ft_strjoin(tmp, ft_itoa_long((long long) pnt));
         len += ft_strlen(ft_itoa_long((long long) pnt)) + 1;
-    }
-    else
-        tmp2 = ft_strjoin(tmp, ft_itoa_long((long long) pnt));
+//    }
+//    else
+//        tmp2 = ft_strjoin(tmp, ft_itoa_long((long long) pnt));
     ft_print_free(tmp2, list, (int)len);
 }
