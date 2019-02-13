@@ -5,6 +5,7 @@
 int		main(void)
 {
     double  d;
+    double  f;
 
 //   int t;
 //   int t1;
@@ -31,8 +32,8 @@ int		main(void)
 //  printf("%d", 2200000000);
 //    ft_printf("|%d||%x|\n", 23, 255);
 //
-    printf("|%x|\n", 4081);
-    ft_printf("|%x|\n", 4081);
+//    printf("|%x|\n", 4081);
+//    ft_printf("|%x|\n", 4081);
 
 //    printf("|%10x|\n", 2147);
 //    ft_printf("|%10x|\n", 2147);
@@ -169,10 +170,9 @@ int		main(void)
 //    printf("|%#19.17o|\n", -157865);
 //    ft_printf("|%#19.17o|\n", -157865);
 //
-    d = 5482.2588797;
-//
-    printf("ORIGIN|%.21f|\n", d );
-    ft_printf("   FT |%.21f|\n", d);
+    d = 3.233421231231231123121371;
+    printf("ORIGIN|%.16f|\n", d);
+    ft_printf("    FT|%.16f|\n", d);
 
 //    printf("|% 15d|\n", 1);
 //    ft_printf("|% 15d|\n", 1);
