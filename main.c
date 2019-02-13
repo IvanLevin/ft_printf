@@ -31,8 +31,8 @@ int		main(void)
 //  printf("%d", 2200000000);
 //    ft_printf("|%d||%x|\n", 23, 255);
 //
-    printf("|%x|\n", 4081);
-    ft_printf("|%x|\n", 4081);
+//    printf("|%x|\n", 4081);
+//    ft_printf("|%x|\n", 4081);
 
 //    printf("|%10x|\n", 2147);
 //    ft_printf("|%10x|\n", 2147);
@@ -157,8 +157,8 @@ int		main(void)
 //
 //
 //
-//    printf("|%#19.17x|\n", -157865);
-//    ft_printf("|%#19.17x|\n", -157865);
+    printf("|%#19.17x|\n", -89);
+    ft_printf("|%#19.17x|\n", -89);
 //
 //    printf("|%#19.17X|\n", -157865);
 //    ft_printf("|%#19.17X|\n", -157865);
@@ -169,10 +169,10 @@ int		main(void)
 //    printf("|%#19.17o|\n", -157865);
 //    ft_printf("|%#19.17o|\n", -157865);
 //
-    d = 548878352.258879;
-//
-    printf("ORIGIN|%.19f|\n", d );
-    ft_printf("   FT |%.19f|\n", d);
+//    d = 0.887958045645476;
+////
+//    printf("ORIGIN|%.21f|\n", d );
+//    ft_printf("   FT |%.21f|\n", d);
 
 //    printf("|% 15d|\n", 1);
 //    ft_printf("|% 15d|\n", 1);

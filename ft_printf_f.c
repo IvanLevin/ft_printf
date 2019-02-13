@@ -8,7 +8,9 @@ void        ft_print_fby1(double pnt, t_lists *list, int prec)
     while (prec)
     {
         pnt = pnt * 10;
-//        tmp = ft_strjoin(tmp, ft_itoa_long((long long)pnt));
+//        if (prec == 1)
+//            pnt += 0.5;
+        tmp = ft_strjoin(tmp, ft_itoa_long((long long)pnt));
         tmp = ft_itoa_long((long long)pnt);
         ft_print_free(tmp, list, (long long)ft_strlen(tmp));
         pnt = pnt - (long)pnt;
@@ -20,7 +22,8 @@ double      ft_get_addit(int prec)
 {
     double  addit;
 
-    addit = 0.5;
+    addit = 50;
+//    prec -= 1;
     while (prec)
     {
         addit /= 10;
@@ -36,9 +39,14 @@ void        ft_printf_f(t_lists *list, double n)
     char    *tmp;
     double  pnt;
     char    *tmp2;
+    double  addit;
 
     pnt = n - (long)n;
-    pnt += ft_get_addit(list->precision);
+//    printf("%d", list->precision);
+    addit = ft_get_addit(list->precision);
+//    pnt += addit;
+//    printf("\nчисло на входе      |%.28f|\n", n);
+//    printf("\nчисло после сложения|%.28f|\n", pnt);
     tmp = ft_strnew(500);
     tmp = ft_itoa_long((long long)n);
     len = ft_strlen(tmp);

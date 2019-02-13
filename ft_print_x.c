@@ -20,14 +20,13 @@ char        *ft_itoa_base(long long n, int base)
     char    *str;
     int     count;
     int     len;
-    char    s[17] = "0123456789abcdef";
 
     count = 0;
     len = ft_itoa_len(n, base);
     str = (char *)malloc(sizeof(char) * len + 1);
     while (count <= len)
     {
-        str[len - count] = s[n % base];
+        str[len - count] = "0123456789abcdef"[n % base];
         n /= base;
         count++;
     }
