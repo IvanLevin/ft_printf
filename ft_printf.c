@@ -2,7 +2,7 @@
 
 #include "ft_printf.h"
 
-void	initialize(t_lists *list)
+static  void	initialize(t_lists *list)
 {
     list->sharp = 0;
 	list->dot = 0;

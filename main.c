@@ -157,8 +157,8 @@ int		main(void)
 //
 //
 //
-    printf("|%#19.17x|\n", -89);
-    ft_printf("|%#19.17x|\n", -89);
+//    printf("|%#19.17x|\n", -89);
+//    ft_printf("|%#19.17x|\n", -89);
 //
 //    printf("|%#19.17X|\n", -157865);
 //    ft_printf("|%#19.17X|\n", -157865);
@@ -169,10 +169,10 @@ int		main(void)
 //    printf("|%#19.17o|\n", -157865);
 //    ft_printf("|%#19.17o|\n", -157865);
 //
-//    d = 0.887958045645476;
-////
-//    printf("ORIGIN|%.21f|\n", d );
-//    ft_printf("   FT |%.21f|\n", d);
+    d = 10.84764656;
+//    unsigned long long i = 1844674407370955161;
+    printf("ORIGIN|%.16f|\n", d);
+    ft_printf("   FT |%.16f|\n", d);
 
 //    printf("|% 15d|\n", 1);
 //    ft_printf("|% 15d|\n", 1);

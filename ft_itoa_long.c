@@ -2,7 +2,7 @@
 
 #include "ft_printf.h"
 
-static	int	ft_len(long long n)
+int         ft_len(long long n)
 {
 	int		check;
 
