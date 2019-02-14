@@ -40,8 +40,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/ft_printf_f.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="540">
-                  <caret line="32" selection-start-line="32" selection-end-line="32" />
+                <state relative-caret-position="805">
+                  <caret line="72" column="38" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="38" />
                 </state>
               </provider>
             </entry>
@@ -58,7 +58,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/ft_itoa_long.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="713">
+                <state relative-caret-position="806">
                   <caret line="31" selection-start-line="31" selection-end-line="31" />
                 </state>
               </provider>
@@ -125,8 +125,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/main.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="273">
-                  <caret line="172" column="18" selection-start-line="172" selection-start-column="18" selection-end-line="172" selection-end-column="18" />
+                <state relative-caret-position="2865">
+                  <caret line="174" column="23" selection-start-line="174" selection-start-column="23" selection-end-line="174" selection-end-column="23" />
                 </state>
               </provider>
             </entry>
@@ -250,7 +250,9 @@
       <workItem from="1550043674992" duration="2292000" />
       <workItem from="1550050836074" duration="1588000" />
       <workItem from="1550065090585" duration="4245000" />
-      <workItem from="1550069797683" duration="5661000" />
+      <workItem from="1550069797683" duration="6123000" />
+      <workItem from="1550133412781" duration="184000" />
+      <workItem from="1550142515487" duration="343000" />
     </task>
     <task id="LOCAL-00001" summary="precision">
       <created>1548932885081</created>
@@ -319,7 +321,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50417000" />
+    <option name="totallyTimeSpent" value="51406000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -332,22 +334,23 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2176" height="1337" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09840675" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.100281164" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.5623243" visible="true" weight="0.32872254" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4376757" side_tool="true" visible="true" weight="0.32872254" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.5492034" weight="0.32872254" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.45079663" side_tool="true" weight="0.32872254" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.27198696" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.5346767" weight="0.32872254" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.70431113" weight="0.25630593" />
+      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.5215558" weight="0.32872254" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.7038425" weight="0.25630593" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5145267" side_tool="true" weight="0.39839357" />
-      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.68109614" weight="0.1514658" />
+      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.68041235" weight="0.15134256" />
       <window_info anchor="bottom" id="CMake" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -524,10 +527,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/print_free.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/libft/ft_strnew.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
           <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ft_itoa_long.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="806">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
     </entry>
@@ -573,31 +590,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/print_free.c">
+    <entry file="file://$PROJECT_DIR$/ft_printf_f.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="805">
+          <caret line="72" column="38" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="172" column="18" selection-start-line="172" selection-start-column="18" selection-end-line="172" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ft_itoa_long.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="713">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ft_printf_f.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="2865">
+          <caret line="174" column="23" selection-start-line="174" selection-start-column="23" selection-end-line="174" selection-end-column="23" />
         </state>
       </provider>
     </entry>

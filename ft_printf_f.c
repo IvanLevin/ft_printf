@@ -67,6 +67,10 @@ void        ft_printf_f(t_lists *list, double n)
     int     i;
     long double  five;
 
+    long int     minussd;
+
+    minussd = (long)n >> 63;
+    printf("MINUS = %ld \n", minussd);
     pnt = n - (long)n;
     tmp = ft_strnew(500);
     tmp = ft_itoa_long((long long)n);
