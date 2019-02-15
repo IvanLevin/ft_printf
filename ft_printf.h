@@ -19,16 +19,16 @@ typedef struct	s_lists
     int         zeros;
     int         spaces;
     int         base;
-    int         sharp;      // для решетки
-    int	        len;		// для сохранения выведенных байт
-	int		    minus;		// сохранения флага '-'
-	int		    zero;		// сохранения флага '0'
+    int         sharp;
+    int	        len;
+	int		    minus;
+	int		    zero;
 	char	    flag[5];
 	int         space;
 	int         plus;
-	int 	    width;		// сохранение ширины поля
-    int		    precision;	// сохранение точности
-	char	    mod;		// модификатор спецификатора
+	int 	    width;
+    int		    precision;
+	char	    mod;
 	char	    spec;
 	int         dot;
 }				t_lists;

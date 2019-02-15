@@ -1,8 +1,6 @@
 
 #include "ft_printf.h"
 
-// печатает строку, фришит память + запоминает сколько байт вывел
-
 void ft_print_free(char *str, t_lists *list, long long max)
 {
 	int		i;
