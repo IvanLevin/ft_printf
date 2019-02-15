@@ -35,6 +35,7 @@ typedef struct	s_lists
 
 int			ft_printf(const char *argv, ...);
 char		*parsing(char *argv, va_list ap, t_lists *list);
+char		*ft_percent(char *argv, t_lists *list);
 char		*ft_flag(char *argv, t_lists *list);
 void		search_flag(char *argv, int len, t_lists *list);
 char		*ft_width(char *argv, va_list ap, t_lists *list);
@@ -57,6 +58,8 @@ char		*ft_itoa_base(long long n, int base);
 void		ft_printf_p(t_lists *list, long long ap);
 int			fill_space_x(int space, char *tmp, int tmp_i);
 void		ft_printf_x(long long n, t_lists *list);
-void		ft_printf_f(t_lists *list, double n);
+void        ft_printf_f(t_lists *list, double n);
+int         ft_len(long long n);
+int			fill_zeros(int zeros, char *tmp, int tmp_i);
 
 #endif

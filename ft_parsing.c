@@ -2,7 +2,7 @@
 
 #include "ft_printf.h"
 
-char *parsing(char *argv, va_list ap, t_lists *list)
+char			*parsing(char *argv, va_list ap, t_lists *list)
 {
 	argv++;
 	if (*argv == '-' || *argv == '+' || *argv == ' ' || \
@@ -13,19 +13,20 @@ char *parsing(char *argv, va_list ap, t_lists *list)
 	if (*argv == '.' || (*argv == '.' && (*(argv + 1) == '*' || \
 		(*(argv + 1) >= '0' && *(argv + 1) <= '9'))))
 		argv = ft_accuracy(argv, ap, list);
-	else
-		if (*argv == '.')
-		{
-			list->precision = 0;
-			argv++;
-		}
+	if (*argv == '.')
+	{
+		list->precision = 0;
+		argv++;
+	}
+	if (*argv == '%')
+	{
+		argv = ft_percent(argv, list);
+		return (argv);
+	}
 	if (*argv == 'h' || *argv == 'l' || *argv == 'L')
 		argv = ft_modifier(argv, list);
 	if (data_types(argv, ap, list))
-	{
 		argv++;
-		// free_our_list(list); - будем подчищать этой функцией;
-	}
 	return (argv);
 }
 

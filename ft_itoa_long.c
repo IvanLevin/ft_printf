@@ -2,9 +2,9 @@
 
 #include "ft_printf.h"
 
-static int ft_len(long long n)
+int         ft_len(long long n)
 {
-	int check;
+	int		check;
 
 	check = 0;
 	if (n < 0)
@@ -18,20 +18,18 @@ static int ft_len(long long n)
 		check++;
 	}
 	if (n == 0 && check == 0)
-	{
 		check++;
-	}
 	return (check);
 }
 
-char *ft_itoa_long(long long n)
+char		*ft_itoa_long(long long n)
 {
 	char		*arr_itoa;
 	int 		sign;
 	long long 	len;
 	long int 	k;
 
-	k = (long int) n;
+	k = (long int)n;
 	len = 0;
 	len = ft_len(k);
 	sign = 0;
@@ -40,10 +38,8 @@ char *ft_itoa_long(long long n)
 		sign = 1;
 		k = -k;
 	}
-	if (!(arr_itoa = ((char *) malloc(sizeof(char) * len + 1))))
-	{
+	if (!(arr_itoa = ((char *)malloc(sizeof(char) * len + 1))))
 		return (NULL);
-	}
 	arr_itoa[len--] = '\0';
 	while (len >= 0)
 	{
@@ -51,9 +47,6 @@ char *ft_itoa_long(long long n)
 		k = k / 10;
 	}
 	if (sign == 1)
-	{
 		arr_itoa[0] = '-';
-	}
 	return (arr_itoa);
 }
-
