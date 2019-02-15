@@ -48,7 +48,6 @@ int			fill_space_x(int space, char *tmp, int tmp_i)
     return (i);
 }
 
-
 static  int       fill_sharp(char *tmp, int tmp_i, t_lists *list, int base)
 {
     if (list->sharp)
@@ -75,7 +74,6 @@ int			fill_zeros(int zeros, char *tmp, int tmp_i)
     }
     return (i);
 }
-
 
 static  int         zeros_amount_x(t_lists *list, int len)
 {
@@ -148,18 +146,19 @@ static  int			space_amount_x(t_lists *list, int len)
         return (space_amount_x2(list, len));
 }
 
-static  void        ft_change_letter(char *tmp, char spec) {
+static  void        ft_change_letter(char *tmp, char spec)
+{
     int i;
 
     i = 0;
     if (spec == 'X')
     {
-        while (tmp[i]) {
+        while (tmp[i])
+        {
             if ((tmp[i] >= 97 && tmp[i] <= 102) || tmp[i] == 'x')
                 tmp[i] = tmp[i] - 32;
             i++;
         }
-
     }
 }
 
@@ -207,4 +206,5 @@ void        ft_printf_x(long long n, t_lists *list)
     list->zeros = zeros_amount_x(list, (int)len);
     list->spaces = space_amount_x(list, (int)len);
     ft_printf_x2(list, tmp, str);
+    free(tmp);
 }
