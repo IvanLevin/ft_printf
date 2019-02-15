@@ -52,13 +52,13 @@ int         pr_right_d(char *arr, char *arr2, t_lists *list);
 int         pr_left_d(char *arr, char *arr2, t_lists *list);
 int         d_minus_left(char *arr_1, char *arr_d, long long len, t_lists *list);
 int         d_minus_right(char *arr_1, char *arr_d, long long len, t_lists *list);
-char		*ft_itoa_long(long long n);
+char		*ft_itoa_long(long double n);
 char        *ft_itoa_base(long long n, int base);
 void        ft_printf_p(t_lists *list, long long ap);
 int			fill_space_x(int space, char *tmp, int tmp_i);
 void        ft_printf_x(long long n, t_lists *list);
 void        ft_printf_f(t_lists *list, double n);
-int         ft_len(long long n);
+int         ft_len(__int128_t n);
 int			fill_zeros(int zeros, char *tmp, int tmp_i);
 
 #endif

@@ -1,6 +1,7 @@
 
 
 #include "ft_printf.h"
+#include <float.h>
 
 int		main(void)
 {
@@ -254,9 +255,11 @@ int		main(void)
     printf("ret ft   = %d\n", ft_printf("   FT |%-48.28f|", d));
 
     float z;
-    z = 922337203685477580;
+    z = -92233720368547758;
     printf("ret orig = %d\n", printf("ORIGIN|%f|", z));
     printf("ret ft   = %d\n", ft_printf("   FT |%f|", z));
+
+
 
 //    printf("|% 15d|\n", 1);
 //    ft_printf("|% 15d|\n", 1);
