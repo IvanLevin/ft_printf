@@ -62,7 +62,7 @@ static  int       fill_sharp(char *tmp, int tmp_i, t_lists *list, int base)
     return (0);
 }
 
-static  int			fill_zeros(int zeros, char *tmp, int tmp_i)
+int			fill_zeros(int zeros, char *tmp, int tmp_i)
 {
     int i;
 

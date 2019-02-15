@@ -59,5 +59,6 @@ int			fill_space_x(int space, char *tmp, int tmp_i);
 void        ft_printf_x(long long n, t_lists *list);
 void        ft_printf_f(t_lists *list, double n);
 int         ft_len(long long n);
+int			fill_zeros(int zeros, char *tmp, int tmp_i);
 
 #endif
