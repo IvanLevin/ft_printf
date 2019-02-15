@@ -2,9 +2,9 @@
 
 #include "ft_printf.h"
 
-static  void	initialize(t_lists *list)
+static void	initialize(t_lists *list)
 {
-    list->sharp = 0;
+	list->sharp = 0;
 	list->dot = 0;
 	list->minus = 0;
 	list->zero = 0;
@@ -16,14 +16,14 @@ static  void	initialize(t_lists *list)
 	list->spec = 0;
 }
 
-int		ft_printf(const char *argv, ...)
+int			ft_printf(const char *argv, ...)
 {
-	va_list	ap;
-	t_lists *list;
-	int 	len;
+	va_list		ap;
+	t_lists		*list;
+	int			len;
 
 	va_start(ap, argv);
-	if (!(list = (t_lists*)malloc(sizeof(t_lists))))
+	if (!(list = (t_lists *) malloc(sizeof(t_lists))))
 		return (-1);
 	list->len = 0;
 	while (*argv)
@@ -31,7 +31,7 @@ int		ft_printf(const char *argv, ...)
 		if (*argv == '%')
 		{
 			initialize(list);
-			argv = parsing((char *)argv, ap, list);
+			argv = parsing((char *) argv, ap, list);
 		}
 		else
 		{

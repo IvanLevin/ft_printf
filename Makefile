@@ -1,5 +1,3 @@
-
-
 NAME = FT_PRINTF
 LNAME = libft
 SRCS = *.c
