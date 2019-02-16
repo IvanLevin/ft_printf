@@ -53,7 +53,7 @@ int			pr_right_d(char *arr, char *arr2, t_lists *list);
 int			pr_left_d(char *arr, char *arr2, t_lists *list);
 int			d_minus_left(char *arr_1, char *arr_d, long long len, t_lists *list);
 int			d_minus_right(char *arr_1, char *arr_d, long long len, t_lists *list);
-char		*ft_itoa_long(long long n);
+char		*ft_itoa_long(__int128_t n);
 char		*ft_itoa_base(long long n, int base);
 void		ft_printf_p(t_lists *list, long long ap);
 int			fill_space_x(int space, char *tmp, int tmp_i);

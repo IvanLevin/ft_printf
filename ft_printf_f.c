@@ -113,8 +113,6 @@ void		ft_printf_f(t_lists *list, double n)
 	long	minus;
 	int		len;
 	char	*tmp;
-	int		tmp_i;
-	char	*str;
 
 	len = 0;
 	minus = *(long*)&n >> 63;

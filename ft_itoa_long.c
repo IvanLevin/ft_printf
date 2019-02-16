@@ -22,7 +22,7 @@ int         ft_len(__int128_t n)
 	return (check);
 }
 
-char		*ft_itoa_long(long long n)
+char		*ft_itoa_long(__int128_t n)
 {
 	char			*arr_itoa;
 	int				sign;
