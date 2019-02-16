@@ -59,6 +59,9 @@ void		ft_printf_s(char *str, t_lists *list)
 			tmp[tmp_i++] = *str++;
 	if (list->minus == 1 && space > 0)
 		tmp_i += fill_space(space, tmp, tmp_i, list);
+	else
+		while (*str)
+			tmp[tmp_i++] = *str++;
 	ft_print_free(tmp, list, tmp_i);
 	free(tmp);
 }
