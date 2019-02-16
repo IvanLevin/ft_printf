@@ -286,7 +286,7 @@ int		main(void)
 
     printf("%lu\n", -42);
     ft_printf("%lu\n", -42);
-    
+
     float z;
     z = -92233720368547758;
     printf("ret orig = %d\n", printf("ORIGIN|%f|", z));
