@@ -2,7 +2,7 @@
 
 #include "ft_printf.h"
 
-int         ft_len(__int128_t n)
+int		ft_len(__int128_t n)
 {
 	int		check;
 
@@ -22,7 +22,7 @@ int         ft_len(__int128_t n)
 	return (check);
 }
 
-char		*ft_itoa_long(long double n)
+char	*ft_itoa_long(long double n)
 {
 	char			*arr_itoa;
 	int				sign;
@@ -50,3 +50,4 @@ char		*ft_itoa_long(long double n)
 		arr_itoa[0] = '-';
 	return (arr_itoa);
 }
+

@@ -6,6 +6,8 @@ int		main(void)
 {
     double  d;
 
+    ft_printf("|%llx| \n", 9223372036854775807);
+    printf("|%llx| \n", 9223372036854775807);
 //   int t;
 //   int t1;
 //
@@ -169,94 +171,94 @@ int		main(void)
 //    printf("|%#19.17o|\n", -157865);
 //    ft_printf("|%#19.17o|\n", -157865);
 //
-    d = 12.51;
-    printf("ORIGIN|%#-.26f|\n", d);
-    ft_printf("   FT |%#-.26f|\n", d);
-
-    d = 14.51237;
-    printf("ORIGIN|%#-.32f|\n", d);
-    ft_printf("   FT |%#-.32f|\n", d);
-
-    d = -14.51237;
-    printf("ORIGIN|%#43.27f|\n", d);
-    ft_printf("   FT |%#43.27f|\n", d);
-
-    d = -14.51237;
-    printf("ORIGIN|%043.27f|\n", d);
-    ft_printf("   FT |%043.27f|\n", d);
-
-    d = -14.512378979878;
-    printf("ORIGIN|%-43.27f|\n", d);
-    ft_printf("   FT |%-43.27f|\n", d);
-
-    d = -14.512378979878;
-    printf("ret orig = %d\n", printf("ORIGIN|%#.27f|", d));
-    printf("ret ft   = %d\n", ft_printf("   FT |%#.27f|", d));
-
-    d = 14.512378979878;
-    printf("orig = %d\n", printf("ORIGIN|%#.f|", d));
-    printf("ft   = %d\n", ft_printf("   FT |%#.f|", d));
-
-    d = 14.512378;
-    printf("ret orig = %d\n", printf("ORIGIN|%#f|", d));
-    printf("ret ft   = %d\n", ft_printf("   FT |%#f|", d));
-
-    d = -14.512378;
-    printf("ret orig = %d\n", printf("ORIGIN|%-f|", d));
-    printf("ret ft   = %d\n", ft_printf("   FT |%-f|", d));
-
-    d = -14.5;
-    printf("ret orig = %d\n", printf("ORIGIN|%-f|", d));
-    printf("ret ft   = %d\n", ft_printf("   FT |%-f|", d));
-
-    d = -13.5;
-    printf("ret orig = %d\n", printf("ORIGIN|%-.f|", d));
-    printf("ret ft   = %d\n", ft_printf("   FT |%-.f|", d));
-
-    d = -14.5;
-    printf("ret orig = %d\n", printf("!!ORIGIN|%-.f|", d));
-    printf("ret ft   = %d\n", ft_printf("!!   FT |%-.f|", d));
-
-    d = 14698987987.556787987;
-    printf("ret orig = %d\n", printf("ORIGIN|%-.f|", d));
-    printf("ret ft   = %d\n", ft_printf("   FT |%-.f|", d));
-
-    d = 14698987987.556787987;
-    printf("ret orig = %d\n", printf("ORIGIN|%-.20f|", d));
-    printf("ret ft   = %d\n", ft_printf("   FT |%-.20f|", d));
-
-    d = -14698987987.556787987;
-    printf("ret orig = %d\n", printf("ORIGIN|%-50.20f|", d));
-    printf("ret ft   = %d\n", ft_printf("   FT |%-50.20f|", d));
-
-    d = -14698987987.556787987;
-    printf("ret orig = %d\n", printf("ORIGIN|%050.20f|", d));
-    printf("ret ft   = %d\n", ft_printf("   FT |%050.20f|", d));
-
-    d = -14698987987.556787987;
-    printf("ret orig = %d\n", printf("ORIGIN|%050.20f|", d));
-    printf("ret ft   = %d\n", ft_printf("   FT |%050.20f|", d));
-
-    d = -1467987.556787987;
-    printf("ret orig = %d\n", printf("ORIGIN|%50.20f|", d));
-    printf("ret ft   = %d\n", ft_printf("   FT |%50.20f|", d));
-
-    d = -1467987.556787987;
-    printf("ret orig = %d\n", printf("ORIGIN|%50.f|", d));
-    printf("ret ft   = %d\n", ft_printf("   FT |%50.f|", d));
-
-    d = -1467987.556787987;
-    printf("ret orig = %d\n", printf("ORIGIN|%.f|", d));
-    printf("ret ft   = %d\n", ft_printf("   FT |%.f|", d));
-
-    d = -1467987.556787987;
-    printf("ret orig = %d\n", printf("ORIGIN|%-48.28f|", d));
-    printf("ret ft   = %d\n", ft_printf("   FT |%-48.28f|", d));
-
-    float z;
-    z = 922337203685477580;
-    printf("ret orig = %d\n", printf("ORIGIN|%f|", z));
-    printf("ret ft   = %d\n", ft_printf("   FT |%f|", z));
+//    d = 12.51;
+//    printf("ORIGIN|%#-.26f|\n", d);
+//    ft_printf("   FT |%#-.26f|\n", d);
+//
+//    d = 14.51237;
+//    printf("ORIGIN|%#-.32f|\n", d);
+//    ft_printf("   FT |%#-.32f|\n", d);
+//
+//    d = -14.51237;
+//    printf("ORIGIN|%#43.27f|\n", d);
+//    ft_printf("   FT |%#43.27f|\n", d);
+//
+//    d = -14.51237;
+//    printf("ORIGIN|%043.27f|\n", d);
+//    ft_printf("   FT |%043.27f|\n", d);
+//
+//    d = -14.512378979878;
+//    printf("ORIGIN|%-43.27f|\n", d);
+//    ft_printf("   FT |%-43.27f|\n", d);
+//
+//    d = -14.512378979878;
+//    printf("ret orig = %d\n", printf("ORIGIN|%#.27f|", d));
+//    printf("ret ft   = %d\n", ft_printf("   FT |%#.27f|", d));
+//
+//    d = 14.512378979878;
+//    printf("orig = %d\n", printf("ORIGIN|%#.f|", d));
+//    printf("ft   = %d\n", ft_printf("   FT |%#.f|", d));
+//
+//    d = 14.512378;
+//    printf("ret orig = %d\n", printf("ORIGIN|%#f|", d));
+//    printf("ret ft   = %d\n", ft_printf("   FT |%#f|", d));
+//
+//    d = -14.512378;
+//    printf("ret orig = %d\n", printf("ORIGIN|%-f|", d));
+//    printf("ret ft   = %d\n", ft_printf("   FT |%-f|", d));
+//
+//    d = -14.5;
+//    printf("ret orig = %d\n", printf("ORIGIN|%-f|", d));
+//    printf("ret ft   = %d\n", ft_printf("   FT |%-f|", d));
+//
+//    d = -13.5;
+//    printf("ret orig = %d\n", printf("ORIGIN|%-.f|", d));
+//    printf("ret ft   = %d\n", ft_printf("   FT |%-.f|", d));
+//
+//    d = -14.5;
+//    printf("ret orig = %d\n", printf("!!ORIGIN|%-.f|", d));
+//    printf("ret ft   = %d\n", ft_printf("!!   FT |%-.f|", d));
+//
+//    d = 14698987987.556787987;
+//    printf("ret orig = %d\n", printf("ORIGIN|%-.f|", d));
+//    printf("ret ft   = %d\n", ft_printf("   FT |%-.f|", d));
+//
+//    d = 14698987987.556787987;
+//    printf("ret orig = %d\n", printf("ORIGIN|%-.20f|", d));
+//    printf("ret ft   = %d\n", ft_printf("   FT |%-.20f|", d));
+//
+//    d = -14698987987.556787987;
+//    printf("ret orig = %d\n", printf("ORIGIN|%-50.20f|", d));
+//    printf("ret ft   = %d\n", ft_printf("   FT |%-50.20f|", d));
+//
+//    d = -14698987987.556787987;
+//    printf("ret orig = %d\n", printf("ORIGIN|%050.20f|", d));
+//    printf("ret ft   = %d\n", ft_printf("   FT |%050.20f|", d));
+//
+//    d = -14698987987.556787987;
+//    printf("ret orig = %d\n", printf("ORIGIN|%050.20f|", d));
+//    printf("ret ft   = %d\n", ft_printf("   FT |%050.20f|", d));
+//
+//    d = -1467987.556787987;
+//    printf("ret orig = %d\n", printf("ORIGIN|%50.20f|", d));
+//    printf("ret ft   = %d\n", ft_printf("   FT |%50.20f|", d));
+//
+//    d = -1467987.556787987;
+//    printf("ret orig = %d\n", printf("ORIGIN|%50.f|", d));
+//    printf("ret ft   = %d\n", ft_printf("   FT |%50.f|", d));
+//
+//    d = -1467987.556787987;
+//    printf("ret orig = %d\n", printf("ORIGIN|%.f|", d));
+//    printf("ret ft   = %d\n", ft_printf("   FT |%.f|", d));
+//
+//    d = -1467987.556787987;
+//    printf("ret orig = %d\n", printf("ORIGIN|%-48.28f|", d));
+//    printf("ret ft   = %d\n", ft_printf("   FT |%-48.28f|", d));
+//
+//    float z;
+//    z = 922337203685477580;
+//    printf("ret orig = %d\n", printf("ORIGIN|%f|", z));
+//    printf("ret ft   = %d\n", ft_printf("   FT |%f|", z));
 
 //    printf("|% 15d|\n", 1);
 //    ft_printf("|% 15d|\n", 1);

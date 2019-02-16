@@ -1,7 +1,7 @@
 
 #include "ft_printf.h"
 
-void ft_print_free(char *str, t_lists *list, long long max)
+void	ft_print_free(char *str, t_lists *list, long long max)
 {
 	int		i;
 
@@ -16,3 +16,4 @@ void ft_print_free(char *str, t_lists *list, long long max)
 	}
 	list->len += i;
 }
+

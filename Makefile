@@ -1,16 +1,17 @@
-NAME = FT_PRINTF
-LNAME = libft
-SRCS = *.c
-LINCLUDES = libft
+NAME = libftprintf.a
+SRCS = *.c libft/*.c
+INCLUDES = libft
 OBJ = *.o
 NORMA = -Wall -Werror -Wextra
 
 all: $(NAME)
 
 $(NAME):
-	@make -C libft fclean && make -C libft
-	@gcc -I $(LINCLUDES)  $(NORMA) -c $(SRCS)
-	@gcc -L libft -lft -I $(LNAME) $(NORMA) -o $(NAME) $(OBJ)
+	gcc $(NORMA) -c $(SRCS)
+	ar rc $(NAME) $(OBJ)
+#	@make -C libft fclean && make -C libft
+#	@gcc -I $(INCLUDES)  $(NORMA) -c $(SRCS)
+#	@gcc -L libft -lft -I $(NAME) $(NORMA) -o $(NAME) $(OBJ)
 
 clean:
 	@rm -f $(OBJ)
@@ -21,3 +22,4 @@ fclean: clean
 	@rm -f libft/libft.a
 
 re: fclean all
+

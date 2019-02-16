@@ -3,7 +3,7 @@
 
 static int	fill_space(int space, char *tmp, int tmp_i, t_lists *list)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (space > 0)

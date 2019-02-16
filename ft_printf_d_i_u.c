@@ -1,7 +1,7 @@
 
 #include "ft_printf.h"
 
-static void	print_pl_sp_d_i(t_lists *list, char *arr_d, long long len)
+static	void	print_pl_sp_d_i(t_lists *list, char *arr_d, long long len)
 {
 	char	*arr_1;
 	int		i;
@@ -28,7 +28,7 @@ static void	print_pl_sp_d_i(t_lists *list, char *arr_d, long long len)
 	}
 }
 
-static void	print_width_d_i(t_lists *list, char *arr_d, long long len)
+static	void	print_width_d_i(t_lists *list, char *arr_d, long long len)
 {
 	char	*arr_1;
 	int		i;
@@ -37,24 +37,23 @@ static void	print_width_d_i(t_lists *list, char *arr_d, long long len)
 	len = list->width - len;
 	arr_1 = ft_strnew((size_t)len);
 	if (list->minus == 1)
-		i = d_minus_left(arr_1, arr_d, len, list);
+		i = d_min_left(arr_1, arr_d, len, list);
 	else
 		if (list->minus == 0)
-			i = d_minus_right(arr_1, arr_d, len, list);
+			i = d_min_right(arr_1, arr_d, len, list);
 	ft_print_free(arr_1, list, i);
 	free(arr_1);
 }
 
-static void	print_precision_d_i(t_lists *list, char *arr_d, long long len)
+static	void	print_precision_d_i(t_lists *list, char *arr_d, long long len)
 {
 	char	*arr_1;
 	char	*arr_2;
 	int		i;
 
-	i = 0;
 	arr_1 = ft_strnew((size_t) list->precision + 1);
 	len = list->precision - len;
-	i = flag_and_width_d(list, arr_1, arr_d, len);
+	i = flag_width_d(list, arr_1, arr_d, len);
 	if (list->precision < list->width && list->width)
 	{
 		arr_2 = ft_strnew((size_t) list->width);
@@ -71,9 +70,9 @@ static void	print_precision_d_i(t_lists *list, char *arr_d, long long len)
 	}
 }
 
-static void print_d_i(t_lists *list, void *arr_d)
+static	void	print_d_i(t_lists *list, void *arr_d)
 {
-	long long len;
+	long long	len;
 
 	len = (long long) ft_strlen(arr_d);
 	if ((long long) list->precision > len && list->precision)
@@ -92,7 +91,7 @@ static void print_d_i(t_lists *list, void *arr_d)
 	}
 }
 
-void		ft_printf_d_i_u(t_lists *list, char *specifier, va_list ap)
+void			ft_printf_d_i_u(t_lists *list, char *specifier, va_list ap)
 {
 	if ((*specifier == 'd' || *specifier == 'i') && !list->mod)
 		print_d_i(list, ft_itoa_long(va_arg(ap, int)));
