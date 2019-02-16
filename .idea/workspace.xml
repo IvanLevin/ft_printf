@@ -62,8 +62,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/ft_printf_f.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1460">
-                  <caret line="19" column="13" lean-forward="true" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+                <state relative-caret-position="522">
+                  <caret line="104" column="16" lean-forward="true" selection-start-line="104" selection-start-column="16" selection-end-line="104" selection-end-column="16" />
                 </state>
               </provider>
             </entry>
@@ -251,7 +251,7 @@
       <workItem from="1550239772854" duration="233000" />
       <workItem from="1550241632999" duration="4095000" />
       <workItem from="1550246109271" duration="88000" />
-      <workItem from="1550313827891" duration="2085000" />
+      <workItem from="1550313827891" duration="2684000" />
     </task>
     <task id="LOCAL-00001" summary="precision">
       <created>1548932885081</created>
@@ -327,7 +327,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59748000" />
+    <option name="totallyTimeSpent" value="60347000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -346,14 +346,14 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.54498595" visible="true" weight="0.29861677" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.54498595" weight="0.29861677" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.45501405" side_tool="true" weight="0.29861677" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.270952" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.44517338" weight="0.32790887" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.70431113" weight="0.25630593" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.70431113" visible="true" weight="0.25630593" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5145267" side_tool="true" weight="0.39839357" />
       <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.68109614" weight="0.08624899" />
       <window_info anchor="bottom" id="CMake" order="12" />
@@ -565,17 +565,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ft_printf_f.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1460">
-          <caret line="19" column="13" lean-forward="true" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="444">
           <caret line="276" column="36" lean-forward="true" selection-start-line="276" selection-start-column="16" selection-end-line="276" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ft_printf_f.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="104" column="16" lean-forward="true" selection-start-line="104" selection-start-column="16" selection-end-line="104" selection-end-column="16" />
         </state>
       </provider>
     </entry>
