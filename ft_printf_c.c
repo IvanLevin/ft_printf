@@ -3,7 +3,7 @@
 
 static int	print_space(char *second, int space, int start)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (space > i)
@@ -16,7 +16,7 @@ static int	print_space(char *second, int space, int start)
 
 static int	print_c(char *first, char *second, int i)
 {
-	int j;
+	int	j;
 
 	j = 0;
 	second[i++] = first[j];

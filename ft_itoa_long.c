@@ -2,7 +2,7 @@
 
 #include "ft_printf.h"
 
-int         ft_len(__int128_t n)
+int		ft_len(__int128_t n)
 {
 	int		check;
 
@@ -50,3 +50,4 @@ char		*ft_itoa_long(__int128_t n)
 		arr_itoa[0] = '-';
 	return (arr_itoa);
 }
+

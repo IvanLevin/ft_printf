@@ -3,7 +3,7 @@
 
 static	int		percent_zero(char *arr, t_lists *list, char *argv)
 {
-	int 	i;
+	int	i;
 
 	i = 0;
 	while (list->width-- > 1)
@@ -13,7 +13,7 @@ static	int		percent_zero(char *arr, t_lists *list, char *argv)
 }
 static	int 	percent_minus(char *arr, t_lists *list, char *argv)
 {
-	int 	i;
+	int	i;
 
 	i = 0;
 	if (list->minus)
@@ -43,7 +43,8 @@ char	*ft_percent(char *argv, t_lists *list)
 		argv++;
 		return (argv);
 	}
-	write(1, "%", 1);
+	ft_print_free("%", list, 1);
 	argv++;
 	return (argv);
 }
+

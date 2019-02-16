@@ -8,11 +8,11 @@ static	long long	ft_get_type(va_list ap, t_lists *list)
 	else if ((ft_strchr(&list->mod, 'h')))
 		return ((unsigned short)va_arg(ap, int));
 	else if ((ft_strchr(&list->mod, 'l')))
-		return (va_arg(ap, long));
+		return (va_arg(ap, long int));
 	else if ((ft_strchr(&list->mod, 'G')))
 		return (va_arg(ap, unsigned int));
 	else if ((ft_strchr(&list->mod, 'K')))
-		return (va_arg(ap, long long int));
+		return ((unsigned long long)va_arg(ap, long int));
 	return (0);
 }
 
@@ -41,3 +41,4 @@ int					data_types(char *argv, va_list ap, t_lists *list)
 		ft_printf_f(list, va_arg(ap, double));
 	return (1);
 }
+

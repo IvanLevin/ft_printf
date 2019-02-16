@@ -73,7 +73,7 @@ int		fill_zero(char *arr, t_lists *list, char *ap, long long max)
 	return (i);
 }
 
-int		flag_and_width_d(t_lists *list, char *ar1, char *ar2, long long len)
+int		flag_width_d(t_lists *list, char *ar1, char *ar2, long long len)
 {
 	int	i;
 

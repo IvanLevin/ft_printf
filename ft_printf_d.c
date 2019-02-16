@@ -30,36 +30,36 @@ static int	extra_rigth_d_two(char *a1, char *ad, long long len, t_lists *list)
 	return (i);
 }
 
-static int	extra_rigth_d(char *arr_1, char *arr_d, long long len, t_lists *list)
+static int	extra_rigth_d(char *ar_1, char *ar_d, long long len, t_lists *list)
 {
 	int		i;
 	int		j;
 
 	i = 0;
 	j = 0;
-	if ((list->plus == 1 && *arr_d == '-') || *arr_d == '-')
+	if ((list->plus == 1 && *ar_d == '-') || *ar_d == '-')
 	{
-		arr_1[i++] = '-';
+		ar_1[i++] = '-';
 		j++;
 	}
-	if (list->plus == 1 && *arr_d != '-')
+	if (list->plus == 1 && *ar_d != '-')
 	{
-		arr_1[i++] = '+';
+		ar_1[i++] = '+';
 		len--;
 	}
 	if (!list->dot)
-		i = ft_sp_zero_d_i(list, i, len, arr_1);
+		i = ft_sp_zero_d_i(list, i, len, ar_1);
 	else
 		while (len--)
-			arr_1[i++] = ' ';
-	while (arr_d[j])
-		arr_1[i++] = arr_d[j++];
+			ar_1[i++] = ' ';
+	while (ar_d[j])
+		ar_1[i++] = ar_d[j++];
 	return (i);
 }
 
-int			d_minus_right(char *arr_1, char *arr_d, long long len, t_lists *list)
+int			d_min_right(char *arr_1, char *arr_d, long long len, t_lists *list)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	len = (long long) list->width - (long long) ft_strlen(arr_d);
@@ -71,7 +71,7 @@ int			d_minus_right(char *arr_1, char *arr_d, long long len, t_lists *list)
 	return (i);
 }
 
-int			d_minus_left(char *arr_1, char *arr_d, long long len, t_lists *list)
+int			d_min_left(char *arr_1, char *arr_d, long long len, t_lists *list)
 {
 	int		i;
 	int		j;
@@ -79,7 +79,7 @@ int			d_minus_left(char *arr_1, char *arr_d, long long len, t_lists *list)
 	i = 0;
 	j = 0;
 	if ((list->plus == 1 && list->space == 1) \
- || (list->plus == 1 && list->space == 0))
+		|| (list->plus == 1 && list->space == 0))
 	{
 		arr_1[i++] = '+';
 		arr_d++;
