@@ -38,8 +38,8 @@ void		ft_printf_c(t_lists *list, va_list ap)
 	second = ft_strnew((size_t) list->width);
 	if (list->minus == 1)
 	{
-		i = print_c(&first, second, i);
-		i = print_space(second, space, i);
+		i += print_c(&first, second, i);
+		i += print_space(second, space, i);
 		ft_print_free(second, list, i);
 		free(second);
 	}

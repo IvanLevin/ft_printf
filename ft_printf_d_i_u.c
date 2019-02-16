@@ -10,22 +10,23 @@ static	void	print_pl_sp_d_i(t_lists *list, char *arr_d, long long len)
 	i = 0;
 	j = 0;
 	arr_1 = ft_strnew((size_t)len + 1);
-	if (list->plus == 1)
+	if (list->plus == 1 && *arr_d != '-' && list->spec != 'u')
 	{
 		arr_1[i++] = '+';
 		while (arr_d[j])
 			arr_1[i++] = arr_d[j++];
-		ft_print_free(arr_1, list, i);
-		free(arr_1);
 	}
-	else if (list->space == 1)
+	else if (list->space == 1 && *arr_d != '-')
 	{
 		arr_1[i++] = ' ';
 		while (arr_d[j])
 			arr_1[i++] = arr_d[j++];
-		ft_print_free(arr_1, list, i);
-		free(arr_1);
 	}
+	else
+		while (arr_d[j])
+			arr_1[i++] = arr_d[j++];
+	ft_print_free(arr_1, list, i);
+	free(arr_1);
 }
 
 static	void	print_width_d_i(t_lists *list, char *arr_d, long long len)
@@ -81,7 +82,7 @@ static	void	print_d_i(t_lists *list, void *arr_d)
 	{
 		if ((long long) list->width > len && list->width)
 			print_width_d_i(list, arr_d, len);
-		else if (list->plus == 1 || list->space == 1)
+		else if ((list->plus == 1 || list->space == 1))
 			print_pl_sp_d_i(list, arr_d, len);
 		else
 			{
@@ -97,25 +98,23 @@ void			ft_printf_d_i_u(t_lists *list, char *specifier, va_list ap)
 		print_d_i(list, ft_itoa_long(va_arg(ap, int)));
 	else if ((*specifier == 'd' || *specifier == 'i') &&
 		ft_strchr(&list->mod, 'h'))
-		print_d_i(list, ft_itoa_long(va_arg(ap, int)));
+		print_d_i(list, ft_itoa_long((short int)va_arg(ap, int)));
 	else if ((*specifier == 'd' || *specifier == 'i') &&
 		ft_strchr(&list->mod, 'l'))
 		print_d_i(list, ft_itoa_long(va_arg(ap, long)));
 	else if ((*specifier == 'd' || *specifier == 'i') &&
 		ft_strchr(&list->mod, 'G'))
-		print_d_i(list, ft_itoa_long((char)va_arg(ap, unsigned int)));
+		print_d_i(list, ft_itoa_long((signed char)va_arg(ap, int)));
 	else if ((*specifier == 'd' || *specifier == 'i') &&
 		ft_strchr(&list->mod, 'K'))
 		print_d_i(list, ft_itoa_long(va_arg(ap, long long int)));
 	if (*specifier == 'u')
 	{
 		list->spec = 'u';
-		if (*specifier == 'u')
+		if (*specifier == 'u' && ft_strchr(&list->mod, 'l'))
+			print_d_i(list, ft_itoa_long(va_arg(ap, unsigned long long int)));
+		else if (*specifier == 'u')
 			print_d_i(list, ft_itoa_long(va_arg(ap, unsigned int)));
-		else
-			if (*specifier == 'u' && ft_strchr(&list->mod, 'l'))
-				print_d_i(list,
-					ft_itoa_long(va_arg(ap, unsigned long long int)));
 	}
 }
 

@@ -32,6 +32,7 @@ int					data_types(char *argv, va_list ap, t_lists *list)
 	}
 	else if (*argv == 'o')
 	{
+	    list->spec = *argv;
 		list->base = 8;
 		ft_printf_x(ft_get_type(ap, list), list);
 	}
