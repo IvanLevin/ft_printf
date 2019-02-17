@@ -12,6 +12,7 @@ char			*parsing(char *argv, va_list ap, t_lists *list)
 		argv = ft_width(argv, ap, list);
 	if (*argv == '.' || (*argv == '.' && (*(argv + 1) == '*' || \
 		(*(argv + 1) >= '0' && *(argv + 1) <= '9'))))
+	    list->dotzero = *(argv + 1) == '0' ? 1 : 0;
 		argv = ft_accuracy(argv, ap, list);
 	if (*argv == '.')
 	{

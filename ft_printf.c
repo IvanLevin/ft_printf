@@ -39,7 +39,6 @@ int			ft_printf(const char *argv, ...)
 			list->len += 1;
 			argv++;
 		}
-
 	}
 	va_end(ap);
 	len = list->len;
