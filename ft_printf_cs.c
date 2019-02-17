@@ -23,11 +23,11 @@ static int	fill_space(int space, char *tmp, int tmp_i, t_lists *list)
 
 int			space_amount(t_lists *list, int len)
 {
-	if (list->width && !list->precision)
-		return (list->width);
 	if (len > 0 && list->width > len)
 		return (list->width - len);
 	if (!len && list->width)
+		return (list->width);
+	if (list->width && !list->precision)
 		return (list->width);
 	return (0);
 }
@@ -54,14 +54,11 @@ void		ft_printf_s(char *str, t_lists *list)
 	space = space_amount(list, (int) len);
 	if (list->minus == 0 && space > 0)
 		tmp_i += fill_space(space, tmp, tmp_i, list);
-	if (!list->dot && list->precision)
+//	if (!list->dot && list->precision)
 		while (*str)
 			tmp[tmp_i++] = *str++;
 	if (list->minus == 1 && space > 0)
 		tmp_i += fill_space(space, tmp, tmp_i, list);
-	else
-		while (*str)
-			tmp[tmp_i++] = *str++;
 	ft_print_free(tmp, list, tmp_i);
 	free(tmp);
 }
