@@ -11,7 +11,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7287214-d24b-4668-8f48-051b6e2fc99e" name="Default Changelist" comment="" />
+    <list default="true" id="f7287214-d24b-4668-8f48-051b6e2fc99e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/x_amount.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x_filler.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_printf_cs.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_printf_cs.c" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,8 +60,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/x_amount.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-276">
-                  <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+                <state relative-caret-position="594">
+                  <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
                 </state>
               </provider>
             </entry>
@@ -136,17 +141,26 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/ft_printf_c.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="549">
+                <state relative-caret-position="931">
                   <caret line="49" column="13" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/ft_printf_cs.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="603">
+                  <caret line="53" column="1" lean-forward="true" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-315">
-                  <caret line="42" column="9" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+                <state relative-caret-position="-37">
+                  <caret line="56" column="26" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
                 </state>
               </provider>
             </entry>
@@ -235,7 +249,6 @@
         <option value="$PROJECT_DIR$/ft_printf_d_i_u.c" />
         <option value="$PROJECT_DIR$/ft_itoa_long.c" />
         <option value="$PROJECT_DIR$/ft_parsing.c" />
-        <option value="$PROJECT_DIR$/ft_printf_cs.c" />
         <option value="$PROJECT_DIR$/ft_printf_c.c" />
         <option value="$PROJECT_DIR$/data_types.c" />
         <option value="$PROJECT_DIR$/ft_printf.c" />
@@ -245,12 +258,13 @@
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/main.c" />
         <option value="$PROJECT_DIR$/x_amount.c" />
+        <option value="$PROJECT_DIR$/ft_printf_cs.c" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="2248" />
+    <option name="width" value="2113" />
     <option name="height" value="1295" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -358,6 +372,8 @@
       <workItem from="1550397166276" duration="107000" />
       <workItem from="1550397287357" duration="807000" />
       <workItem from="1550399334381" duration="75000" />
+      <workItem from="1550400388038" duration="637000" />
+      <workItem from="1550401086521" duration="107000" />
     </task>
     <task id="LOCAL-00001" summary="precision">
       <created>1548932885081</created>
@@ -450,11 +466,18 @@
       <option name="project" value="LOCAL" />
       <updated>1550399362610</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="xXo separated to 3 files + normed">
+      <created>1550400459740</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1550400459740</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78881000" />
+    <option name="totallyTimeSpent" value="79625000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -466,9 +489,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="2248" height="1295" extended-state="0" />
+    <frame x="0" y="23" width="2113" height="1295" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13463283" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14582327" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -479,11 +502,11 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.27076676" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.4653179" weight="0.32757202" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.7034682" weight="0.32427984" />
+      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.4653179" weight="0.32687446" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.7034682" visible="true" weight="0.32350463" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5145267" side_tool="true" weight="0.39839357" />
       <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.68109614" weight="0.10089504" />
-      <window_info active="true" anchor="bottom" id="CMake" order="12" visible="true" weight="0.33698398" />
+      <window_info anchor="bottom" id="CMake" order="12" weight="0.33614153" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -637,13 +660,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ft_printf_cs.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libft/ft_strcmp.c">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -711,16 +727,9 @@
     <entry file="file://$PROJECT_DIR$/author">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/x_amount.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-276">
-          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ft_printf_c.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
+        <state relative-caret-position="931">
           <caret line="49" column="13" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
         </state>
       </provider>
@@ -770,10 +779,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/x_amount.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-315">
-          <caret line="42" column="9" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+        <state relative-caret-position="-37">
+          <caret line="56" column="26" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ft_printf_cs.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="603">
+          <caret line="53" column="1" lean-forward="true" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
         </state>
       </provider>
     </entry>
