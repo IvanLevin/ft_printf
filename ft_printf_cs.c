@@ -1,7 +1,7 @@
 
 #include "ft_printf.h"
 
-static int	fill_space(int space, char *tmp, int tmp_i, t_lists *list)
+static	int	fill_space(int space, char *tmp, int tmp_i, t_lists *list)
 {
 	int	i;
 
@@ -32,22 +32,22 @@ int			space_amount(t_lists *list, int len)
 	return (0);
 }
 
-void        ft_printf_s2(char *str,t_lists *list, char *tmp, int space)
+void		ft_printf_s2(char *str,t_lists *list, char *tmp, int space)
 {
-    int		tmp_i;
+	int	tmp_i;
 
-    tmp_i = 0;
-    if (list->minus == 0 && space > 0)
-        tmp_i += fill_space(space, tmp, tmp_i, list);
-    while (*str)
-        tmp[tmp_i++] = *str++;
-    if (list->minus == 1 && space > 0)
-        tmp_i += fill_space(space, tmp, tmp_i, list);
-    else
-        while (*str)
-            tmp[tmp_i++] = *str++;
-    ft_print_free(tmp, list, tmp_i);
-    free(tmp);
+	tmp_i = 0;
+	if (list->minus == 0 && space > 0)
+		tmp_i += fill_space(space, tmp, tmp_i, list);
+	while (*str)
+		tmp[tmp_i++] = *str++;
+	if (list->minus == 1 && space > 0)
+		tmp_i += fill_space(space, tmp, tmp_i, list);
+	else
+		while (*str)
+			tmp[tmp_i++] = *str++;
+	ft_print_free(tmp, list, tmp_i);
+	free(tmp);
 }
 
 void		ft_printf_s(char *str, t_lists *list)
@@ -56,7 +56,6 @@ void		ft_printf_s(char *str, t_lists *list)
 	size_t	output;
 	char	*tmp;
 	char	*tmp2;
-//	int		tmp_i;
 	int		space;
 
 	if (str == NULL)

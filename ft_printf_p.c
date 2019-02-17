@@ -10,7 +10,7 @@ static	int	fill_space_p(t_lists *list, size_t len)
 	return (0);
 }
 
-static int fill_x_o(char *arr, int i)
+static	int	fill_x_o(char *arr, int i)
 {
 	arr[i++] = '0';
 	arr[i++] = 'x';

@@ -16,7 +16,7 @@
 
 typedef struct	s_lists
 {
-    int         dotzero;
+	int         dotzero;
 	int			zeros;
 	int			spaces;
 	int			base;
@@ -67,3 +67,4 @@ int			space_amount_x(char *str, t_lists *list, int len);
 int			fill_sharp(char *tmp, int tmp_i, t_lists *list, int base);
 
 #endif
+

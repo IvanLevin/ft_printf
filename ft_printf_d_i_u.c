@@ -113,8 +113,8 @@ void			ft_printf_d_i_u(t_lists *list, char *specifier, va_list ap)
 	else if ((*specifier == 'd' || *specifier == 'i') &&
 		ft_strchr(&list->mod, 'G'))
 		print_d_i(list, ft_itoa_long((signed char)va_arg(ap, int)));
-	else if ((*specifier == 'd' || *specifier == 'i') &&
-		ft_strchr(&list->mod, 'K'))
+	else if ((*specifier == 'd' || *specifier == 'i') && ft_strchr
+	(&list->mod, 'K'))
 		print_d_i(list, ft_itoa_long(va_arg(ap, long long int)));
 	if (*specifier == 'u')
 	{

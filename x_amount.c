@@ -94,3 +94,4 @@ int				space_amount_x(char *str, t_lists *list, int len)
 	}
 	return (space_amount_x2(list, len));
 }
+

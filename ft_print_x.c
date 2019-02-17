@@ -93,5 +93,5 @@ void		ft_printf_x(long long n, t_lists *list)
 	list->zeros = zeros_amount_x(list, (int)len);
 	list->spaces = space_amount_x(str, list, (int)len);
 	ft_printf_x2(list, tmp, str);
-	free(tmp);
 }
+

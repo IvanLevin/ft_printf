@@ -130,3 +130,4 @@ void		ft_printf_f(t_lists *list, double n)
 	else
 		place_left_f(list, tmp, minus, n);
 }
+
