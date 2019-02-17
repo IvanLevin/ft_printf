@@ -24,12 +24,30 @@ static int	fill_space(int space, char *tmp, int tmp_i, t_lists *list)
 int			space_amount(t_lists *list, int len)
 {
 	if (list->width && !list->precision)
-		return (list->width);
+		return (list->width - len);
 	if (len > 0 && list->width > len)
 		return (list->width - len);
 	if (!len && list->width)
 		return (list->width);
 	return (0);
+}
+
+void        ft_printf_s2(char *str,t_lists *list, char *tmp, int space)
+{
+    int		tmp_i;
+
+    tmp_i = 0;
+    if (list->minus == 0 && space > 0)
+        tmp_i += fill_space(space, tmp, tmp_i, list);
+    while (*str)
+        tmp[tmp_i++] = *str++;
+    if (list->minus == 1 && space > 0)
+        tmp_i += fill_space(space, tmp, tmp_i, list);
+    else
+        while (*str)
+            tmp[tmp_i++] = *str++;
+    ft_print_free(tmp, list, tmp_i);
+    free(tmp);
 }
 
 void		ft_printf_s(char *str, t_lists *list)
@@ -38,10 +56,11 @@ void		ft_printf_s(char *str, t_lists *list)
 	size_t	output;
 	char	*tmp;
 	char	*tmp2;
-	int		tmp_i;
+//	int		tmp_i;
 	int		space;
 
-	tmp_i = 0;
+	if (str == NULL)
+		str = "(null)";
 	len = ft_strlen(str);
 	if ((int) len > list->precision && list->precision)
 	{
@@ -52,17 +71,6 @@ void		ft_printf_s(char *str, t_lists *list)
 	output = list->width > (int) len ? list->width : len;
 	tmp = ft_strnew(output);
 	space = space_amount(list, (int) len);
-	if (list->minus == 0 && space > 0)
-		tmp_i += fill_space(space, tmp, tmp_i, list);
-	if (!list->dot && list->precision)
-		while (*str)
-			tmp[tmp_i++] = *str++;
-	if (list->minus == 1 && space > 0)
-		tmp_i += fill_space(space, tmp, tmp_i, list);
-	else
-		while (*str)
-			tmp[tmp_i++] = *str++;
-	ft_print_free(tmp, list, tmp_i);
-	free(tmp);
+	ft_printf_s2(str, list, tmp, space);
 }
 
