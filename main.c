@@ -52,8 +52,8 @@ int		main(void)
 //    ft_printf("|%#10x|\n", 2147);
 //
 //
-//    printf("|%-#12x|\n", -1);
-//    ft_printf("|%-#12x|\n", -1);
+    printf("|%-#12x|\n", -1);
+    ft_printf("|%-#12x|\n", -1);
 //
 //    printf("|%#4.8x|\n", 2147);
 //    ft_printf("|%#4.8x|\n", 2147);

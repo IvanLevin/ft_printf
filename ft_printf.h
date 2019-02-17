@@ -62,5 +62,8 @@ void		ft_printf_x(long long n, t_lists *list);
 void		ft_printf_f(t_lists *list, double n);
 int			ft_len(__int128_t n);
 int			fill_zeros(int zeros, char *tmp, int tmp_i);
+int			zeros_amount_x(t_lists *list, int len);
+int			space_amount_x(char *str, t_lists *list, int len);
+int			fill_sharp(char *tmp, int tmp_i, t_lists *list, int base);
 
 #endif
