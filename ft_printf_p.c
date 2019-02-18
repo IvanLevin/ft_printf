@@ -61,7 +61,8 @@ void		ft_printf_p(t_lists *list, long long ap)
 	i = 0;
 	p = ft_itoa_base(ap, 16);
 	len = ft_strlen(p);
-	arr = ft_strnew((int) len > list->width ? (int) len + 2 : (len + 2) + list->width);
+	arr = ft_strnew((int) len > list->width ? (int) len + 2 :
+			(len + 2) + list->width);
 	if (list->width > (int) len + 2 && list->width && !list->precision &&
 	!list->minus)
 		i = print_p_left(p, list, len, arr);
