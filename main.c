@@ -19,9 +19,9 @@ int		main(void)
 
 //    printf("%lo, %lo\n", 0, ULONG_MAX);
 //    ft_printf("%lo, %lo\n", 0, ULONG_MAX);
-
-    printf("%lx, %lx\n", 0, ULONG_MAX);
-    ft_printf("%lx, %lx\n", 0, ULONG_MAX);
+//
+//    printf("%lx, %lx\n", 0, ULONG_MAX);
+//    ft_printf("%lx, %lx\n", 0, ULONG_MAX);
 //    printf("%ld\n", LONG_MIN);
 //    ft_printf("%ld\n", LONG_MIN);
 //    printf("|%llx|\n", 9223372036854775808);
@@ -29,8 +29,8 @@ int		main(void)
 
 //    printf("|%.4x|\n", 44);
 //    ft_printf("|%.40x|\n", 44);
-//    printf("|%4.s|\n", "42");
-//    ft_printf("|%4.s|\n", "42");
+//    printf("|%4.20c|\n", '4');
+//    ft_printf("|%4.20c|\n", '4');
 //    printf("|%ld%ld|\n", 0, 42);
 //    ft_printf("|%ld%ld|\n", 0, 42);
 //    printf("|%li%li|\n", 0, 42);
@@ -76,8 +76,8 @@ int		main(void)
 //    printf("%o, %ho, %hho\n", -42, -42, -42);
 //    ft_printf("%o, %ho, %hho\n", -42, -42, -42);
 
-//printf("%#llx\n", ULONG_LONG_MAX);
-//ft_printf("%#llx\n", ULONG_LONG_MAX);
+printf("%40.30llx\n", ULONG_LONG_MAX);
+ft_printf("%40.30llx\n", ULONG_LONG_MAX);
 //
 //printf("%#llo\n", ULONG_LONG_MAX);
 //ft_printf("%#llo\n", ULONG_LONG_MAX);
