@@ -40,3 +40,4 @@ int			fill_space_x(int space, char *tmp, int tmp_i)
 	}
 	return (i);
 }
+

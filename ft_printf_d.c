@@ -12,7 +12,7 @@ static	int	ft_sp_zero_d_i(t_lists *list, int i, size_t len, char *arr)
 		arr[i++] = '0';
 	return (i);
 }
-static int	extra_rigth_d_two(char *a1, char *ad, long long len, t_lists *list)
+static	int	extra_rigth_d_two(char *a1, char *ad, long long len, t_lists *list)
 {
 	int		i;
 	int		j;
@@ -30,7 +30,7 @@ static int	extra_rigth_d_two(char *a1, char *ad, long long len, t_lists *list)
 	return (i);
 }
 
-static int	extra_rigth_d(char *ar_1, char *ar_d, long long len, t_lists *list)
+static	int	extra_rigth_d(char *ar_1, char *ar_d, long long len, t_lists *list)
 {
 	int		i;
 	int		j;

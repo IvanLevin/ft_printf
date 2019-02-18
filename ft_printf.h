@@ -16,7 +16,7 @@
 
 typedef struct	s_lists
 {
-    int         dotzero;
+	int         dotzero;
 	int			zeros;
 	int			spaces;
 	int			base;
@@ -55,10 +55,10 @@ int			pr_left_d(char *arr, char *arr2, t_lists *list);
 int			d_min_left(char *arr_1, char *arr_d, long long len, t_lists *list);
 int			d_min_right(char *arr_1, char *arr_d, long long len, t_lists *list);
 char		*ft_itoa_long(__int128_t n);
-char		*ft_itoa_base(long long n, int base);
+char		*ft_itoa_base(unsigned long long n, int base);
 void		ft_printf_p(t_lists *list, long long ap);
 int			fill_space_x(int space, char *tmp, int tmp_i);
-void		ft_printf_x(long long n, t_lists *list);
+void		ft_printf_x(unsigned long long n, t_lists *list);
 void		ft_printf_f(t_lists *list, double n);
 int			ft_len(__int128_t n);
 int			fill_zeros(int zeros, char *tmp, int tmp_i);
@@ -67,3 +67,4 @@ int			space_amount_x(char *str, t_lists *list, int len);
 int			fill_sharp(char *tmp, int tmp_i, t_lists *list, int base);
 
 #endif
+
