@@ -11,22 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7287214-d24b-4668-8f48-051b6e2fc99e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_types.c" beforeDir="false" afterPath="$PROJECT_DIR$/data_types.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ft_parsing.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_parsing.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ft_print_x.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_print_x.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ft_printf.h" beforeDir="false" afterPath="$PROJECT_DIR$/ft_printf.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ft_printf_c.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_printf_c.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ft_printf_cs.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_printf_cs.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ft_printf_d.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_printf_d.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ft_printf_d_i_u.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_printf_d_i_u.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ft_printf_f.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_printf_f.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ft_printf_p.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_printf_p.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/x_amount.c" beforeDir="false" afterPath="$PROJECT_DIR$/x_amount.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/x_filler.c" beforeDir="false" afterPath="$PROJECT_DIR$/x_filler.c" afterDir="false" />
-    </list>
+    <list default="true" id="f7287214-d24b-4668-8f48-051b6e2fc99e" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,8 +64,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/ft_parsing.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="676">
-                  <caret line="26" selection-start-line="26" selection-end-line="26" />
+                <state relative-caret-position="858">
+                  <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
                 </state>
               </provider>
             </entry>
@@ -321,7 +306,7 @@
       <workItem from="1550397166276" duration="107000" />
       <workItem from="1550397287357" duration="807000" />
       <workItem from="1550399334381" duration="75000" />
-      <workItem from="1550401391320" duration="7214000" />
+      <workItem from="1550401391320" duration="7591000" />
     </task>
     <task id="LOCAL-00001" summary="precision">
       <created>1548932885081</created>
@@ -418,7 +403,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86160000" />
+    <option name="totallyTimeSpent" value="86537000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -439,13 +424,13 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4169976" weight="0.21270311" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.59332806" side_tool="true" visible="true" weight="0.26070902" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.2974583" side_tool="true" weight="0.1632201" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.27076676" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.40667197" visible="true" weight="0.26070902" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.70293885" weight="0.1632201" />
+      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.40667197" weight="0.26070902" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.7025417" visible="true" weight="0.1632201" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5145267" side_tool="true" weight="0.39839357" />
       <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.680699" weight="0.24593796" />
       <window_info anchor="bottom" id="CMake" order="12" weight="0.33698398" />
@@ -757,17 +742,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ft_parsing.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="676">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
           <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ft_parsing.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="858">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
     </entry>
