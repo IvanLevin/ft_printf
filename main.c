@@ -12,7 +12,7 @@ int		main(void)
 //    printf("|%llx|\n", 9223372036854775808);
 //    ft_printf("|%llx|\n", 9223372036854775808);
 
-    printf("|%.4x|\n", 44);
+    printf("|%.40x|\n", 44);
     ft_printf("|%.40x|\n", 44);
     printf("|%4.s|\n", "42");
     ft_printf("|%4.s|\n", "42");
