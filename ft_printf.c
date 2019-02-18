@@ -23,7 +23,7 @@ int			ft_printf(const char *argv, ...)
 	int			len;
 
 	va_start(ap, argv);
-	if (!(list = (t_lists *) malloc(sizeof(t_lists))))
+	if (!(list = (t_lists *)malloc(sizeof(t_lists))))
 		return (-1);
 	list->len = 0;
 	while (*argv)

@@ -40,7 +40,7 @@ void		ft_printf_c(t_lists *list, va_list ap)
 	{
 		i += print_c(&first, second, i);
 		i += print_space(second, space, i);
-		ft_print_free(second, list, i);
+		ft_print_free(&second, list, i);
 		free(second);
 	}
 	else
@@ -48,7 +48,7 @@ void		ft_printf_c(t_lists *list, va_list ap)
 		{
 			i = print_space(second, space, i);
 			i = print_c(&first, second, i);
-			ft_print_free(second, list, i);
+			ft_print_free(&second, list, i);
 			free(second);
 		}
 }

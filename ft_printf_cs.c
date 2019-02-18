@@ -46,7 +46,7 @@ void		ft_printf_s2(char *str,t_lists *list, char *tmp, int space)
 	else
 		while (*str)
 			tmp[tmp_i++] = *str++;
-	ft_print_free(tmp, list, tmp_i);
+	ft_print_free(&tmp, list, tmp_i);
 	free(tmp);
 }
 
@@ -64,6 +64,7 @@ void		ft_printf_s(char *str, t_lists *list)
 	if ((int) len > list->precision && list->precision)
 	{
 		len = (size_t) list->precision;
+
 		tmp2 = ft_strnew(len);
 		str = ft_strncpy(tmp2, str, len);
 	}

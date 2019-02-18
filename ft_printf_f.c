@@ -6,7 +6,7 @@ void		ft_print_fby1(double pnt, t_lists *list)
 
 	if (!list->dot || (list->dot && list->sharp))
 	{
-		ft_print_free(".", list, 1);
+		ft_print_free2(".", list, 1);
 		if (!(list->sharp && list->dot))
 		{
 			tmp = ft_strnew((size_t)list->precision);
@@ -14,7 +14,7 @@ void		ft_print_fby1(double pnt, t_lists *list)
 			{
 				pnt = pnt * 10;
 				tmp = ft_itoa_long((__int128_t)pnt);
-				ft_print_free(tmp, list, (long long)ft_strlen(tmp));
+				ft_print_free(&tmp, list, (long long)ft_strlen(tmp));
 				pnt = pnt - (long)pnt;
 				list->precision--;
 			}
@@ -66,17 +66,17 @@ void		place_left_f(t_lists *list, char *tmp, long minus, double n)
 	tmp_i = 0;
 	str = ft_itoa_long((long long)n);
 	if (minus)
-		ft_print_free("-", list, 1);
+		ft_print_free2("-", list, 1);
 	else if (list->plus)
-		ft_print_free("+", list, 1);
+		ft_print_free2("+", list, 1);
 	while (*str)
 		tmp[tmp_i++] = *str++;
-	ft_print_free(tmp, list, tmp_i);
+	ft_print_free(&tmp, list, tmp_i);
 	n = n - (long long)n;
 	ft_print_fby1(n, list);
 	tmp_i = 0;
 	tmp_i += fill_space_x(list->spaces, tmp, tmp_i);
-	ft_print_free(tmp, list, tmp_i);
+	ft_print_free(&tmp, list, tmp_i);
 }
 
 void		place_right_f(t_lists *list, char *tmp, long minus, double n)
@@ -89,9 +89,9 @@ void		place_right_f(t_lists *list, char *tmp, long minus, double n)
 	if (list->zero)
 	{
 		if (minus)
-			ft_print_free("-", list, 1);
+			ft_print_free2("-", list, 1);
 		else if (list->plus)
-			ft_print_free("+", list, 1);
+			ft_print_free2("+", list, 1);
 		tmp_i += fill_zeros(list->spaces, tmp, tmp_i);
 	}
 	else
@@ -104,7 +104,7 @@ void		place_right_f(t_lists *list, char *tmp, long minus, double n)
 	}
 	while (*str)
 		tmp[tmp_i++] = *str++;
-	ft_print_free(tmp, list, tmp_i);
+	ft_print_free(&tmp, list, tmp_i);
 	ft_print_fby1(n - (long)n, list);
 }
 

@@ -27,7 +27,7 @@ static	void	print_pl_sp_d_i(t_lists *list, char *arr_d, long long len)
 	else
 		while (arr_d[j])
 			arr_1[i++] = arr_d[j++];
-	ft_print_free(arr_1, list, i);
+	ft_print_free(&arr_1, list, i);
 	free(arr_1);
 }
 
@@ -46,7 +46,7 @@ static	void	print_width_d_i(t_lists *list, char *arr_d, long long len)
 	else
 		if (list->minus == 0)
 			i = d_min_right(arr_1, arr_d, len, list);
-	ft_print_free(arr_1, list, i);
+	ft_print_free(&arr_1, list, i);
 	free(arr_1);
 }
 
@@ -65,17 +65,17 @@ static	void	print_precision_d_i(t_lists *list, char *arr_d, long long len)
 		i = list->minus == 1 ? pr_right_d(arr_1, arr_2, list)\
 		: pr_left_d(arr_1, arr_2, list);
 		free(arr_1);
-		ft_print_free(arr_2, list, i);
+		ft_print_free(&arr_2, list, i);
 		free(arr_2);
 	}
 	else
 	{
-		ft_print_free(arr_1, list, i);
+		ft_print_free(&arr_1, list, i);
 		free(arr_1);
 	}
 }
 
-static	void	print_d_i(t_lists *list, void *arr_d)
+static	void	print_d_i(t_lists *list, char *arr_d)
 {
 	long long	len;
 	char		*arr;
@@ -94,7 +94,7 @@ static	void	print_d_i(t_lists *list, void *arr_d)
 				arr = (char*)arr_d;
 				if (*arr == '0' && list->spec != 'u')
 					len = 0;
-				ft_print_free(arr_d, list, len);
+				ft_print_free(&arr_d, list, len);
 				free(arr_d);
 			}
 	}

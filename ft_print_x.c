@@ -5,8 +5,6 @@ int			ft_itoa_len(unsigned long long n, int base)
 	int	i;
 
 	i = 0;
-//	if (n < 0)
-//		n *= -1;
 	while (n >= (unsigned long long)base)
 	{
 		n /= base;
@@ -73,7 +71,7 @@ static void	ft_printf_x2(t_lists *list, char *tmp, char *str)
 	if (list->minus && list->spaces > 0)
 		tmp_i += fill_space_x(list->spaces, tmp, tmp_i);
 	ft_change_letter(tmp, list->spec);
-	ft_print_free(tmp, list, tmp_i);
+	ft_print_free(&tmp, list, tmp_i);
 }
 
 void		ft_printf_x(unsigned long long n, t_lists *list)

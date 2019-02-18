@@ -15,7 +15,7 @@ static	int	fill_x_o(char *arr, int i)
 	arr[i++] = '0';
 	arr[i++] = 'x';
 	return (i);
-}
+}git add .
 
 static	int	printf_p_right(char *p, t_lists *list, size_t len, char *arr)
 {
@@ -75,7 +75,7 @@ void		ft_printf_p(t_lists *list, long long ap)
 			if (list->width < (int) len)
 				i = print_p_left(p, list, len, arr);
 	}
-	ft_print_free(arr, list, i);
+	ft_print_free(&arr, list, i);
 	free(arr);
 }
 

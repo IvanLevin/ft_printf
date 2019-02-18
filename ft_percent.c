@@ -38,12 +38,12 @@ char	*ft_percent(char *argv, t_lists *list)
 			i = percent_zero(arr, list, argv);
 		else
 			i = percent_minus(arr, list, argv);
-		ft_print_free(arr, list, i);
+		ft_print_free(&arr, list, i);
 		free(arr);
 		argv++;
 		return (argv);
 	}
-	ft_print_free("%", list, 1);
+	ft_print_free2("%", list, 1);
 	argv++;
 	return (argv);
 }
