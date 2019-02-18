@@ -15,7 +15,7 @@ static	int	fill_x_o(char *arr, int i)
 	arr[i++] = '0';
 	arr[i++] = 'x';
 	return (i);
-}git add .
+}
 
 static	int	printf_p_right(char *p, t_lists *list, size_t len, char *arr)
 {
@@ -61,15 +61,15 @@ void		ft_printf_p(t_lists *list, long long ap)
 	i = 0;
 	p = ft_itoa_base(ap, 16);
 	len = ft_strlen(p);
-	arr = ft_strnew(
-			(int) len > list->width ? (int) len + 2 : (len + 2) + list->width);
+	arr = ft_strnew((int) len > list->width ? (int) len + 2 :
+			(len + 2) + list->width);
 	if (list->width > (int) len + 2 && list->width && !list->precision &&
-			!list->minus)
+	!list->minus)
 		i = print_p_left(p, list, len, arr);
 	else
 	{
-		if (list->width > (int) len + 2 && list->width && !list->precision &&
-				list->minus)
+		if (list->width >= (int) len && list->width && !list->precision &&
+		list->minus)
 			i = printf_p_right(p, list, len, arr);
 		else
 			if (list->width < (int) len)

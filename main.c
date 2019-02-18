@@ -1,4 +1,4 @@
-//#include <limits.h>
+#include <limits.h>
 #include "ft_printf.h"
 
 int		main(void)
@@ -20,8 +20,8 @@ int		main(void)
 //    printf("%lo, %lo\n", 0, ULONG_MAX);
 //    ft_printf("%lo, %lo\n", 0, ULONG_MAX);
 
-//    printf("%lx, %lx\n", 0, ULONG_MAX);
-//    ft_printf("%lx, %lx\n", 0, ULONG_MAX);
+    printf("%lx, %lx\n", 0, ULONG_MAX);
+    ft_printf("%lx, %lx\n", 0, ULONG_MAX);
 //    printf("%ld\n", LONG_MIN);
 //    ft_printf("%ld\n", LONG_MIN);
 //    printf("|%llx|\n", 9223372036854775808);
