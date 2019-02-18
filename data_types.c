@@ -1,19 +1,33 @@
 
 #include "ft_printf.h"
 
-static	long long	ft_get_type(va_list ap, t_lists *list)
+//static	long long	ft_get_type(va_list ap, t_lists *list)
+//{
+//	if (!list->mod)
+//		return ((unsigned)va_arg(ap, int));
+//	else if ((ft_strchr(&list->mod, 'h')))
+//		return ((unsigned short)va_arg(ap, int));
+//	else if ((ft_strchr(&list->mod, 'l')))
+//		return (va_arg(ap, long int));
+//	else if ((ft_strchr(&list->mod, 'G')))
+//		return (va_arg(ap, unsigned int));
+//	else if ((ft_strchr(&list->mod, 'K')))
+//		return ((unsigned long long)va_arg(ap, long long));
+//	return (0);
+//}
+
+void		ft_get_type(va_list ap, t_lists *list)
 {
 	if (!list->mod)
-		return ((unsigned)va_arg(ap, int));
+		ft_printf_x((unsigned)va_arg(ap, int), list);
 	else if ((ft_strchr(&list->mod, 'h')))
-		return ((unsigned short)va_arg(ap, int));
+		ft_printf_x((unsigned short)va_arg(ap, int), list);
 	else if ((ft_strchr(&list->mod, 'l')))
-		return (va_arg(ap, long int));
+		ft_printf_x((unsigned long long)va_arg(ap, long), list);
 	else if ((ft_strchr(&list->mod, 'G')))
-		return (va_arg(ap, unsigned int));
+		ft_printf_x(va_arg(ap, unsigned int), list);
 	else if ((ft_strchr(&list->mod, 'K')))
-		return ((unsigned long long)va_arg(ap, long long));
-	return (0);
+		ft_printf_x((unsigned long long)va_arg(ap, long long), list);
 }
 
 int					data_types(char *argv, va_list ap, t_lists *list)
@@ -28,13 +42,13 @@ int					data_types(char *argv, va_list ap, t_lists *list)
 	{
 		list->spec = *argv;
 		list->base = 16;
-		ft_printf_x(ft_get_type(ap, list), list);
+		ft_get_type(ap, list);
 	}
 	else if (*argv == 'o')
 	{
 		list->spec = *argv;
 		list->base = 8;
-		ft_printf_x(ft_get_type(ap, list), list);
+		ft_get_type(ap, list);
 	}
 	else if (*argv == 'p')
 		ft_printf_p(list, va_arg(ap, long long));

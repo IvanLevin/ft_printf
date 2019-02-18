@@ -1,23 +1,50 @@
-
+#include <limits.h>
 
 #include "ft_printf.h"
 
 int		main(void)
 {
-    // 1.
-
-//    printf("|%llx|\n", 9223372036854775807);
-//    ft_printf("|%llx|\n", 9223372036854775807);
+//	printf("|%.d %.d|\n", 0, 0);
+//	ft_printf("|%.d %.d|\n", 0, 0);
+//	printf("|%hd|\n", (short int)0);
+//	ft_printf("|%hd|\n", (short int)0);
 //
-//    printf("|%llx|\n", 9223372036854775808);
-//    ft_printf("|%llx|\n", 9223372036854775808);
-
-    printf("|%.40x|\n", 44);
-    ft_printf("|%.40x|\n", 44);
-    printf("|%4.s|\n", "42");
-    ft_printf("|%4.s|\n", "42");
+//	printf("|%hd|\n", (short int)0);
+//	ft_printf("|%hd|\n", (short int)0);
+//	printf("{%-13p}\n", &strlen);
+//	ft_printf("{%-13p}\n", &strlen);
+//	printf("{%-12p}\n", &strlen);
+//	ft_printf("{%-12p}\n", &strlen);
+//	printf("{%+03d}\n", 0);
+//	ft_printf("{%+03d}\n", 0);
+//	printf("{% 03d}\n", 0);
+//	ft_printf("{% 03d}\n", 0);
 //
-    printf("|%|\n");
-    ft_printf("|%|\n");
+//	printf("|%.0u|\n", 0);
+//	ft_printf("|%.0u|\n", 0);
+//	printf("|%.u|\n", 0);
+//	ft_printf("|%.u|\n", 0);
+//
+//	printf("|%.0d|\n", 43);
+//	ft_printf("|%.0d|\n", 43);
+//	printf("|%.d|\n", 42);
+//	ft_printf("|%.d|\n", 42);
+//
+//	printf("|%.0d|\n", 0);
+//	ft_printf("|%.0d|\n", 0);
+//	printf("|%.d|\n", 0);
+//	ft_printf("|%.d|\n", 0);
+//	printf("|%u|\n", 0);
+//	ft_printf("|%u|\n", 0);
+//	printf("|%u|\n", 1);
+//	ft_printf("|%u|\n", 1);
+//	printf("|%u|\n", -1);
+//	ft_printf("|%u|\n", -1);
+//	printf("|%u|\n", 4294967295);
+//	ft_printf("|%u|\n", 4294967295);
+
+	printf("|%lu|\n", 4294967295);
+	ft_printf("|%lu|\n", 4294967295);
+
 	return (0);
 }

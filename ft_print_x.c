@@ -1,13 +1,13 @@
 #include "ft_printf.h"
 
-int			ft_itoa_len(long long n, int base)
+int			ft_itoa_len(unsigned long long n, int base)
 {
 	int	i;
 
 	i = 0;
-	if (n < 0)
-		n *= -1;
-	while (n >= (long long)base)
+//	if (n < 0)
+//		n *= -1;
+	while (n >= (unsigned long long)base)
 	{
 		n /= base;
 		i++;
@@ -15,7 +15,7 @@ int			ft_itoa_len(long long n, int base)
 	return (i);
 }
 
-char		*ft_itoa_base(long long n, int base)
+char		*ft_itoa_base(unsigned long long n, int base)
 {
 	char	*str;
 	int		count;
@@ -76,7 +76,7 @@ static void	ft_printf_x2(t_lists *list, char *tmp, char *str)
 	ft_print_free(tmp, list, tmp_i);
 }
 
-void		ft_printf_x(long long n, t_lists *list)
+void		ft_printf_x(unsigned long long n, t_lists *list)
 {
 	char	*str;
 	char	*tmp;
@@ -88,8 +88,9 @@ void		ft_printf_x(long long n, t_lists *list)
 		list->sharp = 0;
 	str = ft_itoa_base(n, list->base);
 	len = ft_strlen(str);
-	tmp = ft_strnew((int)len > list->precision ? (int)len + list->width + \
-			list->sharp : len + list->precision + list->sharp);
+//	tmp = ft_strnew((int)len > list->precision ? (int)len + list->width + \
+//			list->sharp : len + list->precision + list->sharp);
+    tmp = ft_strnew(1000);
 	list->zeros = zeros_amount_x(list, (int)len);
 	list->spaces = space_amount_x(str, list, (int)len);
 	ft_printf_x2(list, tmp, str);
