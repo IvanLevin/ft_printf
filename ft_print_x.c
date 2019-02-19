@@ -89,8 +89,7 @@ void		ft_printf_x(unsigned long long n, t_lists *list)
 		list->sharp = 0;
 	str = ft_itoa_base(n, list->base);
 	len = ft_strlen(str);
-    tmp = ft_strnew((size_t)(list->width > list->precision + list->sharp ? list->width : \
-    	list->precision + list->sharp));
+    tmp = ft_strnew(50);
 	list->zeros = zeros_amount_x(list, (int)len);
 	list->spaces = space_amount_x(str, list, (int)len);
 	ft_printf_x2(list, tmp, str);

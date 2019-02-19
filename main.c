@@ -4,6 +4,8 @@
 int		main(void)
 {
     // 1.
+    ft_printf("%D \n", 10);
+//	printf("%zd\n", -1);
 //    printf("%ld%ld\n", 0, 42);
 //    ft_printf("%ld%ld\n", 0, 42);
 //	printf("%d\n",printf("|%hd|\n", -32769));
@@ -76,8 +78,8 @@ int		main(void)
 //    printf("%o, %ho, %hho\n", -42, -42, -42);
 //    ft_printf("%o, %ho, %hho\n", -42, -42, -42);
 
-printf("%40.30llx\n", ULONG_LONG_MAX);
-ft_printf("%40.30llx\n", ULONG_LONG_MAX);
+//printf("%40.30llx\n", ULONG_LONG_MAX);
+//ft_printf("%40.30llx\n", ULONG_LONG_MAX);
 //
 //printf("%#llo\n", ULONG_LONG_MAX);
 //ft_printf("%#llo\n", ULONG_LONG_MAX);
