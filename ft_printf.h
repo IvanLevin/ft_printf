@@ -59,7 +59,7 @@ char        *ft_itoa_base(unsigned long long int i, int base);
 void		ft_printf_p(t_lists *list, long long ap);
 int			fill_space_x(int space, char *tmp, int tmp_i);
 void		ft_printf_x(unsigned long long n, t_lists *list);
-void		ft_printf_f(t_lists *list, double n);
+void		ft_printf_f(t_lists *list, long double n);
 int			ft_len(__int128_t n);
 int			fill_zeros(int zeros, char *tmp, int tmp_i);
 int			zeros_amount_x(t_lists *list, int len);

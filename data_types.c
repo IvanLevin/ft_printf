@@ -15,6 +15,16 @@ void		ft_get_type(va_list ap, t_lists *list)
 		ft_printf_x((unsigned long long)va_arg(ap, long long), list);
 }
 
+void        ft_get_type_f(va_list ap, t_lists *list)
+{
+    if (!list->mod)
+        ft_printf_f(list, va_arg(ap, double));
+    else if ((ft_strchr(&list->mod, 'l')))
+        ft_printf_f(list, (float)va_arg(ap, double));
+    else if ((ft_strchr(&list->mod, 'L')))
+        ft_printf_f(list, va_arg(ap, long double));
+}
+
 int					data_types(char *argv, va_list ap, t_lists *list)
 {
 	if (*argv == 's')
@@ -38,7 +48,7 @@ int					data_types(char *argv, va_list ap, t_lists *list)
 	else if (*argv == 'p')
 		ft_printf_p(list, va_arg(ap, long long));
 	else if (*argv == 'f')
-		ft_printf_f(list, va_arg(ap, double));
+	    ft_get_type_f(ap, list);
 	return (1);
 }
 

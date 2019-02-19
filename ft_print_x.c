@@ -9,7 +9,7 @@ static size_t ft_kols(unsigned long long i, int base)
         return (1);
     while (i > 0)
     {
-        i = i/base;
+        i = i / base;
         k++;
     }
     return (k);
@@ -32,11 +32,11 @@ char *ft_itoa_base(unsigned long long int i, int base)
     {
         t = i % base;
         if(t > 9)
-            str[k] = t - 10 + 'a';
+            str[k] = (char)(t - 10 + 'a');
         else
-            str[k] = t + '0';
+            str[k] = (char)(t + '0');
         k--;
-        i = i/base;
+        i = i / base;
     }
     return (str);
 }

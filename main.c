@@ -123,5 +123,11 @@ int		main(void)
 ////
 //    printf("|%|\n");
 //    ft_printf("|%|\n");
+//long double d;
+//d = 12.23444L;
+//printf("|%30.18Lf|\n", d);
+//ft_printf("|%30.18Lf|\n", d);
+printf("|%:adasd|");
+//ft_printf("%");
 return (0);
 }
