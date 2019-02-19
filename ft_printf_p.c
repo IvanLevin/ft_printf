@@ -77,5 +77,6 @@ void		ft_printf_p(t_lists *list, long long ap)
 	}
 	ft_print_free(&arr, list, i);
 	free(arr);
+	free(p);
 }
 
