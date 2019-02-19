@@ -6,7 +6,7 @@
 /*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 13:04:22 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/02/19 13:40:15 by gkshleri         ###   ########.fr       */
+/*   Updated: 2019/02/19 16:46:02 by gkshleri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ void	u_pars(t_lists *list, char *specifier, va_list ap)
 	if (*specifier == 'u' && ft_strchr(&list->mod, 'l'))
 		print_d_i(list, ft_itoa_long((unsigned long)va_arg(ap, long int)));
 	else if (*specifier == 'u' && list->mod == 'K')
-		print_d_i(list, ft_itoa_long((long long)va_arg(ap, unsigned long \
-			long int)));
+		print_d_i(list, ft_itoa_long((unsigned long long)va_arg(ap, long \
+		long int)));
 	else if (*specifier == 'u' && list->mod == 'G')
 		print_d_i(list, ft_itoa_long((unsigned char)va_arg(ap, int)));
 	else

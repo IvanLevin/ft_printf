@@ -6,7 +6,7 @@
 /*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 10:35:19 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/02/19 15:48:41 by gkshleri         ###   ########.fr       */
+/*   Updated: 2019/02/19 17:58:22 by gkshleri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ static	void	ft_change_letter(char *tmp, char spec)
 
 	i = 0;
 	if (spec == 'X')
+
 		while (tmp[i])
 		{
 			if ((tmp[i] >= 97 && tmp[i] <= 102) || tmp[i] == 'x')
@@ -69,7 +70,7 @@ static	void	ft_change_letter(char *tmp, char spec)
 
 static	void	ft_printf_x2(t_lists *list, char *str, char *tmp)
 {
-	int	tmp_i;
+	int			tmp_i;
 
 	tmp_i = 0;
 	if (!list->minus && list->spaces > 0 && !list->zeros)
@@ -78,13 +79,14 @@ static	void	ft_printf_x2(t_lists *list, char *str, char *tmp)
 		tmp_i += fill_sharp(tmp, tmp_i, list, list->base);
 	}
 	else if (!list->minus && list->zeros)
-	{
-		tmp_i += fill_space_x(list->spaces, tmp, tmp_i);
+		{
+			tmp_i += fill_space_x(list->spaces, tmp, tmp_i);
+			tmp_i += fill_sharp(tmp, tmp_i, list, list->base);
+			tmp_i += fill_zeros(list->zeros, tmp, tmp_i);
+			list->zeros = 0;
+		}
+	if (!(list->spec == 'o' && !ft_strcmp(str, "0") && list->sharp))
 		tmp_i += fill_sharp(tmp, tmp_i, list, list->base);
-		tmp_i += fill_zeros(list->zeros, tmp, tmp_i);
-		list->zeros = 0;
-	}
-	tmp_i += fill_sharp(tmp, tmp_i, list, list->base);
 	tmp_i += fill_zeros(list->zeros, tmp, tmp_i);
 	if (!((list->dot || list->dotzero) && !ft_strcmp(str, "0")))
 		while (*str)
