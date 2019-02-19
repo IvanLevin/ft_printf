@@ -29,6 +29,7 @@ static	void	print_pl_sp_d_i(t_lists *list, char *arr_d, long long len)
 			arr_1[i++] = arr_d[j++];
 	ft_print_free(&arr_1, list, i);
 	free(arr_1);
+	free(arr_d);
 }
 
 static	void	print_width_d_i(t_lists *list, char *arr_d, long long len)
@@ -48,6 +49,7 @@ static	void	print_width_d_i(t_lists *list, char *arr_d, long long len)
 			i = d_min_right(arr_1, arr_d, len, list);
 	ft_print_free(&arr_1, list, i);
 	free(arr_1);
+	free(arr_d);
 }
 
 static	void	print_precision_d_i(t_lists *list, char *arr_d, long long len)
@@ -59,6 +61,7 @@ static	void	print_precision_d_i(t_lists *list, char *arr_d, long long len)
 	arr_1 = ft_strnew((size_t) list->precision + 1);
 	len = list->precision - len;
 	i = flag_width_d(list, arr_1, arr_d, len);
+	free(arr_d);
 	if (list->precision < list->width && list->width)
 	{
 		arr_2 = ft_strnew((size_t) list->width);

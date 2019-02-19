@@ -55,7 +55,7 @@ int			pr_left_d(char *arr, char *arr2, t_lists *list);
 int			d_min_left(char *arr_1, char *arr_d, long long len, t_lists *list);
 int			d_min_right(char *arr_1, char *arr_d, long long len, t_lists *list);
 char		*ft_itoa_long(__int128_t n);
-char		*ft_itoa_base(unsigned long long n, int base);
+char        *ft_itoa_base(unsigned long long int i, int base);
 void		ft_printf_p(t_lists *list, long long ap);
 int			fill_space_x(int space, char *tmp, int tmp_i);
 void		ft_printf_x(unsigned long long n, t_lists *list);

@@ -61,6 +61,7 @@ char	*ft_width(char *argv, va_list ap, t_lists *list)
 			len++;
 		tmp = ft_strnew(len);
 		list->width = ft_atoi(ft_strncpy(tmp, argv, len));
+		free(tmp);
 		while (*argv >= '0' && *argv <= '9')
 			argv++;
 		return (argv);
@@ -71,6 +72,7 @@ char	*ft_width(char *argv, va_list ap, t_lists *list)
 char	*ft_accuracy(char *argv, va_list ap, t_lists *list)
 {
 	size_t	len;
+    char    *tmp;
 
 	if (*argv == '.')
 	{
@@ -88,7 +90,9 @@ char	*ft_accuracy(char *argv, va_list ap, t_lists *list)
 			len = 0;
 			while (argv[len] >= '0' && argv[len] <= '9')
 				len++;
-			list->precision = ft_atoi(ft_strncpy(ft_strnew(len), argv, len));
+			tmp = ft_strnew(len);
+			list->precision = ft_atoi(ft_strncpy(tmp, argv, len));
+			free(tmp);
 			while (*argv >= '0' && *argv <= '9')
 				argv++;
 			return (argv);
