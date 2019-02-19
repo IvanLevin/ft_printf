@@ -6,11 +6,34 @@
 /*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 10:32:55 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/02/19 11:17:55 by gkshleri         ###   ########.fr       */
+/*   Updated: 2019/02/19 13:52:56 by gkshleri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+void	print_test(char *arr_d, t_lists *list, size_t len)
+{
+	if (!list->precision && list->dot && *arr_d == '0' && list->spec != 'u')
+		ft_print_free2("", list, 0);
+	else if (list->dot == 1 && list->spec != 'u' && *arr_d == '0')
+		ft_print_free2("", list, 0);
+	else if (list->dotzero == 1 && *arr_d == '0' && list->spec != 'u')
+		ft_print_free2("", list, 0);
+	else if (list->spec == 'u')
+	{
+		if (*arr_d && list->dotzero == 1)
+			ft_print_free2("", list, 0);
+		else if (*arr_d == '0' && list->dot)
+			ft_print_free2("", list, 0);
+		else if (*arr_d)
+			ft_print_free(&arr_d, list, (int)len);
+		else
+			ft_print_free2("", list, 0);
+	}
+	else
+		ft_print_free(&arr_d, list, (int)len);
+}
 
 void	ft_get_type(va_list ap, t_lists *list)
 {

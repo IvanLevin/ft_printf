@@ -6,7 +6,7 @@
 /*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 10:35:19 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/02/19 11:17:55 by gkshleri         ###   ########.fr       */
+/*   Updated: 2019/02/19 13:52:56 by gkshleri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char			*ft_itoa_base(unsigned long long int i, int base)
 
 	k = ft_kols(i, base);
 	t = 0;
-	if (!(str = (char *)malloc(sizeof(char)*k + 1)))
+	if (!(str = (char *)malloc(sizeof(char) * k + 1)))
 		return (NULL);
 	str[k--] = '\0';
 	if (i == 0)

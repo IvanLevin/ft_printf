@@ -6,7 +6,7 @@
 /*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/18 18:05:49 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/02/19 10:47:00 by gkshleri         ###   ########.fr       */
+/*   Updated: 2019/02/19 13:52:56 by gkshleri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 void	ft_print_free(char **str, t_lists *list, long long max)
 {
 	int		i;
-    char    *tmp;
-	i = 0;
+	char	*tmp;
 
+	i = 0;
 	if (!str)
-		return;
+		return ;
 	tmp = *str;
 	while (max)
 	{
@@ -34,16 +34,16 @@ void	ft_print_free(char **str, t_lists *list, long long max)
 
 void	ft_print_free2(char *str, t_lists *list, long long max)
 {
-    int		i;
+	int	i;
 
-    i = 0;
-    if (!str)
-        return;
-    while (max)
-    {
-        write(1, str++, 1);
-        max--;
-        i++;
-    }
-    list->len += i;
+	i = 0;
+	if (!str)
+		return ;
+	while (max)
+	{
+		write(1, str++, 1);
+		max--;
+		i++;
+	}
+	list->len += i;
 }

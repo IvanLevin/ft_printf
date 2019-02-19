@@ -6,7 +6,7 @@
 /*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 10:34:42 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/02/19 11:17:56 by gkshleri         ###   ########.fr       */
+/*   Updated: 2019/02/19 13:52:56 by gkshleri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ static	int	percent_zero(char *arr, t_lists *list, char *argv)
 	arr[i++] = *argv;
 	return (i);
 }
+
 static	int	percent_minus(char *arr, t_lists *list, char *argv)
 {
 	int	i;
@@ -40,6 +41,7 @@ char		*ft_percent(char *argv, t_lists *list)
 {
 	char	*arr;
 	int		i;
+
 	if (list->width > 1 && list->width)
 	{
 		arr = ft_strnew((size_t)list->width);
