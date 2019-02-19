@@ -6,7 +6,7 @@
 /*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 10:36:08 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/02/19 13:52:56 by gkshleri         ###   ########.fr       */
+/*   Updated: 2019/02/19 14:11:08 by gkshleri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,4 +84,3 @@ int				fill_sharp(char *tmp, int tmp_i, t_lists *list, int base);
 void			ft_print_free2(char *str, t_lists *list, long long max);
 
 #endif
-

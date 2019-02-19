@@ -6,7 +6,7 @@
 /*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/18 18:05:15 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/02/19 13:52:56 by gkshleri         ###   ########.fr       */
+/*   Updated: 2019/02/19 14:11:08 by gkshleri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ int				zeros_amount_x(t_lists *list, int len)
 static	int		space_amount_x2(t_lists *list, int len)
 {
 	if (list->width > len && len < list->precision && list->sharp)
-		return (list->sharp == 1 ? list->width - list->precision :
+		return (list->sharp == 1 ? list->width - list->precision : \
 			list->width - list->precision - list->sharp);
 	if (len && list->width)
 		return (list->width);
