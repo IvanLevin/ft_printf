@@ -12,50 +12,50 @@
 
 #include "ft_printf.h"
 
-static	size_t	ft_kols(unsigned long long i, int base)
+static size_t ft_kols(unsigned long long i, int base)
 {
-	size_t	k;
+    size_t k;
 
-	k = 0;
-	if (i == 0)
-		return (1);
-	while (i > 0)
-	{
-		i = i / base;
-		k++;
-	}
-	return (k);
+    k = 0;
+    if (i == 0)
+        return (1);
+    while (i > 0)
+    {
+        i = i / base;
+        k++;
+    }
+    return (k);
 }
 
-char			*ft_itoa_base(unsigned long long int i, int base)
+char *ft_itoa_base(unsigned long long int i, int base)
 {
-	size_t	k;
-	char	*str;
-	size_t	t;
+    size_t k;
+    char *str;
+    size_t t;
 
-	k = ft_kols(i, base);
-	t = 0;
-	if (!(str = (char *)malloc(sizeof(char) * k + 1)))
-		return (NULL);
-	str[k--] = '\0';
-	if (i == 0)
-		str[0] = '0';
-	while (i > 0)
-	{
-		t = i % base;
-		if (t > 9)
-			str[k] = t - 10 + 'a';
-		else
-			str[k] = t + '0';
-		k--;
-		i = i / base;
-	}
-	return (str);
+    k = ft_kols(i, base);
+    t = 0;
+    if(!(str = (char *)malloc(sizeof(char)* k + 1)))
+        return (NULL);
+    str[k--] = '\0';
+    if (i == 0)
+        str[0] = '0';
+    while (i > 0)
+    {
+        t = i % base;
+        if(t > 9)
+            str[k] = (char)(t - 10 + 'a');
+        else
+            str[k] = (char)(t + '0');
+        k--;
+        i = i / base;
+    }
+    return (str);
 }
 
-static	void	ft_change_letter(char *tmp, char spec)
+static void	ft_change_letter(char *tmp, char spec)
 {
-	int	i;
+	int i;
 
 	i = 0;
 	if (spec == 'X')
@@ -67,12 +67,10 @@ static	void	ft_change_letter(char *tmp, char spec)
 		}
 }
 
-static	void	ft_printf_x2(t_lists *list, char *str)
+static void	ft_printf_x2(t_lists *list, char *str, char *tmp)
 {
-	int		tmp_i;
-	char	*tmp;
+	int     tmp_i;
 
-	tmp = ft_strnew(500);
 	tmp_i = 0;
 	if (!list->minus && list->spaces > 0 && !list->zeros)
 	{
@@ -90,17 +88,18 @@ static	void	ft_printf_x2(t_lists *list, char *str)
 	tmp_i += fill_zeros(list->zeros, tmp, tmp_i);
 	if (!((list->dot || list->dotzero) && !ft_strcmp(str, "0")))
 		while (*str)
-			tmp[tmp_i++] = *str++;
+            tmp[tmp_i++] = *str++;
 	if (list->minus && list->spaces > 0)
 		tmp_i += fill_space_x(list->spaces, tmp, tmp_i);
 	ft_change_letter(tmp, list->spec);
 	ft_print_free(&tmp, list, tmp_i);
 }
 
-void			ft_printf_x(unsigned long long n, t_lists *list)
+void		ft_printf_x(unsigned long long n, t_lists *list)
 {
 	char	*str;
 	size_t	len;
+    char	*tmp;
 
 	if (list->base == 8 && list->sharp)
 		list->sharp = 1;
@@ -110,6 +109,7 @@ void			ft_printf_x(unsigned long long n, t_lists *list)
 	len = ft_strlen(str);
 	list->zeros = zeros_amount_x(list, (int)len);
 	list->spaces = space_amount_x(str, list, (int)len);
-	ft_printf_x2(list, str);
+    tmp = ft_strnew((size_t)list->width + list->precision);
+	ft_printf_x2(list, str, tmp);
 	free(str);
 }

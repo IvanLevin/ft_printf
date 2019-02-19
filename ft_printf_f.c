@@ -6,13 +6,13 @@
 /*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 10:39:19 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/02/19 11:17:56 by gkshleri         ###   ########.fr       */
+/*   Updated: 2019/02/19 13:56:27 by gkshleri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void		ft_print_fby1(double pnt, t_lists *list)
+void		ft_print_fby1(long double pnt, t_lists *list)
 {
 	char	*tmp;
 
@@ -21,7 +21,6 @@ void		ft_print_fby1(double pnt, t_lists *list)
 		ft_print_free2(".", list, 1);
 		if (!(list->sharp && list->dot))
 		{
-			tmp = ft_strnew((size_t)list->precision);
 			while (list->precision)
 			{
 				pnt = pnt * 10;
@@ -34,9 +33,9 @@ void		ft_print_fby1(double pnt, t_lists *list)
 	}
 }
 
-double		ft_get_addit(t_lists *list, double n, int prec)
+long double		ft_get_addit(t_lists *list, long double n, int prec)
 {
-	double	addit;
+	long double	addit;
 
 	addit = 0.5;
 	if ((n - (long)n) * 10 == 5 && list->dot && (long)n % 2 == 0)
@@ -59,6 +58,8 @@ int			space_amount_f(t_lists *list, int len, long minus)
 			return (list->width - list->precision - 1 - len + (int)minus);
 		else if (list->plus)
 			return (list->width - list->precision - 1 - len - list->plus);
+		else
+			return (list->width - len - list->precision - 1);
 	}
 	if (list->width > list->precision + 1 + len && list->dot)
 	{
@@ -70,7 +71,7 @@ int			space_amount_f(t_lists *list, int len, long minus)
 	return (0);
 }
 
-void		place_left_f(t_lists *list, char *tmp, long minus, double n)
+void		place_left_f(t_lists *list, char *tmp, long minus, long double n)
 {
 	char	*str;
 	int		tmp_i;
@@ -91,7 +92,7 @@ void		place_left_f(t_lists *list, char *tmp, long minus, double n)
 	ft_print_free(&tmp, list, tmp_i);
 }
 
-void		place_right_f(t_lists *list, char *tmp, long minus, double n)
+void		place_right_f(t_lists *list, char *tmp, long minus, long double n)
 {
 	char	*str;
 	int		tmp_i;
@@ -120,14 +121,14 @@ void		place_right_f(t_lists *list, char *tmp, long minus, double n)
 	ft_print_fby1(n - (long)n, list);
 }
 
-void		ft_printf_f(t_lists *list, double n)
+void		ft_printf_f(t_lists *list, long double n)
 {
 	long	minus;
 	int		len;
 	char	*tmp;
 
 	len = 0;
-	minus = *(long*)&n >> 63;
+	minus = (long)n >> 63;
 	if (list->precision <= 0 && !(list->dot))
 		list->precision = 6;
 	if (minus)

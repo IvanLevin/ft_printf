@@ -1,14 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   data_types.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/19 10:32:55 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/02/19 13:52:56 by gkshleri         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
 
 #include "ft_printf.h"
 
@@ -35,7 +24,7 @@ void	print_test(char *arr_d, t_lists *list, size_t len)
 		ft_print_free(&arr_d, list, (int)len);
 }
 
-void	ft_get_type(va_list ap, t_lists *list)
+void		ft_get_type(va_list ap, t_lists *list)
 {
 	if (!list->mod)
 		ft_printf_x((unsigned)va_arg(ap, int), list);
@@ -47,6 +36,16 @@ void	ft_get_type(va_list ap, t_lists *list)
 		ft_printf_x((unsigned char)va_arg(ap, unsigned int), list);
 	else if ((ft_strchr(&list->mod, 'K')))
 		ft_printf_x((unsigned long long)va_arg(ap, long long), list);
+}
+
+void        ft_get_type_f(va_list ap, t_lists *list)
+{
+    if (!list->mod)
+        ft_printf_f(list, va_arg(ap, double));
+    else if ((ft_strchr(&list->mod, 'l')))
+        ft_printf_f(list, (float)va_arg(ap, double));
+    else if ((ft_strchr(&list->mod, 'L')))
+        ft_printf_f(list, va_arg(ap, long double));
 }
 
 int		data_types(char *argv, va_list ap, t_lists *list)
@@ -72,6 +71,7 @@ int		data_types(char *argv, va_list ap, t_lists *list)
 	else if (*argv == 'p')
 		ft_printf_p(list, va_arg(ap, long long));
 	else if (*argv == 'f')
-		ft_printf_f(list, va_arg(ap, double));
+	    ft_get_type_f(ap, list);
 	return (1);
 }
+

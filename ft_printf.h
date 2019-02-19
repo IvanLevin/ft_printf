@@ -84,3 +84,4 @@ int				fill_sharp(char *tmp, int tmp_i, t_lists *list, int base);
 void			ft_print_free2(char *str, t_lists *list, long long max);
 
 #endif
+
