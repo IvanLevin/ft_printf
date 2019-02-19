@@ -6,7 +6,7 @@
 /*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 10:35:19 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/02/19 14:31:24 by gkshleri         ###   ########.fr       */
+/*   Updated: 2019/02/19 15:48:41 by gkshleri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,9 @@ char			*ft_itoa_base(unsigned long long int i, int base)
 	{
 		t = i % base;
 		if (t > 9)
-			str[k] = t - 10 + 'a';
+			str[k] = (char)(t - 10 + 'a');
 		else
-			str[k] = t + '0';
+			str[k] = (char)(t + '0');
 		k--;
 		i = i / base;
 	}
@@ -67,12 +67,10 @@ static	void	ft_change_letter(char *tmp, char spec)
 		}
 }
 
-static	void	ft_printf_x2(t_lists *list, char *str)
+static	void	ft_printf_x2(t_lists *list, char *str, char *tmp)
 {
-	int		tmp_i;
-	char	*tmp;
+	int	tmp_i;
 
-	tmp = ft_strnew(500);
 	tmp_i = 0;
 	if (!list->minus && list->spaces > 0 && !list->zeros)
 	{
@@ -101,6 +99,7 @@ void			ft_printf_x(unsigned long long n, t_lists *list)
 {
 	char	*str;
 	size_t	len;
+	char	*tmp;
 
 	if (list->base == 8 && list->sharp)
 		list->sharp = 1;
@@ -110,6 +109,7 @@ void			ft_printf_x(unsigned long long n, t_lists *list)
 	len = ft_strlen(str);
 	list->zeros = zeros_amount_x(list, (int)len);
 	list->spaces = space_amount_x(str, list, (int)len);
-	ft_printf_x2(list, str);
+	tmp = ft_strnew((size_t)list->width + list->precision);
+	ft_printf_x2(list, str, tmp);
 	free(str);
 }

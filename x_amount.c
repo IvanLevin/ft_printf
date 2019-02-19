@@ -6,11 +6,32 @@
 /*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/18 18:05:15 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/02/19 14:31:24 by gkshleri         ###   ########.fr       */
+/*   Updated: 2019/02/19 15:48:41 by gkshleri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+int				space_amount_f(t_lists *list, int len, long minus)
+{
+	if (list->width > list->precision + 1 + len && !list->dot)
+	{
+		if (minus)
+			return (list->width - list->precision - 1 - len + (int)minus);
+		else if (list->plus)
+			return (list->width - list->precision - 1 - len - list->plus);
+		else
+			return (list->width - len - list->precision - 1);
+	}
+	if (list->width > list->precision + 1 + len && list->dot)
+	{
+		if (minus)
+			return (list->width - list->precision - len + (int)minus);
+		else if (list->plus)
+			return (list->width - list->precision - len - list->plus);
+	}
+	return (0);
+}
 
 int				zeros_amount_x2(t_lists *list, int len)
 {
@@ -58,9 +79,11 @@ int				zeros_amount_x(t_lists *list, int len)
 static	int		space_amount_x2(t_lists *list, int len)
 {
 	if (list->width > len && len < list->precision && list->sharp)
-		return (list->sharp == 1 ? list->width - list->precision :
+	{
+		return (list->sharp == 1 ? list->width - list->precision : \
 			list->width - list->precision - list->sharp);
-	if (len && list->width)
+	}
+	if (!len && list->width)
 		return (list->width);
 	if (list->width > len && len < list->precision && !list->sharp)
 		return (list->width - list->precision);
@@ -71,7 +94,7 @@ static	int		space_amount_x2(t_lists *list, int len)
 		if (len > 0 && list->width > list->precision && list->sharp)
 			return (list->width - list->sharp - len);
 		else if (len > 0 && list->width > list->precision && !list->sharp && \
-					!list->minus)
+			!list->minus)
 			return (list->width - len);
 		else if (len > 0 && list->width > list->precision && !list->sharp)
 			return (list->width - len);

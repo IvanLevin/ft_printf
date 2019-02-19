@@ -6,7 +6,7 @@
 /*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 10:35:57 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/02/19 14:31:24 by gkshleri         ###   ########.fr       */
+/*   Updated: 2019/02/19 15:48:41 by gkshleri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,12 @@ int			ft_printf(const char *argv, ...)
 {
 	va_list		ap;
 	t_lists		*list;
+	int			len;
 
 	va_start(ap, argv);
 	if (!(list = (t_lists *)malloc(sizeof(t_lists))))
 		return (-1);
+	list->len = 0;
 	while (*argv)
 	{
 		if (*argv == '%')
@@ -46,12 +48,12 @@ int			ft_printf(const char *argv, ...)
 		}
 		else
 		{
-			write(1, argv, 1);
+			write(1, argv++, 1);
 			list->len += 1;
-			argv++;
 		}
 	}
 	va_end(ap);
+	len = list->len;
 	free(list);
 	return (len);
 }

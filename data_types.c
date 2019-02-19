@@ -6,13 +6,13 @@
 /*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 10:32:55 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/02/19 14:31:24 by gkshleri         ###   ########.fr       */
+/*   Updated: 2019/02/19 15:32:14 by gkshleri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	print_test(char *arr_d, t_lists *list, size_t len)
+void			print_test(char *arr_d, t_lists *list, size_t len)
 {
 	if (!list->precision && list->dot && *arr_d == '0' && list->spec != 'u')
 		ft_print_free2("", list, 0);
@@ -35,7 +35,7 @@ void	print_test(char *arr_d, t_lists *list, size_t len)
 		ft_print_free(&arr_d, list, (int)len);
 }
 
-void	ft_get_type(va_list ap, t_lists *list)
+void			ft_get_type(va_list ap, t_lists *list)
 {
 	if (!list->mod)
 		ft_printf_x((unsigned)va_arg(ap, int), list);
@@ -49,7 +49,17 @@ void	ft_get_type(va_list ap, t_lists *list)
 		ft_printf_x((unsigned long long)va_arg(ap, long long), list);
 }
 
-int		data_types(char *argv, va_list ap, t_lists *list)
+void			ft_get_type_f(va_list ap, t_lists *list)
+{
+	if (!list->mod)
+		ft_printf_f(list, va_arg(ap, double));
+	else if ((ft_strchr(&list->mod, 'l')))
+		ft_printf_f(list, (float)va_arg(ap, double));
+	else if ((ft_strchr(&list->mod, 'L')))
+		ft_printf_f(list, va_arg(ap, long double));
+}
+
+static	int		data_types2(char *argv, va_list ap, t_lists *list)
 {
 	if (*argv == 's')
 		ft_printf_s(va_arg(ap, char *), list);
@@ -72,6 +82,16 @@ int		data_types(char *argv, va_list ap, t_lists *list)
 	else if (*argv == 'p')
 		ft_printf_p(list, va_arg(ap, long long));
 	else if (*argv == 'f')
-		ft_printf_f(list, va_arg(ap, double));
+		ft_get_type_f(ap, list);
 	return (1);
+}
+
+int				data_types(char *argv, va_list ap, t_lists *list)
+{
+	if (*argv == 's' || *argv == 'c' || *argv == 'd' || *argv == 'i' || *argv
+	== 'u' || *argv == 'x' || *argv == 'X' || *argv == 'o' || *argv == 'p' ||
+	*argv == 'f')
+		return (data_types2(argv, ap, list));
+	else
+		return (0);
 }
