@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf_cs.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/02/19 10:36:56 by gkshleri          #+#    #+#             */
+/*   Updated: 2019/02/19 11:17:56 by gkshleri         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "ft_printf.h"
 
@@ -32,7 +43,7 @@ int			space_amount(t_lists *list, int len)
 	return (0);
 }
 
-void		ft_printf_s2(char *str,t_lists *list, char *tmp, int space)
+void		ft_printf_s2(char *str, t_lists *list, char *tmp, int space)
 {
 	int	tmp_i;
 
@@ -61,16 +72,14 @@ void		ft_printf_s(char *str, t_lists *list)
 	if (str == NULL)
 		str = "(null)";
 	len = ft_strlen(str);
-	if ((int) len > list->precision && list->precision)
+	if ((int)len > list->precision && list->precision)
 	{
-		len = (size_t) list->precision;
-
+		len = (size_t)list->precision;
 		tmp2 = ft_strnew(len);
 		str = ft_strncpy(tmp2, str, len);
 	}
-	output = list->width > (int) len ? list->width : len;
+	output = list->width > (int)len ? list->width : len;
 	tmp = ft_strnew(output);
-	space = space_amount(list, (int) len);
+	space = space_amount(list, (int)len);
 	ft_printf_s2(str, list, tmp, space);
 }
-

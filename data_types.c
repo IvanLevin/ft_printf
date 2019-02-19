@@ -1,7 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   data_types.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/02/19 10:32:55 by gkshleri          #+#    #+#             */
+/*   Updated: 2019/02/19 11:17:55 by gkshleri         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void		ft_get_type(va_list ap, t_lists *list)
+void	ft_get_type(va_list ap, t_lists *list)
 {
 	if (!list->mod)
 		ft_printf_x((unsigned)va_arg(ap, int), list);
@@ -15,7 +26,7 @@ void		ft_get_type(va_list ap, t_lists *list)
 		ft_printf_x((unsigned long long)va_arg(ap, long long), list);
 }
 
-int					data_types(char *argv, va_list ap, t_lists *list)
+int		data_types(char *argv, va_list ap, t_lists *list)
 {
 	if (*argv == 's')
 		ft_printf_s(va_arg(ap, char *), list);
@@ -41,4 +52,3 @@ int					data_types(char *argv, va_list ap, t_lists *list)
 		ft_printf_f(list, va_arg(ap, double));
 	return (1);
 }
-

@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf_d.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/02/19 10:37:25 by gkshleri          #+#    #+#             */
+/*   Updated: 2019/02/19 11:17:56 by gkshleri         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "ft_printf.h"
 
@@ -48,7 +59,7 @@ static	int	extra_rigth_d(char *ar_1, char *ar_d, long long len, t_lists *list)
 		len--;
 	}
 	if (!list->dot)
-		i = ft_sp_zero_d_i(list, i, len, ar_1);
+		i =ft_sp_zero_d_i(list, i, len, ar_1);
 	else
 		while (len--)
 			ar_1[i++] = ' ';
@@ -62,7 +73,7 @@ int			d_min_right(char *arr_1, char *arr_d, long long len, t_lists *list)
 	int	i;
 
 	i = 0;
-	len = (long long) list->width - (long long) ft_strlen(arr_d);
+	len = (long long)list->width - (long long)ft_strlen(arr_d);
 	if (list->zero == 1)
 		i = extra_rigth_d(arr_1, arr_d, len, list);
 	else
@@ -96,4 +107,3 @@ int			d_min_left(char *arr_1, char *arr_d, long long len, t_lists *list)
 		arr_1[i++] = ' ';
 	return (i);
 }
-

@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf_d_i_u.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/02/19 10:38:39 by gkshleri          #+#    #+#             */
+/*   Updated: 2019/02/19 11:17:56 by gkshleri         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "ft_printf.h"
 
@@ -148,4 +159,3 @@ void			ft_printf_d_i_u(t_lists *list, char *specifier, va_list ap)
 			print_d_i(list, ft_itoa_long(va_arg(ap, unsigned int)));
 	}
 }
-

@@ -1,7 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_percent.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/02/19 10:34:42 by gkshleri          #+#    #+#             */
+/*   Updated: 2019/02/19 11:17:56 by gkshleri         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static	int		percent_zero(char *arr, t_lists *list, char *argv)
+static	int	percent_zero(char *arr, t_lists *list, char *argv)
 {
 	int	i;
 
@@ -11,7 +22,7 @@ static	int		percent_zero(char *arr, t_lists *list, char *argv)
 	arr[i++] = *argv;
 	return (i);
 }
-static	int 	percent_minus(char *arr, t_lists *list, char *argv)
+static	int	percent_minus(char *arr, t_lists *list, char *argv)
 {
 	int	i;
 
@@ -25,7 +36,7 @@ static	int 	percent_minus(char *arr, t_lists *list, char *argv)
 	return (i);
 }
 
-char	*ft_percent(char *argv, t_lists *list)
+char		*ft_percent(char *argv, t_lists *list)
 {
 	char	*arr;
 	int		i;
@@ -47,4 +58,3 @@ char	*ft_percent(char *argv, t_lists *list)
 	argv++;
 	return (argv);
 }
-

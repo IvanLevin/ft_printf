@@ -1,4 +1,14 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_parsing.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/02/19 10:34:32 by gkshleri          #+#    #+#             */
+/*   Updated: 2019/02/19 11:17:55 by gkshleri         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "ft_printf.h"
 
@@ -13,7 +23,7 @@ char			*parsing(char *argv, va_list ap, t_lists *list)
 	if (*argv == '.' || (*argv == '.' && (*(argv + 1) == '*' || \
 		(*(argv + 1) >= '0' && *(argv + 1) <= '9'))))
 		list->dotzero = *(argv + 1) == '0' ? 1 : 0;
-		argv = ft_accuracy(argv, ap, list);
+	argv = ft_accuracy(argv, ap, list);
 	if (*argv == '.')
 	{
 		list->precision = 0;
@@ -30,4 +40,3 @@ char			*parsing(char *argv, va_list ap, t_lists *list)
 		argv++;
 	return (argv);
 }
-

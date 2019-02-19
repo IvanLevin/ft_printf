@@ -1,4 +1,14 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/02/19 10:36:08 by gkshleri          #+#    #+#             */
+/*   Updated: 2019/02/19 11:17:55 by gkshleri         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #ifndef	FT_PRINTF_H
 # define FT_PRINTF_H
@@ -16,7 +26,7 @@
 
 typedef struct	s_lists
 {
-	int         dotzero;
+	int			dotzero;
 	int			zeros;
 	int			spaces;
 	int			base;
@@ -68,4 +78,3 @@ int			fill_sharp(char *tmp, int tmp_i, t_lists *list, int base);
 void		ft_print_free2(char *str, t_lists *list, long long max);
 
 #endif
-

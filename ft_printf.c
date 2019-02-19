@@ -1,12 +1,22 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/02/19 10:35:57 by gkshleri          #+#    #+#             */
+/*   Updated: 2019/02/19 11:17:55 by gkshleri         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "ft_printf.h"
 
 static void	initialize(t_lists *list)
 {
-    list->dotzero = 0;
-    list->zeros = 0;
-    list->spaces = 0;
+	list->dotzero = 0;
+	list->zeros = 0;
+	list->spaces = 0;
 	list->sharp = 0;
 	list->dot = 0;
 	list->minus = 0;
@@ -34,7 +44,7 @@ int			ft_printf(const char *argv, ...)
 		if (*argv == '%')
 		{
 			initialize(list);
-			argv = parsing((char *) argv, ap, list);
+			argv = parsing((char *)argv, ap, list);
 		}
 		else
 		{
@@ -48,4 +58,3 @@ int			ft_printf(const char *argv, ...)
 	free(list);
 	return (len);
 }
-

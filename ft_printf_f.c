@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf_f.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/02/19 10:39:19 by gkshleri          #+#    #+#             */
+/*   Updated: 2019/02/19 11:17:56 by gkshleri         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 void		ft_print_fby1(double pnt, t_lists *list)
@@ -130,4 +142,3 @@ void		ft_printf_f(t_lists *list, double n)
 	else
 		place_left_f(list, tmp, minus, n);
 }
-

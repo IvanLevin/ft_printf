@@ -1,4 +1,14 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_check_valid.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/02/19 10:33:23 by gkshleri          #+#    #+#             */
+/*   Updated: 2019/02/19 11:17:56 by gkshleri         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "ft_printf.h"
 
@@ -72,31 +82,28 @@ char	*ft_width(char *argv, va_list ap, t_lists *list)
 char	*ft_accuracy(char *argv, va_list ap, t_lists *list)
 {
 	size_t	len;
-    char    *tmp;
+	char	*tmp;
 
-	if (*argv == '.')
+	if (*argv != '.')
+		return (argv);
+	argv++;
+	if (*argv != '*' && !(*argv >= '0' && *argv <= '9'))
+		list->dot = 1;
+	else if (*argv == '*')
 	{
+		list->precision = va_arg(ap, int);
 		argv++;
-		if (*argv != '*' && !(*argv >= '0' && *argv <= '9'))
-			list->dot = 1;
-		else if (*argv == '*')
-		{
-			list->precision = va_arg(ap, int);
+	}
+	else if (*argv >= '0' && *argv <= '9')
+	{
+		len = 0;
+		while (argv[len] >= '0' && argv[len] <= '9')
+			len++;
+		tmp = ft_strnew(len);
+		list->precision = ft_atoi(ft_strncpy(tmp, argv, len));
+		free(tmp);
+		while (*argv >= '0' && *argv <= '9')
 			argv++;
-			return (argv);
-		}
-		else if (*argv >= '0' && *argv <= '9')
-		{
-			len = 0;
-			while (argv[len] >= '0' && argv[len] <= '9')
-				len++;
-			tmp = ft_strnew(len);
-			list->precision = ft_atoi(ft_strncpy(tmp, argv, len));
-			free(tmp);
-			while (*argv >= '0' && *argv <= '9')
-				argv++;
-			return (argv);
-		}
 	}
 	return (argv);
 }
@@ -117,4 +124,3 @@ char	*ft_modifier(char *argv, t_lists *list)
 	}
 	return (argv);
 }
-

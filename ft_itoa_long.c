@@ -1,4 +1,14 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa_long.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gkshleri <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/02/19 10:33:38 by gkshleri          #+#    #+#             */
+/*   Updated: 2019/02/19 11:17:56 by gkshleri         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "ft_printf.h"
 
@@ -22,7 +32,7 @@ int		ft_len(__int128_t n)
 	return (check);
 }
 
-char		*ft_itoa_long(__int128_t n)
+char	*ft_itoa_long(__int128_t n)
 {
 	char			*arr_itoa;
 	int				sign;
@@ -50,4 +60,3 @@ char		*ft_itoa_long(__int128_t n)
 		arr_itoa[0] = '-';
 	return (arr_itoa);
 }
-

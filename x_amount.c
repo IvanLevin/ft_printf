@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   x_amount.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/02/18 18:05:15 by gkshleri          #+#    #+#             */
+/*   Updated: 2019/02/19 11:17:55 by gkshleri         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 int				zeros_amount_x2(t_lists *list, int len)
@@ -94,4 +106,3 @@ int				space_amount_x(char *str, t_lists *list, int len)
 	}
 	return (space_amount_x2(list, len));
 }
-
