@@ -6,7 +6,7 @@
 /*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 10:37:25 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/02/19 13:52:56 by gkshleri         ###   ########.fr       */
+/*   Updated: 2019/02/20 16:05:22 by gkshleri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static	int	ft_sp_zero_d_i(t_lists *list, int i, size_t len, char *arr)
 {
-	if (list->space == 1)
+	if (list->space == 1 && *arr != '-')
 	{
 		arr[i++] = ' ';
 		len--;
@@ -37,8 +37,11 @@ static	int	extra_rigth_d_two(char *a1, char *ad, long long len, t_lists *list)
 		a1[i++] = ' ';
 	if (list->plus == 1 && *ad != '-')
 		a1[i++] = '+';
-	while (ad[j])
-		a1[i++] = ad[j++];
+	if ((*ad != '0' && list->dot) || (*ad != '0' && !list->dot))
+		while (ad[j])
+			a1[i++] = ad[j++];
+	else
+		a1[i++] = ' ';
 	return (i);
 }
 
@@ -89,11 +92,11 @@ int			d_min_left(char *arr_1, char *arr_d, long long len, t_lists *list)
 
 	i = 0;
 	j = 0;
-	if ((list->plus == 1 && list->space == 1) \
-		|| (list->plus == 1 && list->space == 0))
+	if ((list->plus == 1 && list->space == 1 && *arr_d != '-') \
+		|| (list->plus == 1 && list->space == 0 && *arr_d != '-'))
 	{
 		arr_1[i++] = '+';
-		arr_d++;
+		len--;
 	}
 	else if (list->space == 1 && list->plus == 0 && *arr_d != '-')
 	{

@@ -6,7 +6,7 @@
 /*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 10:36:56 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/02/19 11:17:56 by gkshleri         ###   ########.fr       */
+/*   Updated: 2019/02/19 18:28:55 by gkshleri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,10 @@ static	int	fill_space(int space, char *tmp, int tmp_i, t_lists *list)
 
 int			space_amount(t_lists *list, int len)
 {
-	if (list->width && !list->precision)
+	if (list->width && !list->precision && !list->dot)
 		return (list->width - len);
+	if (list->width && list->dot)
+		return (list->width);
 	if (len > 0 && list->width > len)
 		return (list->width - len);
 	if (!len && list->width)
@@ -50,11 +52,12 @@ void		ft_printf_s2(char *str, t_lists *list, char *tmp, int space)
 	tmp_i = 0;
 	if (list->minus == 0 && space > 0)
 		tmp_i += fill_space(space, tmp, tmp_i, list);
-	while (*str)
-		tmp[tmp_i++] = *str++;
+	if (!list->dot)
+		while (*str)
+			tmp[tmp_i++] = *str++;
 	if (list->minus == 1 && space > 0)
 		tmp_i += fill_space(space, tmp, tmp_i, list);
-	else
+	else if (!list->dot)
 		while (*str)
 			tmp[tmp_i++] = *str++;
 	ft_print_free(&tmp, list, tmp_i);

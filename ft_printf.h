@@ -17,7 +17,7 @@
 # define SPACE ' '
 # define LATTICE '#'
 # define ZERO '0'
-# include "libft/includes/libft.h"
+# include "libft/libft.h"
 # include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>

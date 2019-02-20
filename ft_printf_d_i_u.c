@@ -6,7 +6,7 @@
 /*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 10:38:39 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/02/19 13:52:56 by gkshleri         ###   ########.fr       */
+/*   Updated: 2019/02/20 15:27:38 by gkshleri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,14 @@ static	void	print_pl_sp_d_i(t_lists *ls, char *ar, char *a1)
 	if (ls->plus == 1 && *ar != '-' && ls->spec != 'u')
 	{
 		a1[i++] = '+';
-		while (ar[j])
-			a1[i++] = ar[j++];
+		if (!ls->dot || ar[j] != '0')
+			while (ar[j])
+				a1[i++] = ar[j++];
 	}
 	else if (ls->space == 1 && *ar != '-' && ls->spec != 'u')
 	{
 		a1[i++] = ' ';
+		if (!ls->dot || ar[j] != '0')
 		while (ar[j])
 			a1[i++] = ar[j++];
 	}
@@ -46,7 +48,7 @@ static	void	print_width_d_i(t_lists *list, char *arr_d, long long len)
 	int		i;
 
 	i = 0;
-	if (*arr_d == '0' && !list->zero)
+	if (*arr_d == '0' && !list->zero && !list->width)
 		*arr_d = ' ';
 	len = list->width - len;
 	arr_1 = ft_strnew((size_t)len);
@@ -91,7 +93,7 @@ void			print_d_i(t_lists *list, char *arr_d)
 	char		*arr_1;
 
 	len = (long long)ft_strlen(arr_d);
-	if ((long long)list->precision > len && list->precision)
+	if ((long long)list->precision >= len && list->precision)
 		print_precision_d_i(list, arr_d, len);
 	else
 	{

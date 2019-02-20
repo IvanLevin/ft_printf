@@ -1,33 +1,31 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: gleonett <gleonett@student.42.fr>          +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2018/12/28 16:05:16 by gleonett          #+#    #+#              #
-#    Updated: 2019/02/19 16:07:00 by gkshleri         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 NAME = libftprintf.a
-SRCS = *.c libft/*.c
-INCLUDES = libft
+
+LNAME = libft
+
+SRCS = *.c
+
 OBJ = *.o
-NORMA = -Wall -Werror -Wextra
+
+OBJ2 = libft/ft_*.o
+
+FLAGS = -Wall -Wextra -Werror
+
+INC = ft_printf.h
 
 all: $(NAME)
 
 $(NAME):
-	gcc $(NORMA) -c $(SRCS)
-	ar rc $(NAME) $(OBJ)
+	@make -C libft fclean && make -C libft
+	@gcc $(FLAGS) -c $(SRCS) -I$(INC)
+	@ar rc $(NAME) $(OBJ) $(OBJ2)
+	@ranlib $(NAME)
 
 clean:
-	@rm -f $(OBJ)
-	@rm -f libft/$(OBJ)
+	@/bin/rm -f $(OBJ)
+	@/bin/rm -f $(OBJ2)
 
 fclean: clean
-	@rm -f $(NAME)
-	@rm -f libft/libft.a
+	@/bin/rm -f $(NAME)
+	@/bin/rm -f libft/libft.a
 
 re: fclean all

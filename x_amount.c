@@ -6,7 +6,7 @@
 /*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/18 18:05:15 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/02/19 15:48:41 by gkshleri         ###   ########.fr       */
+/*   Updated: 2019/02/19 18:39:13 by gkshleri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ int				zeros_amount_x(t_lists *list, int len)
 	if (list->sharp && list->minus && list->zero)
 		return (0);
 	if (!list->width && list->precision)
-		return (list->precision - len);
+		return (list->precision - len - list->sharp);
 	if (list->zero && !list->width && list->precision)
 		return (list->precision - len);
 	if (list->zero && list->precision && !list->width)
