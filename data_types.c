@@ -6,7 +6,7 @@
 /*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 10:32:55 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/02/20 15:51:04 by gkshleri         ###   ########.fr       */
+/*   Updated: 2019/02/20 17:34:40 by gkshleri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ static	int		data_types2(char *argv, va_list ap, t_lists *list)
 		ft_printf_s(va_arg(ap, char *), list);
 	else if (*argv == 'c')
 		ft_printf_c(list, ap);
-	else if (*argv == 'd' || *argv == 'i' || *argv == 'u')
+	else if (*argv == 'd' || *argv == 'i' || *argv == 'u' || *argv == 'D')
 		ft_printf_d_i_u(list, argv, ap);
 	else if (*argv == 'x' || *argv == 'X')
 	{
@@ -90,7 +90,7 @@ int				data_types(char *argv, va_list ap, t_lists *list)
 {
 	if (*argv == 's' || *argv == 'c' || *argv == 'd' || *argv == 'i' || *argv
 	== 'u' || *argv == 'x' || *argv == 'X' || *argv == 'o' || *argv == 'p' ||
-	*argv == 'f')
+	*argv == 'f' || *argv == 'D')
 		return (data_types2(argv, ap, list));
 	else
 		return (0);

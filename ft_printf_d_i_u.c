@@ -6,7 +6,7 @@
 /*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 10:38:39 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/02/20 15:27:38 by gkshleri         ###   ########.fr       */
+/*   Updated: 2019/02/20 17:33:33 by gkshleri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ static	void	print_pl_sp_d_i(t_lists *ls, char *ar, char *a1)
 	{
 		a1[i++] = ' ';
 		if (!ls->dot || ar[j] != '0')
-		while (ar[j])
-			a1[i++] = ar[j++];
+			while (ar[j])
+				a1[i++] = ar[j++];
 	}
 	else
 		while (ar[j])
@@ -111,7 +111,7 @@ void			print_d_i(t_lists *list, char *arr_d)
 
 void			ft_printf_d_i_u(t_lists *list, char *specifier, va_list ap)
 {
-	if (*specifier == 'i' || *specifier == 'd')
+	if (*specifier == 'i' || *specifier == 'd' || *specifier == 'D')
 		d_pars(list, specifier, ap);
 	if (*specifier == 'u')
 		u_pars(list, specifier, ap);

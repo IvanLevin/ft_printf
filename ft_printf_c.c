@@ -6,18 +6,19 @@
 /*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 10:36:33 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/02/20 14:44:43 by gkshleri         ###   ########.fr       */
+/*   Updated: 2019/02/20 17:33:33 by gkshleri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static	int space_amount_c(t_lists *list)
+static	int	space_amount_c(t_lists *list)
 {
 	if (list->width > list->precision && list->width > 1)
 		return (list->width - 1);
 	return (0);
 }
+
 static	int	print_space(char *second, int space, int start)
 {
 	int	i;
