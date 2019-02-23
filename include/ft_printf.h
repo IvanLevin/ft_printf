@@ -6,7 +6,7 @@
 /*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 10:36:08 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/02/19 15:48:41 by gkshleri         ###   ########.fr       */
+/*   Updated: 2019/02/23 17:29:17 by gkshleri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # define SPACE ' '
 # define LATTICE '#'
 # define ZERO '0'
-# include "../libft/libft.h"
+# include "libft/libft.h"
 # include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
