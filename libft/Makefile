@@ -6,7 +6,7 @@
 #    By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/18 18:03:00 by gkshleri          #+#    #+#              #
-#    Updated: 2019/02/20 16:14:48 by gkshleri         ###   ########.fr        #
+#    Updated: 2019/02/23 17:29:17 by gkshleri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = libft.a
 SRC = *.c
 INC = *.h
 OBJ = *.o
-NORMA = -Wall -Wextra -Werror
+NORMA = -Wall -Wextra -Werror -c
 
 all: $(NAME)
 

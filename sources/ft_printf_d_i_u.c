@@ -6,7 +6,7 @@
 /*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 10:38:39 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/02/20 17:33:33 by gkshleri         ###   ########.fr       */
+/*   Updated: 2019/02/23 17:34:25 by gkshleri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ static	void	print_pl_sp_d_i(t_lists *ls, char *ar, char *a1)
 		while (ar[j])
 			a1[i++] = ar[j++];
 	ft_print_free(&a1, ls, i);
-	free(ar);
 }
 
 static	void	print_width_d_i(t_lists *list, char *arr_d, long long len)
@@ -103,6 +102,7 @@ void			print_d_i(t_lists *list, char *arr_d)
 		{
 			arr_1 = ft_strnew((size_t)len + 1);
 			print_pl_sp_d_i(list, arr_d, arr_1);
+			free(arr_d);
 		}
 		else
 			print_test(arr_d, list, (size_t)len);

@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
-    <generated>
-      <config projectName="ft_printf" targetName="ft_printf" />
-    </generated>
+    <generated />
   </component>
   <component name="CMakeSettings">
     <configurations>
@@ -13,12 +11,29 @@
   <component name="ChangeListManager">
     <list default="true" id="f7287214-d24b-4668-8f48-051b6e2fc99e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_types.c" beforeDir="false" afterPath="$PROJECT_DIR$/data_types.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ft_d_i_pars.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_d_i_pars.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ft_precision_d_or_i.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_precision_d_or_i.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ft_printf_c.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_printf_c.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ft_printf_d_i_u.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_printf_d_i_u.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main c.c" beforeDir="false" afterPath="$PROJECT_DIR$/main c.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_types.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_check_valid.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_d_i_pars.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_itoa_base.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_itoa_long.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_parsing.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_percent.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_precision_d_or_i.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_print_x.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_printf.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_printf.h" beforeDir="false" afterPath="$PROJECT_DIR$/ft_printf.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_printf_c.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_printf_cs.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_printf_d.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_printf_d_i_u.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_printf_f.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_printf_p.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/libft/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main c.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/print_free.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/x_amount.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/x_filler.c" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,7 +56,6 @@
     <expand />
     <select />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileColors">
     <fileColor scope="Tests" color="bbff7e" />
     <fileColor scope="Local Unit Tests" color="bbff7e" />
@@ -49,22 +63,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ft_check_valid.c">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/libft/ft_len_strchr.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="935">
-              <caret line="51" column="15" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="15" />
+            <state relative-caret-position="338">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main c.c">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libft/libft.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+            <state relative-caret-position="468">
+              <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
               <folding>
-                <element signature="e#0#22#0" expanded="true" />
+                <element signature="e#925#945#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -109,6 +123,7 @@
         <option value="$PROJECT_DIR$/data_types.c" />
         <option value="$PROJECT_DIR$/ft_d_i_pars.c" />
         <option value="$PROJECT_DIR$/main c.c" />
+        <option value="$PROJECT_DIR$/libft/ft_len_strchr.c" />
       </list>
     </option>
   </component>
@@ -123,6 +138,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -130,11 +146,15 @@
               <item name="ft_printf" type="b2602c69:ProjectViewProjectNode" />
               <item name="ft_printf" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ft_printf" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ft_printf" type="462c0819:PsiDirectoryNode" />
+              <item name="libft" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -155,13 +175,6 @@
         </RuleState>
       </list>
     </option>
-  </component>
-  <component name="RunManager">
-    <configuration name="ft_printf" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ft_printf" TARGET_NAME="ft_printf" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ft_printf" RUN_TARGET_NAME="ft_printf">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -249,6 +262,9 @@
       <workItem from="1550822526311" duration="956000" />
       <workItem from="1550849095797" duration="272000" />
       <workItem from="1550912498527" duration="141000" />
+      <workItem from="1550913291013" duration="303000" />
+      <workItem from="1550928926791" duration="110000" />
+      <workItem from="1550932156391" duration="6000" />
     </task>
     <task id="LOCAL-00001" summary="precision">
       <created>1548932885081</created>
@@ -352,7 +368,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119916000" />
+    <option name="totallyTimeSpent" value="120335000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -367,7 +383,7 @@
     <frame x="0" y="23" width="2560" height="1337" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21445592" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2192216" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -382,7 +398,7 @@
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.6993646" weight="0.19365337" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5145267" side_tool="true" weight="0.39839357" />
       <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.680699" weight="0.2097489" />
-      <window_info anchor="bottom" id="CMake" order="12" sideWeight="0.4992057" weight="0.3352319" />
+      <window_info active="true" anchor="bottom" id="CMake" order="12" sideWeight="0.4992057" visible="true" weight="0.3352319" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -467,20 +483,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="xXo separated to 3 files + normed" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main c.c</url>
-          <line>8</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/ft_printf_d_i_u.c</url>
-          <line>44</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
         <watch expression="str" />
@@ -496,13 +498,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="127" column="24" selection-start-line="127" selection-start-column="24" selection-end-line="127" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libft/ft_len_strchr.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
@@ -655,13 +650,6 @@
         <state relative-caret-position="-2118" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_types.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="68" column="33" selection-start-line="68" selection-start-column="33" selection-end-line="68" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ft_d_i_pars.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="546">
@@ -690,27 +678,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ft_parsing.c">
+    <entry file="file://$PROJECT_DIR$/ft_check_valid.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="611">
-          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+        <state relative-caret-position="546">
+          <caret line="21" column="44" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ft_check_valid.c">
+    <entry file="file://$PROJECT_DIR$/libft/libft.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="51" column="15" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="15" />
+        <state relative-caret-position="468">
+          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+          <folding>
+            <element signature="e#925#945#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main c.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
-          <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_types.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2392">
+          <caret line="92" column="31" selection-start-line="92" selection-start-column="31" selection-end-line="92" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ft_parsing.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="858">
+          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libft/ft_len_strchr.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
