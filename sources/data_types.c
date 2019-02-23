@@ -5,8 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/19 10:32:55 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/02/20 17:34:40 by gkshleri         ###   ########.fr       */
+<<<<<<< HEAD:sources/data_types.c
+/*   Created: 2019/02/19 10:32:55 by gkshleri  /*   Updated: 2019/02/23 17:39:37 by gkshleri         ###   ########.fr       */
+       ###   ########.fr       */
+=======
+/*   Created: 2019/02/19 14:01:56 by gkshleri          #+#    #+#             */
+/*   Updated: 2019/02/19 14:11:08 by gkshleri         ###   ########.fr       */
+>>>>>>> 84d173f1d89ee0cc5480f56f0c492ac061cc6d2b:data_types.c
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +54,11 @@ void			ft_get_type(va_list ap, t_lists *list)
 		ft_printf_x((unsigned long long)va_arg(ap, long long), list);
 }
 
+<<<<<<< HEAD:sources/data_types.c
 void			ft_get_type_f(va_list ap, t_lists *list)
+=======
+void	ft_get_type_f(va_list ap, t_lists *list)
+>>>>>>> 84d173f1d89ee0cc5480f56f0c492ac061cc6d2b:data_types.c
 {
 	if (!list->mod)
 		ft_printf_f(list, va_arg(ap, double));
@@ -59,7 +68,11 @@ void			ft_get_type_f(va_list ap, t_lists *list)
 		ft_printf_f(list, va_arg(ap, long double));
 }
 
+<<<<<<< HEAD:sources/data_types.c
 static	int		data_types2(char *argv, va_list ap, t_lists *list)
+=======
+int		data_types(char *argv, va_list ap, t_lists *list)
+>>>>>>> 84d173f1d89ee0cc5480f56f0c492ac061cc6d2b:data_types.c
 {
 	if (*argv == 's')
 		ft_printf_s(va_arg(ap, char *), list);

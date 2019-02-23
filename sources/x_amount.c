@@ -6,7 +6,11 @@
 /*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/18 18:05:15 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/02/19 18:39:13 by gkshleri         ###   ########.fr       */
+/*   Updated: 2019/02/23 17:39:37 by gkshleri         ###   ########.fr       */
+     ###   ########.fr       */
+=======
+/*   Updated: 2019/02/19 14:11:08 by gkshleri         ###   ########.fr       */
+>>>>>>> 84d173f1d89ee0cc5480f56f0c492ac061cc6d2b:x_amount.c
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +83,10 @@ int				zeros_amount_x(t_lists *list, int len)
 static	int		space_amount_x2(t_lists *list, int len)
 {
 	if (list->width > len && len < list->precision && list->sharp)
+<<<<<<< HEAD:sources/x_amount.c
 	{
+=======
+>>>>>>> 84d173f1d89ee0cc5480f56f0c492ac061cc6d2b:x_amount.c
 		return (list->sharp == 1 ? list->width - list->precision : \
 			list->width - list->precision - list->sharp);
 	}

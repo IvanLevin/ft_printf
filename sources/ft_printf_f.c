@@ -6,7 +6,11 @@
 /*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 10:39:19 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/02/19 15:48:41 by gkshleri         ###   ########.fr       */
+/*   Updated: 2019/02/23 17:39:37 by gkshleri         ###   ########.fr       */
+        ###   ########.fr       */
+=======
+/*   Updated: 2019/02/19 13:56:27 by gkshleri         ###   ########.fr       */
+>>>>>>> 84d173f1d89ee0cc5480f56f0c492ac061cc6d2b:ft_printf_f.c
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +37,11 @@ void		ft_print_fby1(long double pnt, t_lists *list)
 	}
 }
 
+<<<<<<< HEAD:sources/ft_printf_f.c
 long double	ft_get_addit(t_lists *list, long double n, int prec)
+=======
+long double		ft_get_addit(t_lists *list, long double n, int prec)
+>>>>>>> 84d173f1d89ee0cc5480f56f0c492ac061cc6d2b:ft_printf_f.c
 {
 	long double	addit;
 
@@ -50,6 +58,30 @@ long double	ft_get_addit(t_lists *list, long double n, int prec)
 	return (n);
 }
 
+<<<<<<< HEAD:sources/ft_printf_f.c
+=======
+int			space_amount_f(t_lists *list, int len, long minus)
+{
+	if (list->width > list->precision + 1 + len && !list->dot)
+	{
+		if (minus)
+			return (list->width - list->precision - 1 - len + (int)minus);
+		else if (list->plus)
+			return (list->width - list->precision - 1 - len - list->plus);
+		else
+			return (list->width - len - list->precision - 1);
+	}
+	if (list->width > list->precision + 1 + len && list->dot)
+	{
+		if (minus)
+			return (list->width - list->precision - len + (int)minus);
+		else if (list->plus)
+			return (list->width - list->precision - len - list->plus);
+	}
+	return (0);
+}
+
+>>>>>>> 84d173f1d89ee0cc5480f56f0c492ac061cc6d2b:ft_printf_f.c
 void		place_left_f(t_lists *list, char *tmp, long minus, long double n)
 {
 	char	*str;

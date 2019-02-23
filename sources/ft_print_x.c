@@ -6,15 +6,63 @@
 /*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 10:35:19 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/02/19 18:58:35 by gkshleri         ###   ########.fr       */
+/*   Updated: 2019/02/23 17:39:37 by gkshleri         ###   ########.fr       */
+       ###   ########.fr       */
+=======
+/*   Updated: 2019/02/19 14:11:08 by gkshleri         ###   ########.fr       */
+>>>>>>> 84d173f1d89ee0cc5480f56f0c492ac061cc6d2b:ft_print_x.c
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+<<<<<<< HEAD:sources/ft_print_x.c
+=======
+static	size_t	ft_kols(unsigned long long i, int base)
+{
+	size_t		k;
+
+	k = 0;
+	if (i == 0)
+		return (1);
+	while (i > 0)
+	{
+		i = i / base;
+		k++;
+	}
+	return (k);
+}
+
+char			*ft_itoa_base(unsigned long long int i, int base)
+{
+	size_t		k;
+	char		*str;
+	size_t		t;
+
+	k = ft_kols(i, base);
+	t = 0;
+	if (!(str = (char *)malloc(sizeof(char) * k + 1)))
+		return (NULL);
+	str[k--] = '\0';
+	if (i == 0)
+		str[0] = '0';
+	while (i > 0)
+	{
+		t = i % base;
+		if (t > 9)
+			str[k] = (char)(t - 10 + 'a');
+		else
+			str[k] = (char)(t + '0');
+		k--;
+		i = i / base;
+	}
+	return (str);
+}
+
+>>>>>>> 84d173f1d89ee0cc5480f56f0c492ac061cc6d2b:ft_print_x.c
 static	void	ft_change_letter(char *tmp, char spec)
 {
-	int	i;
+	int			i;
 
 	i = 0;
 	if (spec == 'X')
@@ -26,6 +74,7 @@ static	void	ft_change_letter(char *tmp, char spec)
 		}
 }
 
+<<<<<<< HEAD:sources/ft_print_x.c
 static	void	ft_printf_x3(t_lists *list, char *str, char *tmp, int tmp_i)
 {
 	if (list->minus && list->spaces > 0)
@@ -39,6 +88,10 @@ static	void	ft_printf_x3(t_lists *list, char *str, char *tmp, int tmp_i)
 
 static	void	ft_printf_x2(t_lists *list, char *str, char *tmp)
 {
+=======
+static	void	ft_printf_x2(t_lists *list, char *str, char *tmp)
+{
+>>>>>>> 84d173f1d89ee0cc5480f56f0c492ac061cc6d2b:ft_print_x.c
 	int			tmp_i;
 
 	tmp_i = 0;
@@ -64,7 +117,7 @@ static	void	ft_printf_x2(t_lists *list, char *str, char *tmp)
 	ft_printf_x3(list, str, tmp, tmp_i);
 }
 
-void			ft_printf_x(unsigned long long n, t_lists *list)
+void		ft_printf_x(unsigned long long n, t_lists *list)
 {
 	char	*str;
 	size_t	len;
