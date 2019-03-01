@@ -6,7 +6,7 @@
 /*   By: gkshleri <gkshleri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 10:36:08 by gkshleri          #+#    #+#             */
-/*   Updated: 2019/02/23 17:29:17 by gkshleri         ###   ########.fr       */
+/*   Updated: 2019/03/01 15:46:25 by gkshleri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@
 # define SPACE ' '
 # define LATTICE '#'
 # define ZERO '0'
+# define BLACK "\e[0;30m"
+# define GREEN "\e[0;32m"
+# define PURPLE "\e[0;35m"
+# define REBOOT "\e[0m"
 # include "libft/libft.h"
 # include <stdio.h>
 # include <unistd.h>
